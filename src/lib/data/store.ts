@@ -85,11 +85,52 @@ class SupabaseStore implements Store {
 
 let localStore: LocalFileStore | null = null;
 
+export class StoreNotConfiguredError extends Error {
+  constructor() {
+    super("Supabase is not configured. Set NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY and SUPABASE_SERVICE_ROLE_KEY.");
+    this.name = "StoreNotConfiguredError";
+  }
+}
+
+/**
+ * Production without Supabase: reads return nothing so public pages still
+ * render from seed content, and writes fail loudly with a clear message.
+ */
+class NullStore implements Store {
+  private warned = false;
+  private warn() {
+    if (!this.warned) {
+      this.warned = true;
+      console.warn("[store] " + new StoreNotConfiguredError().message);
+    }
+  }
+  async get() {
+    this.warn();
+    return null;
+  }
+  async list() {
+    this.warn();
+    return [];
+  }
+  async insert(): Promise<never> {
+    throw new StoreNotConfiguredError();
+  }
+  async update(): Promise<never> {
+    throw new StoreNotConfiguredError();
+  }
+  async upsert(): Promise<never> {
+    throw new StoreNotConfiguredError();
+  }
+  async delete(): Promise<never> {
+    throw new StoreNotConfiguredError();
+  }
+}
+
 /** Store that acts as the current user (RLS enforced in production). */
 export function getStore(): Store {
   if (supabaseConfigured) return new SupabaseStore(false);
   if (process.env.NODE_ENV === "production" && process.env.ALLOW_LOCAL_STORE !== "true") {
-    throw new Error("Supabase is not configured. Set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY.");
+    return new NullStore();
   }
   localStore ??= new LocalFileStore();
   return localStore;
@@ -101,4 +142,4 @@ export function getAdminStore(): Store {
   return getStore();
 }
 
-export const storeMode = supabaseConfigured ? "supabase" : "local";
+export const storeMode = supabaseConfigured ? "supabase" : process.env.NODE_ENV === "production" && process.env.ALLOW_LOCAL_STORE !== "true" ? "unconfigured" : "local";

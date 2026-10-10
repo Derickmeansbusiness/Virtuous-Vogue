@@ -18,7 +18,7 @@ export default async function AdminLayout({ children, params }: { children: Reac
           <aside className="lg:col-span-2">
             <p className="eyebrow text-mulberry">Cockpit</p>
             <p className="mt-1 text-sm text-ink-soft">{user.name ?? user.email}</p>
-            {storeMode === "local" ? <p className="mt-2 inline-block border border-warning/40 px-2 py-0.5 text-[0.625rem] uppercase tracking-[0.14em] text-warning">Local store</p> : null}
+            {storeMode !== "supabase" ? <p className="mt-2 inline-block border border-warning/40 px-2 py-0.5 text-[0.625rem] uppercase tracking-[0.14em] text-warning">{storeMode === "local" ? "Local store" : "Supabase not configured"}</p> : null}
             <AdminNav className="mt-6" />
           </aside>
           <div className="lg:col-span-10">{children}</div>

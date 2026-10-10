@@ -30,7 +30,7 @@ async function loadRules(): Promise<AvailabilityRule[]> {
 }
 
 async function loadBusy(from: Date, to: Date): Promise<{ start: Date; end: Date }[]> {
-  const rows = await getAdminStore().list<{ starts_at: string; ends_at: string; status: string }>("appointments");
+  const rows = await getAdminStore().list<{ starts_at: string; ends_at: string; status: string }>("appointments").catch(() => []);
   return rows
     .filter((a) => !["cancelled"].includes(a.status))
     .map((a) => ({ start: new Date(a.starts_at), end: new Date(a.ends_at) }))
