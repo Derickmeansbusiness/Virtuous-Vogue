@@ -15,7 +15,15 @@ export async function Hero() {
 
   return (
     <section className="relative isolate flex min-h-[100svh] items-end overflow-hidden bg-ink text-ivory" aria-label="Virtuous Vogue">
-      <HeroVideo desktop={desktop} mobile={mobile} poster={poster} mobilePoster={mobilePoster} alt={t("videoAlt")} />
+      <HeroVideo
+        desktop={desktop}
+        mobile={mobile}
+        poster={poster}
+        mobilePoster={mobilePoster}
+        alt={t("videoAlt")}
+        // On phones, enlarge and slide the film to the right so the model stands clear of the headline.
+        mediaClassName="max-md:origin-center max-md:scale-[1.4] max-md:translate-x-[18%] max-md:transform-gpu"
+      />
       <div aria-hidden className="absolute inset-0 bg-[linear-gradient(to_top,rgba(25,24,22,0.82)_0%,rgba(25,24,22,0.42)_38%,rgba(25,24,22,0.06)_68%,rgba(25,24,22,0.18)_100%)]" />
       <div aria-hidden className="grain absolute inset-0" />
       <div className="container-vv relative z-10 pb-16 pt-40 md:pb-24">

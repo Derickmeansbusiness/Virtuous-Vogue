@@ -20,6 +20,7 @@ export function HeroVideo({
   poster,
   mobilePoster,
   className,
+  mediaClassName,
   alt,
 }: {
   desktop: AssetVideo | null;
@@ -27,6 +28,8 @@ export function HeroVideo({
   poster: AssetImage | null;
   mobilePoster?: AssetImage | null;
   className?: string;
+  /** Extra classes on the poster and video, e.g. a phone-only shift so the subject clears the headline. */
+  mediaClassName?: string;
   alt: string;
 }) {
   const reduce = useReducedMotion();
@@ -62,7 +65,7 @@ export function HeroVideo({
           sizes="100vw"
           placeholder={posterAsset.blurDataURL ? "blur" : "empty"}
           blurDataURL={posterAsset.blurDataURL || undefined}
-          className="object-cover"
+          className={cn("object-cover", mediaClassName)}
           quality={80}
         />
       ) : (
@@ -71,7 +74,10 @@ export function HeroVideo({
       {playVideo && video ? (
         <video
           ref={ref}
-          className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-[1200ms] ease-out data-[ready=true]:opacity-100"
+          className={cn(
+            "absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-[1200ms] ease-out data-[ready=true]:opacity-100",
+            mediaClassName,
+          )}
           autoPlay
           muted
           loop
