@@ -33,10 +33,10 @@ export async function Hero() {
           <p className="font-serif text-lg leading-relaxed text-ivory/85 md:text-xl">{t("support")}</p>
         </Reveal>
         <Reveal delay={0.55} className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
-          <Button href="/studio/compass" variant="ivory" size="lg">
+          <Button href="/studio/compass" variant="glass" size="lg">
             {c("discover")}
           </Button>
-          <Button href="/book" variant="ghost" size="lg" className="border-ivory/50 text-ivory hover:border-ivory hover:bg-ivory/10">
+          <Button href="/book" variant="glass" size="lg" className="glass-glitter-soft">
             {c("book")}
           </Button>
         </Reveal>

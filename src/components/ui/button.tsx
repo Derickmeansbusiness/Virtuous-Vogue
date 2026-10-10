@@ -2,7 +2,7 @@ import * as React from "react";
 import { cn } from "@/lib/utils/cn";
 import { Link } from "@/i18n/navigation";
 
-type Variant = "primary" | "secondary" | "ghost" | "ink" | "link" | "ivory";
+type Variant = "primary" | "secondary" | "ghost" | "ink" | "link" | "ivory" | "glass";
 type Size = "sm" | "md" | "lg";
 
 const base =
@@ -18,6 +18,7 @@ const variants: Record<Variant, string> = {
   ghost:
     "bg-transparent text-ink border border-transparent hover:border-line-strong",
   ink: "bg-ink text-ivory border border-ink hover:bg-ink-soft",
+  glass: "glass-glitter text-ivory",
   link: "bg-transparent text-mulberry border-b border-mulberry/50 hover:border-mulberry px-0 py-0 rounded-none normal-case tracking-normal font-medium",
 };
 
