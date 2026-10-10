@@ -7,8 +7,8 @@ import { FEATURE_FLAGS } from "@/lib/site";
 import { cn } from "@/lib/utils/cn";
 
 /**
- * Public site shell: header, footer, optional bottom nav for signed-in
- * clients on mobile. Used by every marketing, studio and magazine route.
+ * Public site shell: header, footer and the bottom-docked navigation on
+ * phones and tablets. Used by every marketing, studio and magazine route.
  */
 export async function SiteFrame({
   children,
@@ -25,11 +25,11 @@ export async function SiteFrame({
   return (
     <>
       <Header signedIn={Boolean(user)} isAdmin={user?.role === "admin"} tone={headerTone} />
-      <main id="main" className={cn("flex-1", headerTone === "auto" ? "" : "pt-[var(--vv-header-h)]", user && "pb-safe-nav lg:pb-0", className)}>
+      <main id="main" className={cn("flex-1", headerTone === "auto" ? "" : "pt-[var(--vv-header-h)]", !withFooter && "pb-safe-nav lg:pb-0", className)}>
         {children}
       </main>
       {withFooter ? <Footer /> : null}
-      {user ? <MobileNav /> : null}
+      <MobileNav signedIn={Boolean(user)} />
       {FEATURE_FLAGS.customCursor ? <Cursor /> : null}
     </>
   );

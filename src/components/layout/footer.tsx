@@ -51,7 +51,7 @@ export async function Footer() {
   ];
 
   return (
-    <footer className="bg-ink text-ivory">
+    <footer className="bg-ink text-ivory pb-safe-nav lg:pb-0">
       <div className="container-vv grid gap-14 py-20 lg:grid-cols-12 lg:gap-10">
         <div className="lg:col-span-5">
           <div className="flex items-end gap-6">

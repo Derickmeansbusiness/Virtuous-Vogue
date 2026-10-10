@@ -26,7 +26,7 @@ export async function Hero() {
       />
       <div aria-hidden className="absolute inset-0 bg-[linear-gradient(to_top,rgba(25,24,22,0.82)_0%,rgba(25,24,22,0.42)_38%,rgba(25,24,22,0.06)_68%,rgba(25,24,22,0.18)_100%)]" />
       <div aria-hidden className="grain absolute inset-0" />
-      <div className="container-vv relative z-10 pb-16 pt-40 md:pb-24">
+      <div className="container-vv relative z-10 pb-[calc(var(--vv-bottom-nav-h)+2.5rem)] pt-40 lg:pb-24">
         <p className="mb-6 font-display text-lg italic text-ivory/85 md:text-xl">Virtue Never Goes Out of Style.</p>
         <TextReveal as="h1" lines={[t("line1"), t("line2")]} className="display-xl max-w-5xl text-ivory" />
         <Reveal delay={0.4} className="mt-8 max-w-xl">

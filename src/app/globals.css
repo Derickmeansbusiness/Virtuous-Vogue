@@ -320,7 +320,7 @@ body {
   body[data-cursor="custom"] a, body[data-cursor="custom"] button { cursor: none; }
 }
 
-/* Safe-area padding for the mobile bottom nav */
-.pb-safe-nav {
+/* Safe-area padding for the docked mobile navigation (a utility so lg:pb-0 can override it). */
+@utility pb-safe-nav {
   padding-bottom: calc(var(--vv-bottom-nav-h) + env(safe-area-inset-bottom));
 }

@@ -22,7 +22,7 @@ export default async function AccountLayout({ children, params }: { children: Re
           <div className="lg:col-span-9">{children}</div>
         </div>
       </main>
-      <MobileNav />
+      <MobileNav signedIn />
     </>
   );
 }
