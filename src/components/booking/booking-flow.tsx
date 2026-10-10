@@ -57,6 +57,7 @@ export function BookingFlow({ services, initialService, methods, user, compassId
   React.useEffect(() => {
     if (!service || step !== "date") return;
     let alive = true;
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- syncing from a browser API after mount
     setLoadingSlots(true);
     const from = startOfDay(new Date(Math.max(month.getTime(), Date.now())));
     const to = endOfMonth(month);
@@ -70,6 +71,7 @@ export function BookingFlow({ services, initialService, methods, user, compassId
 
   React.useEffect(() => {
     if (!result?.ok || result.payment?.kind !== "push") return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- syncing from a browser API after mount
     setPayState("waiting");
     let tries = 0;
     const id = setInterval(async () => {

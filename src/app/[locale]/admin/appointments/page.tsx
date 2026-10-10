@@ -8,6 +8,7 @@ import { SITE } from "@/lib/site";
 export default async function AdminAppointments({ searchParams }: { searchParams: Promise<{ view?: string }> }) {
   const { view = "upcoming" } = await searchParams;
   const all = await getAdminStore().list<AppointmentRow>("appointments", {}, { orderBy: "starts_at", ascending: view === "upcoming" });
+  // eslint-disable-next-line react-hooks/purity -- server component; current time is request-scoped
   const now = Date.now();
   const rows = view === "upcoming" ? all.filter((a) => new Date(a.starts_at).getTime() >= now) : all.filter((a) => new Date(a.starts_at).getTime() < now);
   return (

@@ -20,6 +20,7 @@ export function Cursor() {
     if (reduce) return;
     const mq = window.matchMedia("(hover: hover) and (pointer: fine)");
     if (!mq.matches) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- syncing from a browser API after mount
     setEnabled(true);
     document.body.dataset.cursor = "custom";
     const move = (e: PointerEvent) => {

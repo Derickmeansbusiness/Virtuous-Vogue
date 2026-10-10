@@ -23,7 +23,7 @@ export function StylistNoteForm({ userId, appointmentId }: { userId: string; app
         <Field label="Link (purchases)" htmlFor="n-url"><Input id="n-url" name="url" type="url" maxLength={300} /></Field>
         <div className="flex items-end"><Checkbox name="visible" defaultChecked label="Visible to client" /></div>
       </div>
-      {state.status === "success" ? <Notice tone="success">Saved to the client's Style Passport.</Notice> : null}
+      {state.status === "success" ? <Notice tone="success">Saved to the client&rsquo;s Style Passport.</Notice> : null}
       {state.status === "error" ? <Notice tone="error">{state.message ?? "Could not save."}</Notice> : null}
       <Button type="submit" size="sm" loading={pending} disabled={pending}>Save</Button>
     </form>

@@ -37,10 +37,12 @@ export function HeroVideo({
   React.useEffect(() => {
     const mq = window.matchMedia("(max-width: 767px)");
     const update = () => setIsMobile(mq.matches);
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- syncing from a browser API after mount
     update();
     mq.addEventListener("change", update);
     const conn = (navigator as Navigator & { connection?: NetworkInformation }).connection;
     const slow = conn?.saveData || ["slow-2g", "2g", "3g"].includes(conn?.effectiveType ?? "");
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- syncing from a browser API after mount
     if (!reduce && !slow) setPlayVideo(true);
     return () => mq.removeEventListener("change", update);
   }, [reduce]);

@@ -31,7 +31,9 @@ export function CompassWizard() {
       const raw = sessionStorage.getItem(STORAGE_KEY);
       if (raw) {
         const parsed = JSON.parse(raw) as { step: number; answers: Answers };
+        // eslint-disable-next-line react-hooks/set-state-in-effect -- syncing from a browser API after mount
         setAnswers(parsed.answers ?? {});
+        // eslint-disable-next-line react-hooks/set-state-in-effect -- syncing from a browser API after mount
         setStep(Math.min(parsed.step ?? 0, questions.length - 1));
       }
     } catch {}

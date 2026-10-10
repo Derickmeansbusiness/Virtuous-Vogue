@@ -2,7 +2,7 @@ import "server-only";
 import { getAdminStore } from "@/lib/data/store";
 import { listUserStyleProfiles } from "./style-profiles";
 
-export type AppointmentRow = { id: string; service_slug: string; starts_at: string; ends_at: string; status: string; format: string; time_zone: string; manage_token: string; style_goals?: string | null; guest_name?: string; guest_email?: string; user_id?: string | null; context?: Record<string, unknown> };
+export type AppointmentRow = { id: string; service_slug: string; starts_at: string; ends_at: string; status: string; format: string; time_zone: string; manage_token: string; style_goals?: string | null; guest_name?: string; guest_email?: string; guest_phone?: string | null; user_id?: string | null; context?: Record<string, unknown> };
 export type ColourRow = { id: string; undertone: string; contrast: string; confidence: number; families: { name: string; hex: string }[]; neutrals: { name: string; hex: string }[]; accents: { name: string; hex: string }[]; metals: string; combinations: string[]; test_carefully: { name: string; hex: string }[]; notes: string; image_path: string | null; source: string; created_at: string };
 export type WardrobeRow = { id: string; category: string; subcategory?: string | null; name?: string | null; colour?: string | null; colour_hex?: string | null; pattern?: string | null; fabric?: string | null; fit?: string | null; seasons: string[]; occasions: string[]; is_favourite: boolean; archived_at?: string | null; created_at: string };
 export type OutfitRow = { id: string; name?: string | null; occasion?: string | null; reasoning?: string | null; gap_suggestions: unknown[]; scheduled_for?: string | null; created_by: string; created_at: string };

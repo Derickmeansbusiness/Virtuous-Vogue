@@ -18,6 +18,7 @@ export function ManageBooking({ token, serviceSlug, format: fmt, startsAt }: { t
   const [pick, setPick] = React.useState<string | null>(null);
   const [busy, setBusy] = React.useState(false);
   const [msg, setMsg] = React.useState<string | null>(null);
+  // eslint-disable-next-line react-hooks/purity -- 24h cut-off evaluated against the current time
   const late = (new Date(startsAt).getTime() - Date.now()) / 36e5 < 24;
 
   React.useEffect(() => {

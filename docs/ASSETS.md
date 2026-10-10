@@ -1,0 +1,107 @@
+# Visual asset library
+
+Source: Higgsfield Soul 2.0 (stills, 2k) and Seedance 2.5 (video), generated under the account owner's subscription, art-directed and individually reviewed. 38 approved assets (36 stills, 2 videos); 25 generations rejected during review.
+
+**Rights.** Generated for Virtuous Vogue. The women depicted are synthetic and are not clients; the footer and Terms say so. No third-party photography is used anywhere. The founder's photograph is deliberately absent until her approved image is supplied.
+
+**Standards applied to every asset**
+- No exposed skin beyond face, neck, hands and forearms. No suggestive posing. Fully clothed, covered shoulders.
+- No baked-in lettering, logos or captions in the source image; the Virtuous Vogue lockup is applied by the pipeline.
+- No invented clients, testimonials, press or awards.
+- Diverse African and global skin tones rendered with faithful undertones and natural texture.
+
+## Pipeline
+
+`assets-src/manifest.json` → `scripts/assets/build.mjs` → `public/assets/virtuous-vogue/<section>/<id>-<width>.jpg` + `src/lib/assets/manifest.generated.json` (dimensions, blur placeholder, dominant colour).
+
+- Sources are fetched by job id from Higgsfield (`FETCH=1`), never committed; a JPEG master is kept as a local build cache in `assets-src/masters/` (git-ignored).
+- Every published still and video frame carries the approved Virtuous Vogue lockup (`assets-src/brand-kit`), composited bottom-right at 14% of the image width (12% for video) with a soft contrast halo. Tone (ink or white) is set per asset in the manifest.
+- Outputs are JPEG at two widths (1200/1920 wide, 900/1400 portrait, 800/1200 square); `next/image` serves AVIF/WebP and exact device sizes at request time, so nothing heavier is committed. Total library: ~19 MB.
+- Video: H.264 (CRF 24/26, slow preset, faststart) and VP9 WebM at 1080p and 720p (mobile: 720p/480p), muted, loopable, with a stamped poster frame. The hero only attaches video on fast connections without data-saver or reduced-motion; the poster always renders first.
+- The GitHub Actions workflow `.github/workflows/assets.yml` rebuilds everything on demand and commits the results, so the library can be regenerated or extended from any machine.
+
+## To replace or add an asset
+
+1. Generate or photograph the new image (follow the standards above; no lettering, fully clothed).
+2. Add or edit its entry in `assets-src/manifest.json` (id, section, source URL or path, alt text, usage, `logoTone`, optional `logoCorner`/`logoScale`/`crop`).
+3. Run `FETCH=1 ONLY=<id> pnpm assets:build` locally, or dispatch the workflow with the id in the `only` input.
+4. Reference it in code with `<EditorialImage id="<id>" />`.
+
+## Inventory
+
+| id | kind | section | aspect | source size | outputs | assigned usage | job |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `hero-01-woman-before-wardrobe` | image | hero | 16:9 | 2048×1152 | 1200w, 1920w | Homepage hero concept 1 (desktop), Open Graph image | `7a80a939` |
+| `hero-01-woman-before-wardrobe-mobile` | image | mobile | 9:16 | 1152×2048 | 900w | Homepage hero concept 1 (mobile) | `beab0b52` |
+| `hero-02-style-in-motion` | image | hero | 16:9 | 2048×1152 | 1200w, 1920w | Homepage hero concept 2 (desktop), video poster fallback | `0840e029` |
+| `hero-02-style-in-motion-mobile` | image | mobile | 9:16 | 1152×2048 | 900w | Homepage hero concept 2 (mobile) | `a5ceba35` |
+| `hero-03-intentional-elegance` | image | hero | 16:9 | 2048×1152 | 1200w, 1920w | Homepage hero concept 3, About page | `98db4786` |
+| `hero-03-intentional-elegance-portrait` | image | hero | 3:4 | 1536×2048 | 900w, 1400w | Hero concept 3 portrait crop, About page, social | `62d026ea` |
+| `hero-04-column-dress` | image | hero | 16:9 | 2048×1152 | 1200w, 1920w | Services index hero, SEO landing pages | `270d1a6f` |
+| `hero-05-colonnade` | image | campaigns | 16:9 | 2048×1152 | 1200w, 1920w | Magazine index hero, Culture category | `9a30be11` |
+| `philosophy-wardrobe` | image | philosophy | 3:4 | 1536×2048 | 900w, 1400w | Homepage philosophy series | `a9826b33` |
+| `philosophy-mirror` | image | philosophy | 4:3 | 2048×1536 | 1200w, 1920w | Homepage philosophy series, About page | `355cee78` |
+| `philosophy-hands` | image | philosophy | 1:1 | 2048×2048 | 800w, 1200w | Homepage philosophy series, Wardrobe Edit | `31272d11` |
+| `philosophy-city-walk` | image | philosophy | 3:2 | 2016×1344 | 1200w, 1920w | Homepage philosophy series, Executive styling landing | `fe73e38b` |
+| `service-style-clarity` | image | services | 3:4 | 1536×2048 | 900w, 1400w | Style Clarity Consultation | `ccd82d34` |
+| `service-colour-harmony` | image | services | 3:4 | 1536×2048 | 900w, 1400w | Colour & Harmony Consultation | `c4af596c` |
+| `service-wardrobe-edit` | image | services | 3:4 | 1536×2048 | 900w, 1400w | Wardrobe Edit | `68fd9d9a` |
+| `service-occasion-styling` | image | services | 3:4 | 1536×2048 | 900w, 1400w | Occasion Styling | `4aca2ad7` |
+| `service-personal-shopping` | image | services | 3:4 | 1536×2048 | 900w, 1400w | Personal Shopping | `221e0ca3` |
+| `service-signature-private` | image | services | 3:4 | 1536×2048 | 900w, 1400w | Signature Private Styling | `0cbf22f8` |
+| `studio-compass` | image | style-studio | 4:3 | 2048×1536 | 1200w, 1920w | Style Compass card and page | `e9dd4013` |
+| `studio-colour-lens` | image | style-studio | 4:3 | 2048×1536 | 1200w, 1920w | Colour Lens card and page | `187af45a` |
+| `studio-closet-remix` | image | style-studio | 4:3 | 2048×1536 | 1200w, 1920w | Closet Remix card, Shop Your Closet section | `3440526a` |
+| `studio-passport` | image | style-studio | 4:3 | 2048×1536 | 1200w, 1920w | Style Passport promotion, account empty states | `c460d3ff` |
+| `mag-edited-rail` | image | magazine | 3:2 | 2016×1344 | 1200w, 1920w | Article: Why More Clothes Don't Always Mean More Style | `6de42225` |
+| `mag-swatch-wall` | image | magazine | 3:2 | 2016×1344 | 1200w, 1920w | Article: How to Discover Your Style Without Copying Someone Else | `e7e19c6a` |
+| `mag-rework-shirt` | image | magazine | 3:2 | 2016×1344 | 1200w, 1920w | Article: 7 Ways to Rework Pieces You Already Own | `d99c1344` |
+| `mag-planned-wardrobe` | image | magazine | 3:2 | 2016×1344 | 1200w, 1920w | Article: The Quiet Power of a Well-Planned Wardrobe | `a133c919` |
+| `mag-modest-elegance` | image | magazine | 3:2 | 2016×1344 | 1200w, 1920w | Article: What Does Modest Elegance Actually Mean? | `5c44b0c4` |
+| `mag-real-life` | image | magazine | 3:2 | 2016×1344 | 1200w, 1920w | Article: Dressing for the Life You Actually Live | `b223915a` |
+| `mag-colour-joy` | image | magazine | 3:2 | 2016×1344 | 1200w, 1920w | Article: Colour Without Rules | `5290a4ee` |
+| `mag-inspiration-desk` | image | magazine | 3:2 | 2016×1344 | 1200w, 1920w | Article: From Inspiration to Identity | `4968616b` |
+| `mag-city-douala` | image | magazine | 3:2 | 2016×1344 | 1200w, 1920w | Article: City Style Douala | `2227162e` |
+| `brand-seal-card` | image | brand | 3:2 | 2016×1344 | 1200w, 1920w | About page, policies, brand moments | `6255f7d4` |
+| `brand-newsletter-letter` | image | brand | 3:2 | 2016×1344 | 1200w, 1920w | The Virtuous Edit newsletter section and page | `61040292` |
+| `about-woman-before-wardrobe` | image | campaigns | 3:4 | 1536×2048 | 900w, 1400w | About page: The Woman Before the Wardrobe | `185cb8ea` |
+| `consultation-chairs` | image | campaigns | 16:9 | 2048×1152 | 1200w, 1920w | Homepage private consultation section, booking flow | `f10e5fc1` |
+| `empty-hanger` | image | campaigns | 16:9 | 2048×1152 | 1200w, 1920w | 404 page and empty states | `35eabd9e` |
+| `hero-video-wide` | video | motion |  | 1920×1080 | 1080p mp4+webm, 720p mp4+webm | Homepage hero (desktop, loop) | `53c9ba2a` |
+| `hero-video-mobile` | video | motion |  | 720×1280 | 720p mp4+webm, 480p mp4+webm | Homepage hero (mobile, loop, loaded only on request or fast connections) | `b2f142f0` |
+
+## Brand kit (approved, raster)
+
+`assets-src/brand-kit/` holds the approved PNG kit: website header lockups (ink/white), primary stacked wordmark (ink/white/mulberry), wordmark with tagline, two-tone and single-colour monograms, app icons and favicon. Trimmed, responsive PNG/WebP exports live in `public/assets/virtuous-vogue/brand/` and icons in `public/icons/`. The kit is raster; vector artwork should be commissioned for large-format print.
+
+## Rejection log
+
+Kept for transparency about the review standard.
+
+| job | reason |
+| --- | --- |
+| `ba346dee` | Invented lettering in the negative space |
+| `c8ba7aba` | Invented lettering |
+| `f0e905f8` | Invented lettering |
+| `c79bb72e` | Bare shoulders and fake swatch labels |
+| `527fdb1d` | Camisole does not meet modesty standard |
+| `6bf5a237` | Invented lettering |
+| `067bcadd` | Rendered as a printed spread with captions |
+| `1f470b1c` | Nudity: rejected outright |
+| `9d0cb132` | Off-shoulder drape |
+| `39ba45b8` | Monogram letters pressed into seal |
+| `51a92634` | Fake titles on spines |
+| `2fa5a0b5` | Printed text on a card |
+| `8d95f78f` | Sleeveless sweetheart neckline |
+| `73707686` | Bare shoulders |
+| `06578bfc` | Fake swatch labels |
+| `4a6ead8d` | Shirt open at the chest |
+| `b56bd838` | Rendered as printed spread |
+| `0249c486` | Rendered as printed spread |
+| `3dfe20ff` | Midriff exposed, suggestive pose |
+| `93e5388d` | Printed fan with lettering |
+| `d8ae0dde` | Wide neckline, cluttered room |
+| `6fb3a3ee` | Letters pressed into seal |
+| `35175b86` | Fake titles on spines |
+| `cc2e69e0` | Shirt open at the chest |
+| `36fb2256` | Green wall off-palette; superseded |

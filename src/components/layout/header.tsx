@@ -38,6 +38,7 @@ export function Header({
   }, []);
 
   React.useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- syncing from a browser API after mount
     setOpen(false);
   }, [pathname]);
 
