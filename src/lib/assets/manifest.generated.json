@@ -777,6 +777,54 @@
       "alt": "VV10 The Evening Psalm: a woman in a midnight-indigo column dress with a scarf panel falling from the left shoulder, on a grand concert-hall staircase.",
       "usage": "Our Collection: VV10 catalogue hero",
       "dominant": "#66432f"
+    },
+    "collection-vv02-mulberry-muse": {
+      "id": "collection-vv02-mulberry-muse",
+      "section": "collection",
+      "width": 1536,
+      "height": 2048,
+      "aspect": 0.75,
+      "widths": [
+        900,
+        1400
+      ],
+      "base": "/assets/virtuous-vogue/collection/collection-vv02-mulberry-muse",
+      "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACwAwCdASoQABUAPu1mqk4ppaOiMAgBMB2JZQCw7BrdQuWNCh6JoAD+FmbQgmBYajIPeWc4rOYu0VM0ShuIQDE0P3NAAA==",
+      "alt": "VV02 Mulberry Muse: a woman in a deep mulberry turtleneck column dress with a short attached cape, in a travertine gallery hallway.",
+      "usage": "Our Collection: VV02 catalogue hero",
+      "dominant": "#705e52"
+    },
+    "collection-vv07-linen-virtue": {
+      "id": "collection-vv07-linen-virtue",
+      "section": "collection",
+      "width": 1536,
+      "height": 2048,
+      "aspect": 0.75,
+      "widths": [
+        900,
+        1400
+      ],
+      "base": "/assets/virtuous-vogue/collection/collection-vv07-linen-virtue",
+      "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAABwAwCdASoQABUAPu1mqk4ppaOiMAgBMB2JQBOgAwuop9New1wA/r9Kt7jp53O7356NwLtqzvTbsDPZ5otMZGLRx/3hgQAA",
+      "alt": "VV07 The Linen Virtue: a woman in a long sea-glass teal linen gilet buttoned over an ivory top, with cropped wide-leg trousers, in a resort colonnade.",
+      "usage": "Our Collection: VV07 catalogue hero",
+      "dominant": "#51594e"
+    },
+    "collection-vv08-rosewood-poise": {
+      "id": "collection-vv08-rosewood-poise",
+      "section": "collection",
+      "width": 1536,
+      "height": 2048,
+      "aspect": 0.75,
+      "widths": [
+        900,
+        1400
+      ],
+      "base": "/assets/virtuous-vogue/collection/collection-vv08-rosewood-poise",
+      "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAABwAwCdASoQABUAPu1kq04ppaQiMAgBMB2JQBOmUACL2IRT9UAA/uzX7dvMqB4xXB4yjnmqi/m3y8/f+q7DjqnlfDz4PuRWAAA=",
+      "alt": "VV08 Rosewood Poise: a woman in a rosewood pleated mock-neck blouse with a slim belt and a matching pencil midi skirt, in a warm hotel interior.",
+      "usage": "Our Collection: VV08 catalogue hero",
+      "dominant": "#592f29"
     }
   },
   "videos": {
@@ -935,5 +983,5 @@
       "usage": "Homepage hero (mobile, seamless loop, loaded only on fast connections)"
     }
   },
-  "builtAt": "2026-10-10T22:11:41.564Z"
+  "builtAt": "2026-10-10T22:12:54.852Z"
 }
