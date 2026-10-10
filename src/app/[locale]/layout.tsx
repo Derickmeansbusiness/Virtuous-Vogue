@@ -33,14 +33,14 @@ export async function generateMetadata({
       type: "website",
       siteName: SITE.name,
       locale: locale === "fr" ? "fr_CM" : "en_GB",
-      images: [{ url: "/assets/virtuous-vogue/hero/hero-01-woman-before-wardrobe-1600.jpg", width: 1600, height: 900 }],
+      images: [{ url: "/assets/virtuous-vogue/hero/hero-01-woman-before-wardrobe-1600.jpg", width: 1600, height: 900 }, { url: "/icons/og-fallback.jpg", width: 1200, height: 630 }],
     },
     twitter: { card: "summary_large_image" },
     alternates: {
       canonical: "/",
       languages: { en: "/", fr: "/fr" },
     },
-    icons: { icon: "/icons/icon.svg", apple: "/icons/apple-touch-icon.png" },
+    icons: { icon: [{ url: "/icons/favicon-32.png", sizes: "32x32" }, { url: "/icons/favicon-64.png", sizes: "64x64" }], apple: "/icons/apple-touch-icon.png" },
   };
 }
 

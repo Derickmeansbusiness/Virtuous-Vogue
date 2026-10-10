@@ -28,8 +28,11 @@ const BRAND = path.join(ROOT, "public/assets/virtuous-vogue/brand");
 const FETCH = process.env.FETCH === "1";
 const ONLY = process.env.ONLY ? process.env.ONLY.split(",") : null;
 
-const WIDTHS = { wide: [640, 960, 1280, 1600, 1920, 2560], portrait: [480, 768, 1024, 1400], square: [480, 768, 1024] };
-const QUALITY = { avif: 55, webp: 76, jpeg: 80 };
+// next/image produces AVIF/WebP at request time from these JPEG sources, so the
+// committed set stays small: a mid size for cards and a large size for heroes.
+const WIDTHS = { wide: [1200, 1920], portrait: [900, 1400], square: [800, 1200] };
+const QUALITY = { jpeg: 82 };
+const even = (n) => Math.round(n / 2) * 2;
 
 const manifest = JSON.parse(readFileSync(MANIFEST, "utf8"));
 mkdirSync(MASTERS, { recursive: true });
@@ -41,9 +44,10 @@ async function download(url, dest) {
   await pipeline(Readable.fromWeb(res.body), createWriteStream(dest));
 }
 
+// Approved kit: header lockup (monogram + wordmark). "ivory" tone maps to the white kit file.
 async function lockupBuffer(tone, width) {
-  const svg = path.join(BRAND, `vv-lockup-${tone}.svg`);
-  return sharp(svg, { density: 300 }).resize({ width }).png().toBuffer();
+  const file = tone === "ivory" || tone === "white" ? "header-white-1600.png" : "header-ink-1600.png";
+  return sharp(path.join(BRAND, file)).resize({ width }).png().toBuffer();
 }
 
 /** Composite the brand lockup into the chosen corner with a soft shadow for legibility. */
@@ -55,10 +59,12 @@ async function stamp(image, meta, entry) {
   const margin = Math.round(meta.width * 0.028);
   const logo = await lockupBuffer(tone, w);
   const lm = await sharp(logo).metadata();
-  const shadow = await sharp(logo)
-    .ensureAlpha()
-    .tint(tone === "ivory" ? "#191816" : "#F4EFE7")
-    .blur(3)
+  // Soft contrasting halo so the mark stays legible on any photograph.
+  const haloColour = tone === "ivory" || tone === "white" ? { r: 25, g: 24, b: 22 } : { r: 251, g: 249, b: 245 };
+  const alpha = await sharp(logo).ensureAlpha().extractChannel("alpha").blur(4).toBuffer();
+  const shadow = await sharp({ create: { width: lm.width, height: lm.height, channels: 3, background: haloColour } })
+    .joinChannel(alpha)
+    .png()
     .toBuffer();
   const pos = {
     "bottom-right": { left: meta.width - lm.width - margin, top: meta.height - lm.height - margin },
@@ -87,20 +93,15 @@ async function buildImage(entry) {
   const ratio = meta.width / meta.height;
   const kind = ratio > 1.2 ? "wide" : ratio < 0.85 ? "portrait" : "square";
   const widths = WIDTHS[kind].filter((w) => w <= meta.width);
+  if (widths.length === 0) widths.push(even(meta.width));
   const dir = path.join(OUT, entry.section);
   mkdirSync(dir, { recursive: true });
 
   // Stamp once at master resolution, then derive every size from it so the mark scales consistently.
   const stamped = await (await stamp(sharp(master), meta, entry)).toBuffer();
-  const variants = [];
   for (const w of widths) {
-    for (const fmt of ["avif", "webp", "jpeg"]) {
-      const file = path.join(dir, `${entry.id}-${w}.${fmt === "jpeg" ? "jpg" : fmt}`);
-      let p = sharp(stamped).resize({ width: w, withoutEnlargement: true });
-      p = fmt === "avif" ? p.avif({ quality: QUALITY.avif, effort: 4 }) : fmt === "webp" ? p.webp({ quality: QUALITY.webp }) : p.jpeg({ quality: QUALITY.jpeg, mozjpeg: true, progressive: true });
-      await p.toFile(file);
-      variants.push({ width: w, format: fmt, src: `/assets/virtuous-vogue/${entry.section}/${path.basename(file)}` });
-    }
+    const file = path.join(dir, `${entry.id}-${w}.jpg`);
+    await sharp(stamped).resize({ width: w, withoutEnlargement: true }).jpeg({ quality: QUALITY.jpeg, mozjpeg: true, progressive: true }).toFile(file);
   }
   const blur = await sharp(master).resize(16).blur(2).webp({ quality: 40 }).toBuffer();
   return {
@@ -128,9 +129,10 @@ async function buildVideo(entry) {
   const logoPng = path.join(MASTERS, `${entry.id}.logo.png`);
   const scale = entry.logoScale ?? 0.12;
   const targetW = entry.width ?? 1920;
-  await sharp(path.join(BRAND, `vv-lockup-${tone}.svg`), { density: 300 }).resize({ width: Math.round(targetW * scale) }).png().toFile(logoPng);
+  const lockFile = tone === "ivory" || tone === "white" ? "header-white-1600.png" : "header-ink-1600.png";
+  await sharp(path.join(BRAND, lockFile)).resize({ width: Math.round(targetW * scale) }).png().toFile(logoPng);
   const outputs = [];
-  const variants = entry.variants ?? [{ suffix: "1080", width: targetW, crf: 24 }, { suffix: "720", width: Math.round(targetW * 0.667), crf: 26 }];
+  const variants = (entry.variants ?? [{ suffix: "1080", width: targetW, crf: 24 }, { suffix: "720", width: targetW * 0.667, crf: 26 }]).map((v) => ({ ...v, width: even(v.width) }));
   for (const v of variants) {
     const mp4 = path.join(dir, `${entry.id}-${v.suffix}.mp4`);
     const webm = path.join(dir, `${entry.id}-${v.suffix}.webm`);

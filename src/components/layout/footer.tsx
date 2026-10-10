@@ -54,10 +54,11 @@ export async function Footer() {
     <footer className="bg-ink text-ivory">
       <div className="container-vv grid gap-14 py-20 lg:grid-cols-12 lg:gap-10">
         <div className="lg:col-span-5">
-          <div className="flex items-center gap-3">
-            <Monogram className="h-10" />
-            <Wordmark stacked descriptor className="text-ivory [&_.eyebrow]:text-ivory/60" />
+          <div className="flex items-end gap-6">
+            <Monogram tone="twotone" height={56} />
+            <Wordmark tone="white" width={200} />
           </div>
+          <p className="eyebrow mt-4 text-ivory/50">Fashion Styling &amp; Lifestyle Consultancy</p>
           <p className="mt-10 font-display text-2xl italic leading-tight text-ivory/90 md:text-3xl">
             {t("newsletterTitle")}
           </p>

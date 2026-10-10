@@ -42,3 +42,6 @@ next-env.d.ts
 
 # local dev data store
 .data/
+
+# asset build cache (sources are re-fetchable via assets-src/manifest.json job ids)
+assets-src/masters/

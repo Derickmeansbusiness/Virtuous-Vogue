@@ -1,50 +1,84 @@
+import Image from "next/image";
 import { cn } from "@/lib/utils/cn";
+import brand from "../../../public/assets/virtuous-vogue/brand/brand.json";
 
 /**
- * VV monogram, following the identity proposal: two overlapping V forms,
- * the left in Signature Mulberry and the right in Satin.
+ * Approved Virtuous Vogue marks (PNG kit in assets-src/brand-kit, exported
+ * trimmed and responsive to public/assets/virtuous-vogue/brand). The kit is
+ * raster, so marks are rendered with next/image at explicit sizes.
  */
-export function Monogram({ className, title = "Virtuous Vogue" }: { className?: string; title?: string }) {
+type MarkId = keyof typeof brand.marks;
+const BASE = "/assets/virtuous-vogue/brand";
+
+function mark(id: MarkId) {
+  const m = brand.marks[id];
+  const w = m.widths[m.widths.length - 1];
+  return { src: `${BASE}/${id}-${w}.png`, aspect: m.aspect };
+}
+
+export function Monogram({
+  className,
+  tone = "twotone",
+  title = "Virtuous Vogue",
+  height = 32,
+}: {
+  className?: string;
+  tone?: "twotone" | "ink" | "white" | "mulberry";
+  title?: string;
+  height?: number;
+}) {
+  const { src, aspect } = mark(`monogram-${tone}` as MarkId);
   return (
-    <svg viewBox="0 0 120 100" className={cn("h-8 w-auto", className)} role="img" aria-label={title}>
-      <title>{title}</title>
-      <defs>
-        <linearGradient id="vv-satin" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#D7C3B1" />
-          <stop offset="1" stopColor="#A88D72" />
-        </linearGradient>
-      </defs>
-      <path d="M6 8h18l22 60 8-22-14-38h18l20 60L96 8h18L84 92H66L56 64 46 92H28z" fill="#672F40" />
-      <path d="M58 8h18l20 60L114 8h-18L78 68z" fill="url(#vv-satin)" />
-    </svg>
+    <Image
+      src={src}
+      alt={title}
+      width={Math.round(height * aspect)}
+      height={height}
+      className={cn("h-auto w-auto select-none", className)}
+      style={{ height, width: "auto" }}
+      priority
+    />
   );
 }
 
+/** Horizontal header lockup: monogram + wordmark, as supplied in the kit. */
+export function HeaderLockup({ className, tone = "ink", height = 34 }: { className?: string; tone?: "ink" | "white"; height?: number }) {
+  const { src, aspect } = mark(`header-${tone}` as MarkId);
+  return (
+    <Image
+      src={src}
+      alt="Virtuous Vogue"
+      width={Math.round(height * aspect)}
+      height={height}
+      className={cn("select-none", className)}
+      style={{ height, width: "auto" }}
+      priority
+    />
+  );
+}
+
+/** Stacked primary wordmark, optionally with the approved tagline treatment. */
 export function Wordmark({
   className,
-  stacked = false,
-  descriptor = false,
+  tone = "ink",
+  tagline = false,
+  width = 220,
 }: {
   className?: string;
-  stacked?: boolean;
-  descriptor?: boolean;
+  tone?: "ink" | "white" | "mulberry";
+  tagline?: boolean;
+  width?: number;
 }) {
+  const id = (tagline ? "wordmark-tagline-ink" : `wordmark-${tone}`) as MarkId;
+  const { src, aspect } = mark(id);
   return (
-    <span className={cn("inline-flex flex-col leading-none", className)}>
-      <span
-        className={cn(
-          "font-display uppercase tracking-[0.02em]",
-          stacked ? "flex flex-col text-[1.9rem] leading-[0.86]" : "text-xl",
-        )}
-      >
-        <span>Virtuous</span>
-        {stacked ? <span className="self-end">Vogue</span> : <span> Vogue</span>}
-      </span>
-      {descriptor ? (
-        <span className="mt-2 eyebrow text-[0.56rem] text-ink-muted">
-          Fashion Styling &amp; Lifestyle Consultancy
-        </span>
-      ) : null}
-    </span>
+    <Image
+      src={src}
+      alt={tagline ? "Virtuous Vogue — Virtue Never Goes Out of Style." : "Virtuous Vogue"}
+      width={width}
+      height={Math.round(width / aspect)}
+      className={cn("select-none", className)}
+      style={{ width, height: "auto" }}
+    />
   );
 }

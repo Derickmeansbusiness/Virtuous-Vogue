@@ -37,7 +37,7 @@ jobs:
         run: |
           git config user.name "virtuous-vogue-assets[bot]"
           git config user.email "assets@users.noreply.github.com"
-          git add public/assets src/lib/assets/manifest.generated.json assets-src/masters
+          git add public/assets src/lib/assets/manifest.generated.json
           git diff --cached --quiet && echo "No asset changes" && exit 0
           git commit -m "chore(assets): build optimised visual assets"
           git push origin HEAD:${{ github.ref_name }}

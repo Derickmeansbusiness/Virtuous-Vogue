@@ -1,0 +1,105 @@
+{
+  "source": "assets-src/brand-kit (approved PNG kit)",
+  "marks": {
+    "header-ink": {
+      "width": 3386,
+      "height": 769,
+      "aspect": 4.4031,
+      "widths": [
+        400,
+        800,
+        1600
+      ]
+    },
+    "header-white": {
+      "width": 3386,
+      "height": 769,
+      "aspect": 4.4031,
+      "widths": [
+        400,
+        800,
+        1600
+      ]
+    },
+    "wordmark-ink": {
+      "width": 3180,
+      "height": 1101,
+      "aspect": 2.8883,
+      "widths": [
+        400,
+        800,
+        1600
+      ]
+    },
+    "wordmark-white": {
+      "width": 3180,
+      "height": 1101,
+      "aspect": 2.8883,
+      "widths": [
+        400,
+        800,
+        1600
+      ]
+    },
+    "wordmark-mulberry": {
+      "width": 3180,
+      "height": 1101,
+      "aspect": 2.8883,
+      "widths": [
+        400,
+        800,
+        1600
+      ]
+    },
+    "wordmark-tagline-ink": {
+      "width": 2775,
+      "height": 1205,
+      "aspect": 2.3029,
+      "widths": [
+        600,
+        1200
+      ]
+    },
+    "monogram-twotone": {
+      "width": 2124,
+      "height": 1840,
+      "aspect": 1.1543,
+      "widths": [
+        96,
+        192,
+        384,
+        768
+      ]
+    },
+    "monogram-ink": {
+      "width": 2124,
+      "height": 1840,
+      "aspect": 1.1543,
+      "widths": [
+        96,
+        192,
+        384
+      ]
+    },
+    "monogram-white": {
+      "width": 2124,
+      "height": 1840,
+      "aspect": 1.1543,
+      "widths": [
+        96,
+        192,
+        384
+      ]
+    },
+    "monogram-mulberry": {
+      "width": 2124,
+      "height": 1840,
+      "aspect": 1.1543,
+      "widths": [
+        96,
+        192,
+        384
+      ]
+    }
+  }
+}

@@ -20,7 +20,7 @@ export function organizationSchema() {
     url: SITE.url,
     slogan: SITE.tagline,
     description: "Personal styling, wardrobe intelligence and curated fashion for women who dress with intention. Douala, Cameroon and virtual.",
-    logo: `${SITE.url}/assets/virtuous-vogue/brand/vv-lockup-ink.svg`,
+    logo: `${SITE.url}/assets/virtuous-vogue/brand/wordmark-ink-800.png`,
     address: { "@type": "PostalAddress", addressLocality: SITE.city, addressCountry: "CM" },
     areaServed: ["Douala", "Cameroon", "Worldwide (virtual)"],
     sameAs: [SITE.instagram, SITE.tiktok].filter(Boolean),
