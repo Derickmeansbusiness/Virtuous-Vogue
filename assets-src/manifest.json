@@ -116,6 +116,69 @@
       "logoTone": "ivory"
     },
     {
+      "id": "hero-06-staircase",
+      "kind": "image",
+      "section": "hero",
+      "status": "approved",
+      "job": "7e09c085-5278-4a3d-88ec-b2943c39fb42",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_211207_7e09c085-5278-4a3d-88ec-b2943c39fb42.png",
+      "aspect": "16:9",
+      "usage": "Homepage hero (desktop poster and reduced-motion still), Open Graph candidate",
+      "alt": "A woman in a floor-length dark mulberry silk gown with a long train stands on a grand stone staircase, lit by a single shaft of golden light.",
+      "logoTone": "ink"
+    },
+    {
+      "id": "hero-06-staircase-mobile",
+      "kind": "image",
+      "section": "mobile",
+      "status": "approved",
+      "job": "1d93661f-2f8b-4eaa-aa90-d0bb29669ff3",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_211602_1d93661f-2f8b-4eaa-aa90-d0bb29669ff3.png",
+      "aspect": "9:16",
+      "usage": "Homepage hero (mobile poster and reduced-motion still)",
+      "alt": "A woman in a floor-length deep mulberry silk gown descends a pale stone staircase through a shaft of warm light.",
+      "logoTone": "ink",
+      "logoScale": 0.3
+    },
+    {
+      "id": "hero-07-trench-monolith",
+      "kind": "image",
+      "section": "hero",
+      "status": "approved",
+      "job": "96f6b456-69d4-465c-9f94-ed35a04c3ec0",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_211209_96f6b456-69d4-465c-9f94-ed35a04c3ec0.png",
+      "aspect": "16:9",
+      "usage": "Alternate hero, Private Consultation section, Signature service",
+      "alt": "A woman in a belted satin-beige silk trench coat walks across a vast dark polished floor toward a tall window of warm light, her reflection beneath her.",
+      "logoTone": "ivory"
+    },
+    {
+      "id": "hero-07-trench-monolith-mobile",
+      "kind": "image",
+      "section": "mobile",
+      "status": "approved",
+      "job": "532e44d9-1acd-4f29-9680-d26644c4fd76",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_211207_532e44d9-1acd-4f29-9680-d26644c4fd76.png",
+      "aspect": "9:16",
+      "usage": "Alternate hero (mobile)",
+      "alt": "A woman in a belted satin-beige trench coat stands on a dark mirrored floor between tall columns and a wash of warm light.",
+      "logoTone": "ivory",
+      "logoScale": 0.3
+    },
+    {
+      "id": "hero-08-rooftop-cape-mobile",
+      "kind": "image",
+      "section": "mobile",
+      "status": "approved",
+      "job": "ad6721ad-c7e3-45e8-afa1-d5dfd54b863c",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_211208_ad6721ad-c7e3-45e8-afa1-d5dfd54b863c.png",
+      "aspect": "9:16",
+      "usage": "Alternate hero (mobile), social",
+      "alt": "A woman in a sculptural ivory cape coat and column dress stands on a rooftop terrace at sunset, the cape lifted by the wind above a hazy coastal city.",
+      "logoTone": "ink",
+      "logoScale": 0.3
+    },
+    {
       "id": "philosophy-wardrobe",
       "kind": "image",
       "section": "philosophy",
@@ -603,6 +666,30 @@
     {
       "job": "36fb2256-0042-4d59-b40d-7e36851f68c9",
       "reason": "Green wall off-palette; superseded"
+    },
+    {
+      "job": "fe0fd1a7-56c0-46c8-803f-f2862b530aa9",
+      "reason": "Rooftop cape concept: invented lettering in the sky"
+    },
+    {
+      "job": "42bad687-e8dc-4a17-b256-2dd487bf21e4",
+      "reason": "Rooftop cape concept, second pass: invented lettering in the sky"
+    },
+    {
+      "job": "59128041-417d-4a14-8adf-8a91031d0922",
+      "reason": "Headwrap portrait: sleeveless gown, shoulders uncovered"
+    },
+    {
+      "job": "b7c5fca8-9d18-4d37-aea4-c2ae650d1393",
+      "reason": "Headwrap portrait (mobile): sleeveless halter gown and invented lettering"
+    },
+    {
+      "job": "23d3f7d1-29e9-4622-8b7b-9ba1ded5473a",
+      "reason": "Staircase (mobile), first pass: invented lettering at the bottom edge"
+    },
+    {
+      "job": "41b40b47-8b16-45b1-b65b-0f9d8a28f3a9",
+      "reason": "Staircase (desktop), second pass: faint lettering at the bottom edge and flatter light than the approved frame"
     }
   ]
 }
