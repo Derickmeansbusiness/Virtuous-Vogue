@@ -544,5 +544,345 @@
     "selectedService": "Selected",
     "change": "Change",
     "reference": "Reference"
+  },
+  "magazine": {
+    "eyebrow": "Virtuous Vogue Magazine",
+    "title": "The Magazine",
+    "issue": "Issue",
+    "featured": "Featured story",
+    "editorsPick": "Editor's selection",
+    "latest": "Latest",
+    "popular": "Most read",
+    "categories": "Categories",
+    "related": "Related stories",
+    "byAuthor": "Stories",
+    "search": "Search",
+    "searchPlaceholder": "Search the magazine",
+    "resultsFor": "Results for “{q}”",
+    "noResults": "Nothing found for that.",
+    "noResultsBody": "Try a different word, or browse the categories.",
+    "emptyCategory": "No stories here yet.",
+    "emptyCategoryBody": "This category is waiting for its first story.",
+    "share": "Share",
+    "copied": "Link copied",
+    "save": "Save",
+    "saved": "Saved",
+    "newsletterTitle": "A considered note on style, wardrobe and intentional living.",
+    "types": {
+      "how-to": "How To",
+      "the-edit": "The Edit",
+      "style-notes": "Style Notes",
+      "wardrobe-intelligence": "Wardrobe Intelligence",
+      "conversations": "Conversations",
+      "vv-profiles": "VV Profiles",
+      "occasion-guide": "Occasion Guide",
+      "colour-notes": "Colour Notes",
+      "the-virtuous-woman": "The Virtuous Woman",
+      "city-style": "City Style"
+    },
+    "callouts": {
+      "closetEyebrow": "Shop your closet",
+      "closetTitle": "You may already own this outfit.",
+      "bookEyebrow": "The related consultation",
+      "bookTitle": "Talk it through with a stylist",
+      "learn": "What it includes",
+      "editTitle": "Join The Virtuous Edit"
+    }
+  },
+  "about": {
+    "philosophy": {
+      "eyebrow": "The Philosophy",
+      "line1": "Inside out,",
+      "line2": "not outside in.",
+      "body": "Virtuous Vogue is a styling house built on one conviction: identity informs style. Style does not determine identity."
+    },
+    "woman": {
+      "eyebrow": "The Woman Before the Wardrobe",
+      "title": "Before any garment, there is a woman with a life.",
+      "p1": "Every consultation begins there: the rooms she walks into, the work she does, the family she returns to, the way she wants to be met. Her worth is not decided by her outfit, her shape, her budget, a label or her ability to follow a trend.",
+      "p2": "Once that is clear, the clothes become easy. They become a language she already speaks, rather than a test she keeps failing."
+    },
+    "why": {
+      "eyebrow": "Why Virtuous Vogue Exists",
+      "title": "Because too much fashion advice makes women feel smaller.",
+      "p1": "The industry sells inadequacy and calls it aspiration. Fix your flaws, hide your problem areas, buy the thing that will finally make you enough. Virtuous Vogue was founded to do the opposite: to help women see what is already working and build from it.",
+      "p2": "Fashion is the language. Identity is the message. Style is how you communicate it. Our role is to help you speak it fluently, in your own accent.",
+      "quote1": "You give what you wear relevance.",
+      "quote2": "What you wear does not give you relevance."
+    },
+    "selling": {
+      "eyebrow": "Styling Before Selling",
+      "title": "We shop your closet first.",
+      "p1": "Closet Remix, our wardrobe technology, is built to compose outfits from what you already own. It only names a purchase when a true gap exists, and it labels it optional. Our curated Edit will arrive later, and it will follow the same rule.",
+      "p2": "Styling is the business. Selling, when it comes, is in service of it."
+    },
+    "founder": {
+      "eyebrow": "Meet the Founder",
+      "title": "A stylist who would rather listen first.",
+      "p1": "Virtuous Vogue was founded in Douala by a stylist who spent years watching capable, accomplished women apologise for their wardrobes. The studio exists so they can stop.",
+      "p2": "Her approach is quiet, specific and practical: understand the woman, read the wardrobe honestly, and make the next morning easier than the last one.",
+      "quote1": "I'm not here to tell you to dress like me.",
+      "quote2": "I'm here to help you discover how to dress like you.",
+      "photoAlt": "The founder of Virtuous Vogue",
+      "photoPending": "The founder's approved photograph will appear here. No generated portrait is used in its place."
+    },
+    "approach": {
+      "eyebrow": "Our Approach",
+      "title": "Discover, understand, experiment, trust, consult, return.",
+      "items": [
+        {
+          "title": "Discover",
+          "body": "The Style Compass puts words to the direction already living in your choices."
+        },
+        {
+          "title": "Understand",
+          "body": "Colour, silhouette and wardrobe are read on your terms, never a template's."
+        },
+        {
+          "title": "Experiment",
+          "body": "Closet Remix lets you try before anyone asks you to buy."
+        },
+        {
+          "title": "Consult",
+          "body": "A stylist interprets what the technology can only suggest, and the relationship continues in your Style Passport."
+        }
+      ]
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Write to us.",
+    "body": "Questions about a consultation, a collaboration, or simply where to begin. We read everything and reply personally.",
+    "studio": "Studio",
+    "virtualNote": "virtual consultations worldwide",
+    "hours": "Hours",
+    "hoursValue": "Tuesday to Saturday, 09:00 to 17:00 (Douala)",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone / WhatsApp",
+    "topic": "Topic",
+    "topics": {
+      "consultation": "Choosing a consultation",
+      "styling": "A styling question",
+      "press": "Press",
+      "collaboration": "Collaboration",
+      "other": "Something else"
+    },
+    "message": "Message",
+    "consent": "I agree to be contacted about my enquiry.",
+    "send": "Send",
+    "sentTitle": "Thank you.",
+    "sentBody": "Your message is with us. We reply within two working days.",
+    "invalid": "Please enter a valid email address.",
+    "error": "We couldn't send that just now. Please try again."
+  },
+  "edit": {
+    "eyebrow": "The Edit",
+    "title": "Curated fashion, after styling.",
+    "intro": "A small, considered selection chosen by the stylist: everyday foundations, statement finds, modest essentials, denim, tailoring, accessories and pre-loved pieces.",
+    "principle": "Styling comes before selling.",
+    "categories": [
+      "Everyday Foundations",
+      "Statement Finds",
+      "Modest Essentials",
+      "Denim",
+      "Tailoring",
+      "Accessories",
+      "Pre-Loved Finds"
+    ],
+    "soonTitle": "The Edit opens later.",
+    "soonBody": "We're building the styling relationship first. When The Edit launches, every piece in it will have earned its place by solving a real wardrobe gap.",
+    "notify": "Be told when it opens"
+  },
+  "legal": {
+    "privacy": {
+      "eyebrow": "Policies",
+      "title": "Privacy Policy",
+      "updated": "Last updated: October 2026",
+      "sections": [
+        {
+          "title": "What we collect",
+          "body": [
+            "Account details (name, email, phone), the answers you give in the Style Studio, wardrobe photographs you upload, consultation notes and booking and payment records.",
+            "We collect only what a styling relationship needs, and we tell you why each time we ask."
+          ]
+        },
+        {
+          "title": "Photographs",
+          "body": [
+            "Wardrobe and Colour Lens photographs are processed to suggest outfits or preview colour. They are stored privately under your account, encrypted in transit and at rest, and never used to train models.",
+            "You can delete any image, or your whole account, at any time from Privacy settings. Colour Lens images are discarded immediately unless you choose to save them."
+          ]
+        },
+        {
+          "title": "Payments",
+          "body": [
+            "Payments are processed by licensed gateways (Mobile Money and card providers). We store the transaction reference and status, never your card number or Mobile Money PIN."
+          ]
+        },
+        {
+          "title": "Your rights",
+          "body": [
+            "You can download your data, correct it, or delete it from your Style Passport. Write to us for anything the dashboard does not cover."
+          ]
+        },
+        {
+          "title": "Analytics",
+          "body": [
+            "We use privacy-conscious analytics without cookies that track you across sites. Conversion events are counted, not people."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "eyebrow": "Policies",
+      "title": "Terms of Service",
+      "updated": "Last updated: October 2026",
+      "sections": [
+        {
+          "title": "Consultations",
+          "body": [
+            "A booking is confirmed when the deposit is received or when the stylist confirms a request. Pricing is shared before any payment is taken.",
+            "You may reschedule or cancel up to 24 hours before a session. Deposits for later cancellations may be retained."
+          ]
+        },
+        {
+          "title": "Style Studio",
+          "body": [
+            "Style Compass, Colour Lens and Closet Remix are assistive tools. Their outputs are directions and previews, not professional verdicts, and the stylist's interpretation always takes precedence."
+          ]
+        },
+        {
+          "title": "Content",
+          "body": [
+            "Magazine stories and campaign imagery are the property of Virtuous Vogue. Campaign imagery is art-directed and generated for the brand; the women depicted are not clients."
+          ]
+        },
+        {
+          "title": "Liability",
+          "body": [
+            "We do our best work every time. We are not liable for purchases you make on your own initiative or for third-party services such as payment gateways and calendars."
+          ]
+        }
+      ]
+    }
+  },
+  "account": {
+    "eyebrow": "Style Passport",
+    "nav": {
+      "overview": "Overview",
+      "passport": "Style Passport",
+      "wardrobe": "Wardrobe",
+      "looks": "Looks",
+      "bookings": "Bookings",
+      "saves": "Magazine saves",
+      "notes": "Stylist notes",
+      "settings": "Account",
+      "privacy": "Privacy"
+    },
+    "overview": {
+      "title": "Welcome back, {name}.",
+      "body": "Your living style profile. Everything you discover, save and book stays here.",
+      "openPassport": "Open my Style Passport",
+      "noCompass": "You haven't taken the Style Compass yet. It takes two to four minutes.",
+      "manage": "Manage booking",
+      "noBooking": "No upcoming consultation.",
+      "recommendations": "Stylist recommendations",
+      "emptyTitle": "Your passport is empty, for now.",
+      "emptyBody": "Start with the Style Compass, preview your colours, or upload a few pieces to Closet Remix."
+    },
+    "passport": {
+      "title": "Style Passport",
+      "body": "Your style direction, words, palette, silhouettes and priorities, updated by you and by the stylist after each consultation.",
+      "compass": "Style Compass",
+      "viewResult": "View full result",
+      "noCompass": "No Style Compass result yet.",
+      "palette": "My palette",
+      "stylistPalette": "Set by the stylist",
+      "noColour": "No colour reading yet.",
+      "lookbooks": "Lookbooks"
+    },
+    "wardrobe": {
+      "title": "Wardrobe",
+      "body": "{count} pieces in your digital wardrobe.",
+      "emptyTitle": "No pieces yet.",
+      "emptyBody": "Upload a few pieces in Closet Remix and they'll appear here.",
+      "all": "All",
+      "favourite": "Favourite",
+      "archive": "Archive"
+    },
+    "looks": {
+      "title": "Looks",
+      "body": "Outfits you saved from Closet Remix and looks the stylist built for you.",
+      "scheduled": "Scheduled",
+      "byStylist": "By the stylist",
+      "untitled": "Untitled look",
+      "emptyTitle": "No saved looks yet.",
+      "emptyBody": "Remix your closet and heart the looks you want to keep."
+    },
+    "bookings": {
+      "title": "Bookings",
+      "upcoming": "Upcoming",
+      "past": "Past",
+      "noUpcoming": "No upcoming consultation.",
+      "status": {
+        "pending_payment": "Awaiting payment",
+        "confirmed": "Confirmed",
+        "rescheduled": "Rescheduled",
+        "cancelled": "Cancelled",
+        "completed": "Completed",
+        "no_show": "Missed"
+      }
+    },
+    "saves": {
+      "title": "Saved stories",
+      "emptyTitle": "Nothing saved yet.",
+      "emptyBody": "Save stories from the magazine to read them here."
+    },
+    "notes": {
+      "title": "Stylist notes",
+      "body": "Notes, principles, recommendations and lookbooks added after your consultations.",
+      "notes": "Notes",
+      "recommendations": "Recommended purchases",
+      "lookbook": "Lookbook",
+      "fillsGap": "Fills a real gap",
+      "optional": "Optional",
+      "view": "View",
+      "emptyTitle": "Nothing here yet.",
+      "emptyBody": "After your first consultation the stylist's notes and lookbooks will appear here.",
+      "kinds": {
+        "note": "Note",
+        "principle": "Style principle",
+        "priority": "Wardrobe priority",
+        "colour": "Colour guidance",
+        "recommendation": "Recommendation",
+        "outfit": "Outfit"
+      }
+    },
+    "settings": {
+      "title": "Account",
+      "email": "Email",
+      "name": "Name",
+      "phone": "Phone",
+      "city": "City",
+      "marketing": "Send me The Virtuous Edit and studio news.",
+      "saved": "Saved."
+    },
+    "privacy": {
+      "title": "Privacy",
+      "body": "Your photos and data are yours. These controls do exactly what they say.",
+      "exportTitle": "Download my data",
+      "exportBody": "A JSON file with your profile, Style Studio results, wardrobe, looks, bookings and notes.",
+      "export": "Download",
+      "imagesTitle": "Delete my images",
+      "imagesBody": "Removes every wardrobe and Colour Lens photo from storage. Your wardrobe items stay as text.",
+      "deleteImages": "Delete all images",
+      "imagesDone": "Deleted {count} images.",
+      "deleteTitle": "Delete my account",
+      "deleteBody": "Permanently deletes your profile, Style Studio results, wardrobe, looks and notes. Booking and payment records are kept anonymised for accounting. Type DELETE to confirm.",
+      "typeDelete": "Type DELETE",
+      "deleteAccount": "Delete my account",
+      "training": "Your images are never used to train models."
+    }
   }
 }
