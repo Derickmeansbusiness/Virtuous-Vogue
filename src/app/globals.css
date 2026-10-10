@@ -49,7 +49,7 @@
 :root {
   color-scheme: light;
   --vv-header-h: 4.25rem;
-  --vv-bottom-nav-h: 5.25rem; /* floating dock (4rem) + its 0.75rem lift + breathing room */
+  --vv-bottom-nav-h: 4.5rem; /* bottom dock (4rem) + breathing room */
 }
 
 html {

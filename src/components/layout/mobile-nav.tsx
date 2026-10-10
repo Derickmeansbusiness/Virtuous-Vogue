@@ -6,7 +6,7 @@ import { Home, Compass, Shirt, BookOpen, User, LogIn } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 
 /**
- * Floating glass dock on phones and tablets, for every visitor: Home, Studio,
+ * Glass dock pinned to the bottom edge on phones and tablets, for every visitor: Home, Studio,
  * Collection, Magazine and either the Style Passport or Sign in. Booking lives
  * in the Concierge button so the dock stays about moving around the house.
  */
@@ -25,10 +25,9 @@ export function MobileNav({ signedIn = false }: { signedIn?: boolean }) {
   return (
     <nav
       aria-label="Mobile primary"
-      className="fixed inset-x-3 z-30 lg:hidden"
-      style={{ bottom: "calc(env(safe-area-inset-bottom) + 0.75rem)" }}
+      className="fixed inset-x-0 bottom-0 z-30 lg:hidden"
     >
-      <ul className="glass-dock grid h-16 grid-cols-5 rounded-full px-1">
+      <ul className="glass-dock grid h-16 grid-cols-5 rounded-t-2xl border-b-0 px-1 pb-[env(safe-area-inset-bottom)] [height:calc(4rem+env(safe-area-inset-bottom))]">
         {items.map(({ href, label, icon: Icon, match }) => {
           const active = match(pathname);
           return (
