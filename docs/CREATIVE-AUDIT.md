@@ -4,11 +4,11 @@ Reviewed as a senior fashion creative director after integration, against the br
 
 ## Does the website feel like one cohesive fashion brand?
 
-Yes. Every photograph was generated from one art-direction sheet: natural skin, tailored or fluid silhouettes, limewashed and travertine interiors, warm late light, mulberry used as the single recurring signature. The approved VV lockup is on every published image and both hero videos, and the identity kit (header lockup, stacked wordmark, two-tone monogram, mulberry app icon) is used verbatim in the header, footer, auth pages, PWA icons and favicon.
+Yes. Every photograph was generated from one art-direction sheet: natural skin, tailored or fluid silhouettes, limewashed and travertine interiors, warm late light, mulberry used as the single recurring signature. The homepage opens on the staircase campaign: a floor-length mulberry gown in a single shaft of light, filmed as a slow push-in that loops without a cut. The approved VV lockup is on every published image and all hero videos, and the identity kit (header lockup, stacked wordmark, two-tone monogram, mulberry app icon) is used verbatim in the header, footer, auth pages, PWA icons and favicon.
 
 ## Are the women depicted authentic and diverse?
 
-Deep, medium-deep and medium skin tones appear across hero, services, magazine and studio imagery; hair ranges from natural crops and afros to braids, locs and sleek buns. Expressions are calm or genuinely joyful, never performed. Two generations with exaggerated or off-palette results were rejected.
+Deep, medium-deep and medium skin tones appear across hero, services, magazine and studio imagery; hair ranges from natural crops and afros to braids, locs and sleek buns. Expressions are calm or genuinely joyful, never performed. Two generations with exaggerated or off-palette results were rejected. In the second hero round, every frame with baked-in lettering or an uncovered shoulder was rejected and logged, including two otherwise spectacular rooftop frames.
 
 ## Does the visual direction communicate intentional elegance rather than status anxiety?
 
@@ -48,7 +48,7 @@ Dedicated 9:16 hero stills and a 9:16 hero video, a bottom navigation for signed
 
 ## Performance notes
 
-- Committed imagery totals ~19 MB for 36 stills and 2 videos; `next/image` serves AVIF/WebP at device size with blur placeholders, and the hero poster is the only `priority` image above the fold.
+- Committed imagery totals ~24 MB for 41 stills and 4 videos (two retired); `next/image` serves AVIF/WebP at device size with blur placeholders, and the hero poster is the only `priority` image above the fold.
 - Hero video is attached client-side only when `navigator.connection` reports a fast connection without data-saver and reduced-motion is off; mobile uses a 720p/480p vertical clip. No autoplay download happens on 2G/3G.
 - Fonts are self-hosted via `next/font` (Bodoni Moda, Manrope, Source Serif 4) with `display: swap`.
 - Marketing routes are statically rendered; motion components are small client islands.
