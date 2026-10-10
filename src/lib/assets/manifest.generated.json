@@ -573,6 +573,83 @@
       "alt": "A single wooden hanger on a brass rail against a plain ivory wall.",
       "usage": "404 page and empty states",
       "dominant": "#99866d"
+    },
+    "hero-06-staircase": {
+      "id": "hero-06-staircase",
+      "section": "hero",
+      "width": 2048,
+      "height": 1152,
+      "aspect": 1.7778,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/hero/hero-06-staircase",
+      "blurDataURL": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAQCdASoQAAkAA4BaJZACdAD0gyMXAAD+9pPl5iem4bW5GOdYikcjYNkIwAAA",
+      "alt": "A woman in a floor-length dark mulberry silk gown with a long train stands on a grand stone staircase, lit by a single shaft of golden light.",
+      "usage": "Homepage hero (desktop poster and reduced-motion still), Open Graph candidate",
+      "dominant": "#42311d"
+    },
+    "hero-06-staircase-mobile": {
+      "id": "hero-06-staircase-mobile",
+      "section": "mobile",
+      "width": 1152,
+      "height": 2048,
+      "aspect": 0.5625,
+      "widths": [
+        900
+      ],
+      "base": "/assets/virtuous-vogue/mobile/hero-06-staircase-mobile",
+      "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQBACdASoQABwAPu1iqk2ppaQiMAgBMB2JQBOgDSwrYhqPkSueqy5eeAD+/VUSHnEkwey9G1HfhfdkTHKXdkDVCwhf/yiPohp6Z6uQD08TgAAA",
+      "alt": "A woman in a floor-length deep mulberry silk gown descends a pale stone staircase through a shaft of warm light.",
+      "usage": "Homepage hero (mobile poster and reduced-motion still)",
+      "dominant": "#7d6043"
+    },
+    "hero-07-trench-monolith": {
+      "id": "hero-07-trench-monolith",
+      "section": "hero",
+      "width": 2048,
+      "height": 1152,
+      "aspect": 1.7778,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/hero/hero-07-trench-monolith",
+      "blurDataURL": "data:image/webp;base64,UklGRjAAAABXRUJQVlA4ICQAAABQAQCdASoQAAkAA4BaJZwABDOAAP7ywUEv3g1KqaIgKsw+KAA=",
+      "alt": "A woman in a belted satin-beige silk trench coat walks across a vast dark polished floor toward a tall window of warm light, her reflection beneath her.",
+      "usage": "Alternate hero, Private Consultation section, Signature service",
+      "dominant": "#24191d"
+    },
+    "hero-07-trench-monolith-mobile": {
+      "id": "hero-07-trench-monolith-mobile",
+      "section": "mobile",
+      "width": 1152,
+      "height": 2048,
+      "aspect": 0.5625,
+      "widths": [
+        900
+      ],
+      "base": "/assets/virtuous-vogue/mobile/hero-07-trench-monolith-mobile",
+      "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAwCdASoQABwAPu1iqU2ppaOiMAgBMB2JZQAASorV85dn2h32oAD+7PvuzaKdkXAnmP808PXQhrGwvmUOQXA3hM/h86ru6AA=",
+      "alt": "A woman in a belted satin-beige trench coat stands on a dark mirrored floor between tall columns and a wash of warm light.",
+      "usage": "Alternate hero (mobile)",
+      "dominant": "#1e1a19"
+    },
+    "hero-08-rooftop-cape-mobile": {
+      "id": "hero-08-rooftop-cape-mobile",
+      "section": "mobile",
+      "width": 1152,
+      "height": 2048,
+      "aspect": 0.5625,
+      "widths": [
+        900
+      ],
+      "base": "/assets/virtuous-vogue/mobile/hero-08-rooftop-cape-mobile",
+      "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAABQBACdASoQABwAPu1kq04ppaQiMAgBMB2JYgCdMoRwACVx8GLxagxndW4AAP5xAt/N4OA7nrhhyHpaVPJKa5eTmkv3txNHpgom0oosab2SBUqgAAA=",
+      "alt": "A woman in a sculptural ivory cape coat and column dress stands on a rooftop terrace at sunset, the cape lifted by the wind above a hazy coastal city.",
+      "usage": "Alternate hero (mobile), social",
+      "dominant": "#51392b"
     }
   },
   "videos": {
@@ -654,5 +731,5 @@
       "usage": "Homepage hero (mobile, loop, loaded only on request or fast connections)"
     }
   },
-  "builtAt": "2026-10-10T19:44:43.517Z"
+  "builtAt": "2026-10-10T21:20:34.934Z"
 }
