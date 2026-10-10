@@ -719,6 +719,45 @@
       "alt": "VV10 The Evening Psalm: a woman in a midnight-indigo column dress with a scarf panel falling from the left shoulder, on a grand concert-hall staircase.",
       "logoTone": "ivory",
       "logoScale": 0.2
+    },
+    {
+      "id": "collection-vv02-mulberry-muse",
+      "kind": "image",
+      "section": "collection",
+      "status": "approved",
+      "job": "8f1c0825-28f4-48ac-a779-a8c899e53cba",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_221007_8f1c0825-28f4-48ac-a779-a8c899e53cba.png",
+      "aspect": "3:4",
+      "usage": "Our Collection: VV02 catalogue hero",
+      "alt": "VV02 Mulberry Muse: a woman in a deep mulberry turtleneck column dress with a short attached cape, in a travertine gallery hallway.",
+      "logoTone": "ink",
+      "logoScale": 0.2
+    },
+    {
+      "id": "collection-vv07-linen-virtue",
+      "kind": "image",
+      "section": "collection",
+      "status": "approved",
+      "job": "04df1b59-2cbf-4e8c-9c45-39ee8b7726b1",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_221007_04df1b59-2cbf-4e8c-9c45-39ee8b7726b1.png",
+      "aspect": "3:4",
+      "usage": "Our Collection: VV07 catalogue hero",
+      "alt": "VV07 The Linen Virtue: a woman in a long sea-glass teal linen gilet buttoned over an ivory top, with cropped wide-leg trousers, in a resort colonnade.",
+      "logoTone": "ink",
+      "logoScale": 0.2
+    },
+    {
+      "id": "collection-vv08-rosewood-poise",
+      "kind": "image",
+      "section": "collection",
+      "status": "approved",
+      "job": "34daafae-90b1-462e-96cb-ef01c2b25a97",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_221007_34daafae-90b1-462e-96cb-ef01c2b25a97.png",
+      "aspect": "3:4",
+      "usage": "Our Collection: VV08 catalogue hero",
+      "alt": "VV08 Rosewood Poise: a woman in a rosewood pleated mock-neck blouse with a slim belt and a matching pencil midi skirt, in a warm hotel interior.",
+      "logoTone": "ivory",
+      "logoScale": 0.2
     }
   ],
   "rejected": [
