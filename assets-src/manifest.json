@@ -1,0 +1,608 @@
+{
+  "$schema": "./manifest.schema.json",
+  "generator": "Higgsfield Soul 2.0 (stills, 2k) and Seedance 2.5 (video), art-directed and reviewed for Virtuous Vogue",
+  "rights": "Generated for Virtuous Vogue under the account owner's Higgsfield subscription. The women depicted are synthetic and are not clients. No third-party photography is used.",
+  "standards": [
+    "No exposed skin beyond face, neck, hands and forearms. No suggestive posing. Fully clothed, covered shoulders.",
+    "No baked-in lettering, logos or captions in the source image; the Virtuous Vogue lockup is applied by the pipeline.",
+    "No invented clients, testimonials, press or awards.",
+    "Diverse African and global skin tones rendered with faithful undertones and natural texture."
+  ],
+  "brand": {
+    "stamp": "vv-lockup",
+    "defaultCorner": "bottom-right",
+    "defaultScale": 0.14
+  },
+  "assets": [
+    {
+      "id": "hero-01-woman-before-wardrobe",
+      "kind": "image",
+      "section": "hero",
+      "status": "approved",
+      "job": "7a80a939-b442-4924-86d0-eb5c7ea609fc",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_182309_7a80a939-b442-4924-86d0-eb5c7ea609fc.png",
+      "aspect": "16:9",
+      "usage": "Homepage hero concept 1 (desktop), Open Graph image",
+      "alt": "An elegant woman in an ivory blazer and wide oatmeal trousers stands at the right of a sunlit travertine atrium.",
+      "logoTone": "ink",
+      "logoCorner": "bottom-left"
+    },
+    {
+      "id": "hero-01-woman-before-wardrobe-mobile",
+      "kind": "image",
+      "section": "mobile",
+      "status": "approved",
+      "job": "beab0b52-f65c-43af-a8be-b146fbbf3519",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_181725_beab0b52-f65c-43af-a8be-b146fbbf3519.png",
+      "aspect": "9:16",
+      "usage": "Homepage hero concept 1 (mobile)",
+      "alt": "A woman in an ivory blazer and oatmeal trousers stands beside a tall window in a travertine room.",
+      "logoTone": "ink",
+      "logoScale": 0.3
+    },
+    {
+      "id": "hero-02-style-in-motion",
+      "kind": "image",
+      "section": "hero",
+      "status": "approved",
+      "job": "0840e029-778a-4cc9-8c97-889efd932708",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_181726_0840e029-778a-4cc9-8c97-889efd932708.png",
+      "aspect": "16:9",
+      "usage": "Homepage hero concept 2 (desktop), video poster fallback",
+      "alt": "A woman in a cream top and deep mulberry silk skirt turns through a sunlit gallery corridor.",
+      "logoTone": "ink"
+    },
+    {
+      "id": "hero-02-style-in-motion-mobile",
+      "kind": "image",
+      "section": "mobile",
+      "status": "approved",
+      "job": "a5ceba35-fadf-42c3-8b1f-c63679c5b46e",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_182309_a5ceba35-fadf-42c3-8b1f-c63679c5b46e.png",
+      "aspect": "9:16",
+      "usage": "Homepage hero concept 2 (mobile)",
+      "alt": "A woman in a cream top and deep mulberry skirt walks toward the camera along a warm corridor.",
+      "logoTone": "ink",
+      "logoScale": 0.3
+    },
+    {
+      "id": "hero-03-intentional-elegance",
+      "kind": "image",
+      "section": "hero",
+      "status": "approved",
+      "job": "98db4786-6186-477d-acef-8ec817069918",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_181723_98db4786-6186-477d-acef-8ec817069918.png",
+      "aspect": "16:9",
+      "usage": "Homepage hero concept 3, About page",
+      "alt": "A woman in a sand linen shirt dress with a silk scarf looks calmly into the lens beside a window.",
+      "logoTone": "ivory"
+    },
+    {
+      "id": "hero-03-intentional-elegance-portrait",
+      "kind": "image",
+      "section": "hero",
+      "status": "approved",
+      "job": "62d026ea-a10a-4b87-a47f-1550684c3030",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_181725_62d026ea-a10a-4b87-a47f-1550684c3030.png",
+      "aspect": "3:4",
+      "usage": "Hero concept 3 portrait crop, About page, social",
+      "alt": "Portrait of a woman in a sand linen shirt dress and silk scarf beside a window.",
+      "logoTone": "ivory",
+      "logoScale": 0.2
+    },
+    {
+      "id": "hero-04-column-dress",
+      "kind": "image",
+      "section": "hero",
+      "status": "approved",
+      "job": "270d1a6f-0e7f-466a-9612-72a3b4ea76f7",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_182307_270d1a6f-0e7f-466a-9612-72a3b4ea76f7.png",
+      "aspect": "16:9",
+      "usage": "Services index hero, SEO landing pages",
+      "alt": "A woman in a floor-length ivory column dress stands in profile at the edge of a vast limewashed room.",
+      "logoTone": "ink",
+      "logoCorner": "bottom-left"
+    },
+    {
+      "id": "hero-05-colonnade",
+      "kind": "image",
+      "section": "campaigns",
+      "status": "approved",
+      "job": "9a30be11-a6f9-42e3-8020-83ce119cdf60",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_181724_9a30be11-a6f9-42e3-8020-83ce119cdf60.png",
+      "aspect": "16:9",
+      "usage": "Magazine index hero, Culture category",
+      "alt": "Two women walk together along a sunlit stone colonnade, laughing.",
+      "logoTone": "ivory"
+    },
+    {
+      "id": "philosophy-wardrobe",
+      "kind": "image",
+      "section": "philosophy",
+      "status": "approved",
+      "job": "a9826b33-c6b2-4871-be4d-fe193106d362",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_181723_a9826b33-c6b2-4871-be4d-fe193106d362.png",
+      "aspect": "3:4",
+      "usage": "Homepage philosophy series",
+      "alt": "A woman thoughtfully touches the sleeve of a camel coat in an edited oak wardrobe.",
+      "logoTone": "ivory",
+      "logoScale": 0.2
+    },
+    {
+      "id": "philosophy-mirror",
+      "kind": "image",
+      "section": "philosophy",
+      "status": "approved",
+      "job": "355cee78-d498-4c4d-93a1-9e7033eeec47",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_181725_355cee78-d498-4c4d-93a1-9e7033eeec47.png",
+      "aspect": "4:3",
+      "usage": "Homepage philosophy series, About page",
+      "alt": "A woman adjusts the collar of a camel coat in front of an arched mirror.",
+      "logoTone": "ink"
+    },
+    {
+      "id": "philosophy-hands",
+      "kind": "image",
+      "section": "philosophy",
+      "status": "approved",
+      "job": "31272d11-3fdf-40fa-9c10-1ee6d1eb35c5",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_181724_31272d11-3fdf-40fa-9c10-1ee6d1eb35c5.png",
+      "aspect": "1:1",
+      "usage": "Homepage philosophy series, Wardrobe Edit",
+      "alt": "Hands rest on folded ivory knitwear and deep mulberry silk.",
+      "logoTone": "ivory",
+      "logoScale": 0.2
+    },
+    {
+      "id": "philosophy-city-walk",
+      "kind": "image",
+      "section": "philosophy",
+      "status": "approved",
+      "job": "fe73e38b-c627-4ba8-bdd4-e0810d6e413f",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_181726_fe73e38b-c627-4ba8-bdd4-e0810d6e413f.png",
+      "aspect": "3:2",
+      "usage": "Homepage philosophy series, Executive styling landing",
+      "alt": "A woman in a forest-green trouser suit walks into a modern office building in Douala.",
+      "logoTone": "ivory"
+    },
+    {
+      "id": "service-style-clarity",
+      "kind": "image",
+      "section": "services",
+      "status": "approved",
+      "job": "ccd82d34-d72b-4f9f-9dcf-9ffddc1b46b5",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_182308_ccd82d34-d72b-4f9f-9dcf-9ffddc1b46b5.png",
+      "aspect": "3:4",
+      "usage": "Style Clarity Consultation",
+      "alt": "Two women talk across an oak table with a notebook and folded fabric swatches.",
+      "logoTone": "ink",
+      "logoScale": 0.2
+    },
+    {
+      "id": "service-colour-harmony",
+      "kind": "image",
+      "section": "services",
+      "status": "approved",
+      "job": "c4af596c-b406-4667-9ba9-f0a5fbc1e278",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_184118_c4af596c-b406-4667-9ba9-f0a5fbc1e278.png",
+      "aspect": "3:4",
+      "usage": "Colour & Harmony Consultation",
+      "alt": "A stylist drapes a terracotta silk swatch beneath the chin of a woman in an ivory top.",
+      "logoTone": "ink",
+      "logoScale": 0.2
+    },
+    {
+      "id": "service-wardrobe-edit",
+      "kind": "image",
+      "section": "services",
+      "status": "approved",
+      "job": "68fd9d9a-ce4e-44d9-8387-83f5d9be54d6",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_182310_68fd9d9a-ce4e-44d9-8387-83f5d9be54d6.png",
+      "aspect": "3:4",
+      "usage": "Wardrobe Edit",
+      "alt": "A woman compares a navy blazer and a camel blazer on hangers in front of a brass rail.",
+      "logoTone": "ink",
+      "logoScale": 0.2
+    },
+    {
+      "id": "service-occasion-styling",
+      "kind": "image",
+      "section": "services",
+      "status": "approved",
+      "job": "4aca2ad7-6059-40e0-ad65-34a158b9ff63",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_182308_4aca2ad7-6059-40e0-ad65-34a158b9ff63.png",
+      "aspect": "3:4",
+      "usage": "Occasion Styling",
+      "alt": "A woman in a long-sleeved deep mulberry satin gown walks along a warm hotel corridor at dusk.",
+      "logoTone": "ivory",
+      "logoScale": 0.2
+    },
+    {
+      "id": "service-personal-shopping",
+      "kind": "image",
+      "section": "services",
+      "status": "approved",
+      "job": "221e0ca3-af0b-4455-af2e-555c468155b7",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_182307_221e0ca3-af0b-4455-af2e-555c468155b7.png",
+      "aspect": "3:4",
+      "usage": "Personal Shopping",
+      "alt": "A woman in a cream trench coat considers a sage silk dress on a brass rail in a calm boutique.",
+      "logoTone": "ink",
+      "logoScale": 0.2
+    },
+    {
+      "id": "service-signature-private",
+      "kind": "image",
+      "section": "services",
+      "status": "approved",
+      "job": "0cbf22f8-3275-47b7-ae45-5a5165dd80fc",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_182308_0cbf22f8-3275-47b7-ae45-5a5165dd80fc.png",
+      "aspect": "3:4",
+      "usage": "Signature Private Styling",
+      "alt": "A stylist adjusts the shoulder of an ivory jacket on a woman in a black midi dress before a tall mirror.",
+      "logoTone": "ivory",
+      "logoScale": 0.2
+    },
+    {
+      "id": "studio-compass",
+      "kind": "image",
+      "section": "style-studio",
+      "status": "approved",
+      "job": "e9dd4013-a6ce-4562-9460-cb1e6b648086",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_182310_e9dd4013-a6ce-4562-9460-cb1e6b648086.png",
+      "aspect": "4:3",
+      "usage": "Style Compass card and page",
+      "alt": "Three outfits on brass hangers against an ivory wall: a soft knit set, an ivory silk dress with a mulberry belt, and a charcoal blazer with stone trousers.",
+      "logoTone": "ink"
+    },
+    {
+      "id": "studio-colour-lens",
+      "kind": "image",
+      "section": "style-studio",
+      "status": "approved",
+      "job": "187af45a-4143-4175-886d-f526f946f282",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_184657_187af45a-4143-4175-886d-f526f946f282.png",
+      "aspect": "4:3",
+      "usage": "Colour Lens card and page",
+      "alt": "A woman in an ivory knit holds a bundle of satin ribbons in terracotta, olive, mulberry, teal and camel near her collarbone.",
+      "logoTone": "ivory"
+    },
+    {
+      "id": "studio-closet-remix",
+      "kind": "image",
+      "section": "style-studio",
+      "status": "approved",
+      "job": "3440526a-e747-46d0-a8d0-50d1b190a41f",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_182309_3440526a-e747-46d0-a8d0-50d1b190a41f.png",
+      "aspect": "4:3",
+      "usage": "Closet Remix card, Shop Your Closet section",
+      "alt": "A wardrobe laid flat on ivory linen: camel coat, white shirt, navy knit, black trousers, a wool skirt, loafers, flats and a tan bag.",
+      "logoTone": "ink"
+    },
+    {
+      "id": "studio-passport",
+      "kind": "image",
+      "section": "style-studio",
+      "status": "approved",
+      "job": "c460d3ff-cd4e-429a-b15d-d29265f5b955",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_184119_c460d3ff-cd4e-429a-b15d-d29265f5b955.png",
+      "aspect": "4:3",
+      "usage": "Style Passport promotion, account empty states",
+      "alt": "Hands hold open a linen folio of fabric swatch cards and blank cream cards.",
+      "logoTone": "ink"
+    },
+    {
+      "id": "mag-edited-rail",
+      "kind": "image",
+      "section": "magazine",
+      "status": "approved",
+      "job": "6de42225-e1f9-4c70-a4c9-2df1a54b00c3",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_185615_6de42225-e1f9-4c70-a4c9-2df1a54b00c3.png",
+      "aspect": "3:2",
+      "usage": "Article: Why More Clothes Don't Always Mean More Style",
+      "alt": "A woman stands beside a small brass rail holding eight carefully chosen garments.",
+      "logoTone": "ink"
+    },
+    {
+      "id": "mag-swatch-wall",
+      "kind": "image",
+      "section": "magazine",
+      "status": "approved",
+      "job": "e7e19c6a-e8b0-401e-b049-53ef14999a02",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_184604_e7e19c6a-e8b0-401e-b049-53ef14999a02.png",
+      "aspect": "3:2",
+      "usage": "Article: How to Discover Your Style Without Copying Someone Else",
+      "alt": "A woman in a black turtleneck considers fabric swatches pinned to a sunlit studio wall.",
+      "logoTone": "ink"
+    },
+    {
+      "id": "mag-rework-shirt",
+      "kind": "image",
+      "section": "magazine",
+      "status": "approved",
+      "job": "d99c1344-95c9-43e8-9d33-78877121dbc6",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_185615_d99c1344-95c9-43e8-9d33-78877121dbc6.png",
+      "aspect": "3:2",
+      "usage": "Article: 7 Ways to Rework Pieces You Already Own",
+      "alt": "A woman in a buttoned white shirt and mulberry skirt adjusts a silk scarf beside a window.",
+      "logoTone": "ivory"
+    },
+    {
+      "id": "mag-planned-wardrobe",
+      "kind": "image",
+      "section": "magazine",
+      "status": "approved",
+      "job": "a133c919-f456-46d9-bb36-49b89f0f09d3",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_182643_a133c919-f456-46d9-bb36-49b89f0f09d3.png",
+      "aspect": "3:2",
+      "usage": "Article: The Quiet Power of a Well-Planned Wardrobe",
+      "alt": "An open oak wardrobe with garments arranged from ivory to black in morning light.",
+      "logoTone": "ivory"
+    },
+    {
+      "id": "mag-modest-elegance",
+      "kind": "image",
+      "section": "magazine",
+      "status": "approved",
+      "job": "5c44b0c4-e85b-45ea-9a6b-9fa69bdded3b",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_182643_5c44b0c4-e85b-45ea-9a6b-9fa69bdded3b.png",
+      "aspect": "3:2",
+      "usage": "Article: What Does Modest Elegance Actually Mean?",
+      "alt": "A woman in a long-sleeved olive dress walks along a sunlit street lined with palms.",
+      "logoTone": "ivory"
+    },
+    {
+      "id": "mag-real-life",
+      "kind": "image",
+      "section": "magazine",
+      "status": "approved",
+      "job": "b223915a-f416-4cef-adeb-92f5fe88a6a5",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_182645_b223915a-f416-4cef-adeb-92f5fe88a6a5.png",
+      "aspect": "3:2",
+      "usage": "Article: Dressing for the Life You Actually Live",
+      "alt": "A woman in relaxed linen laughs at a shaded café table in Douala.",
+      "logoTone": "ivory"
+    },
+    {
+      "id": "mag-colour-joy",
+      "kind": "image",
+      "section": "magazine",
+      "status": "approved",
+      "job": "5290a4ee-2b5a-40a0-81fc-ee7820204fdf",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_184117_5290a4ee-2b5a-40a0-81fc-ee7820204fdf.png",
+      "aspect": "3:2",
+      "usage": "Article: Colour Without Rules",
+      "alt": "A laughing woman in an ivory top with a cobalt and terracotta silk scarf.",
+      "logoTone": "ivory"
+    },
+    {
+      "id": "mag-inspiration-desk",
+      "kind": "image",
+      "section": "magazine",
+      "status": "approved",
+      "job": "4968616b-d59e-442c-b8a6-40b8b5dd8237",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_182644_4968616b-d59e-442c-b8a6-40b8b5dd8237.png",
+      "aspect": "3:2",
+      "usage": "Article: From Inspiration to Identity",
+      "alt": "Hands arrange a linen notebook and fabric swatches on an oak desk.",
+      "logoTone": "ink"
+    },
+    {
+      "id": "mag-city-douala",
+      "kind": "image",
+      "section": "magazine",
+      "status": "approved",
+      "job": "2227162e-a8b8-4d98-ad78-998e0ecb42ac",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_184119_2227162e-a8b8-4d98-ad78-998e0ecb42ac.png",
+      "aspect": "3:2",
+      "usage": "Article: City Style Douala",
+      "alt": "A woman in an ivory coat and camel trousers stands on a balcony above Douala's rooftops.",
+      "logoTone": "ivory"
+    },
+    {
+      "id": "brand-seal-card",
+      "kind": "image",
+      "section": "brand",
+      "status": "approved",
+      "job": "6255f7d4-781e-465b-8ba9-a31a16a7c3f5",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_184658_6255f7d4-781e-465b-8ba9-a31a16a7c3f5.png",
+      "aspect": "3:2",
+      "usage": "About page, policies, brand moments",
+      "alt": "A blank ivory card sealed with a drop of mulberry wax, tied with satin ribbon on marble.",
+      "logoTone": "ink"
+    },
+    {
+      "id": "brand-newsletter-letter",
+      "kind": "image",
+      "section": "brand",
+      "status": "approved",
+      "job": "61040292-2526-41a8-a416-bcfe33a74835",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_182858_61040292-2526-41a8-a416-bcfe33a74835.png",
+      "aspect": "3:2",
+      "usage": "The Virtuous Edit newsletter section and page",
+      "alt": "A folded sheet of ivory paper tied with a mulberry ribbon on cream linen.",
+      "logoTone": "ink"
+    },
+    {
+      "id": "about-woman-before-wardrobe",
+      "kind": "image",
+      "section": "campaigns",
+      "status": "approved",
+      "job": "185cb8ea-41e4-442e-8458-2520d9e509f6",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_184658_185cb8ea-41e4-442e-8458-2520d9e509f6.png",
+      "aspect": "3:4",
+      "usage": "About page: The Woman Before the Wardrobe",
+      "alt": "A woman in a plain cream dress sits on a wooden chair in an empty ivory room beside a window.",
+      "logoTone": "ink",
+      "logoScale": 0.2
+    },
+    {
+      "id": "consultation-chairs",
+      "kind": "image",
+      "section": "campaigns",
+      "status": "approved",
+      "job": "f10e5fc1-96ea-4c9f-9d23-94fec2da7de7",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_182858_f10e5fc1-96ea-4c9f-9d23-94fec2da7de7.png",
+      "aspect": "16:9",
+      "usage": "Homepage private consultation section, booking flow",
+      "alt": "Two ivory bouclé chairs angled toward each other beside a tall window in a calm atelier.",
+      "logoTone": "ink"
+    },
+    {
+      "id": "empty-hanger",
+      "kind": "image",
+      "section": "campaigns",
+      "status": "approved",
+      "job": "35eabd9e-d44c-42c7-8ff6-2a59a3aa442f",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_182858_35eabd9e-d44c-42c7-8ff6-2a59a3aa442f.png",
+      "aspect": "16:9",
+      "usage": "404 page and empty states",
+      "alt": "A single wooden hanger on a brass rail against a plain ivory wall.",
+      "logoTone": "ink"
+    },
+    {
+      "id": "hero-video-wide",
+      "kind": "video",
+      "section": "motion",
+      "status": "approved",
+      "job": "53c9ba2a-39bf-46d6-8de8-4036e8d17065",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_183739_53c9ba2a-39bf-46d6-8de8-4036e8d17065.mp4",
+      "width": 1920,
+      "height": 1080,
+      "duration": 10,
+      "usage": "Homepage hero (desktop, loop)",
+      "alt": "A woman in a cream top and deep mulberry skirt turns slowly through a sunlit gallery corridor.",
+      "logoTone": "ink",
+      "logoScale": 0.12
+    },
+    {
+      "id": "hero-video-mobile",
+      "kind": "video",
+      "section": "motion",
+      "status": "approved",
+      "job": "b2f142f0-217e-4e8b-babf-646a5e0d9ebe",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_182856_b2f142f0-217e-4e8b-babf-646a5e0d9ebe.mp4",
+      "width": 720,
+      "height": 1280,
+      "duration": 8,
+      "usage": "Homepage hero (mobile, loop, loaded only on request or fast connections)",
+      "alt": "A woman in a cream top and deep mulberry skirt walks toward the camera along a warm corridor.",
+      "logoTone": "ink",
+      "logoScale": 0.3,
+      "variants": [
+        {
+          "suffix": "720",
+          "width": 720,
+          "crf": 26
+        },
+        {
+          "suffix": "480",
+          "width": 480,
+          "crf": 28
+        }
+      ]
+    }
+  ],
+  "rejected": [
+    {
+      "job": "ba346dee-a042-4ee7-af5c-31251bf54808",
+      "reason": "Invented lettering in the negative space"
+    },
+    {
+      "job": "c8ba7aba-e4ec-4fa6-8517-8e16717f60a8",
+      "reason": "Invented lettering"
+    },
+    {
+      "job": "f0e905f8-efed-4c5d-a77c-28108d27c997",
+      "reason": "Invented lettering"
+    },
+    {
+      "job": "c79bb72e-a3cf-43f2-a4d8-c91d5e7b86a9",
+      "reason": "Bare shoulders and fake swatch labels"
+    },
+    {
+      "job": "527fdb1d-2ed1-4c20-b558-695d4e434eec",
+      "reason": "Camisole does not meet modesty standard"
+    },
+    {
+      "job": "6bf5a237-67ba-4f6a-9b8d-252ba2bed55a",
+      "reason": "Invented lettering"
+    },
+    {
+      "job": "067bcadd-4cf7-4753-bd0e-d4352a8f9c69",
+      "reason": "Rendered as a printed spread with captions"
+    },
+    {
+      "job": "1f470b1c-3148-45bd-947e-911599e68bc8",
+      "reason": "Nudity: rejected outright"
+    },
+    {
+      "job": "9d0cb132-3a5f-4bc4-8424-7e2ad31c2338",
+      "reason": "Off-shoulder drape"
+    },
+    {
+      "job": "39ba45b8-ecd6-4bf3-a639-fb6c84698ace",
+      "reason": "Monogram letters pressed into seal"
+    },
+    {
+      "job": "51a92634-9833-4a68-86fb-970b9d7e8a19",
+      "reason": "Fake titles on spines"
+    },
+    {
+      "job": "2fa5a0b5-0da3-4d24-84c0-31d9257504df",
+      "reason": "Printed text on a card"
+    },
+    {
+      "job": "8d95f78f-64af-473e-ab92-8448162b46ca",
+      "reason": "Sleeveless sweetheart neckline"
+    },
+    {
+      "job": "73707686-f4a1-4eea-b089-ccebeba25e41",
+      "reason": "Bare shoulders"
+    },
+    {
+      "job": "06578bfc-aed9-4dd0-ba4c-d3d41d7a4857",
+      "reason": "Fake swatch labels"
+    },
+    {
+      "job": "4a6ead8d-90ad-4e15-8262-dba1124cad6d",
+      "reason": "Shirt open at the chest"
+    },
+    {
+      "job": "b56bd838-3fc0-4c56-a8ec-8eb9c71ab740",
+      "reason": "Rendered as printed spread"
+    },
+    {
+      "job": "0249c486-355b-4352-b0fa-64e662625f1b",
+      "reason": "Rendered as printed spread"
+    },
+    {
+      "job": "3dfe20ff-858a-46c5-ab30-abb2e3a550ca",
+      "reason": "Midriff exposed, suggestive pose"
+    },
+    {
+      "job": "93e5388d-bb66-4c05-9fba-7aa969290747",
+      "reason": "Printed fan with lettering"
+    },
+    {
+      "job": "d8ae0dde-0e2b-48f0-88e9-411592044d8f",
+      "reason": "Wide neckline, cluttered room"
+    },
+    {
+      "job": "6fb3a3ee-8552-41c2-8097-8833917f20a1",
+      "reason": "Letters pressed into seal"
+    },
+    {
+      "job": "35175b86-d020-4a4e-99c6-8a3616b05c43",
+      "reason": "Fake titles on spines"
+    },
+    {
+      "job": "cc2e69e0-6a1e-4cae-a514-f04717862541",
+      "reason": "Shirt open at the chest"
+    },
+    {
+      "job": "36fb2256-0042-4d59-b40d-7e36851f68c9",
+      "reason": "Green wall off-palette; superseded"
+    }
+  ]
+}

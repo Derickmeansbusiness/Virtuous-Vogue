@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100">
+  <defs><linearGradient id="satin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D7C3B1"/><stop offset="1" stop-color="#A88D72"/></linearGradient></defs>
+  <path d="M6 8h18l22 60 8-22-14-38h18l20 60L96 8h18L84 92H66L56 64 46 92H28z" fill="#672F40"/>
+  <path d="M58 8h18l20 60L114 8h-18L78 68z" fill="url(#satin)"/></svg>

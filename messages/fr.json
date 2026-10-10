@@ -1,0 +1,246 @@
+{
+  "common": {
+    "brand": "Virtuous Vogue",
+    "descriptor": "Conseil en style et art de vivre",
+    "tagline": "Virtue Never Goes Out of Style.",
+    "statement": "Le style doit vous exprimer. Il ne doit pas vous définir.",
+    "skipToContent": "Aller au contenu",
+    "menu": "Menu",
+    "close": "Fermer",
+    "loading": "Chargement",
+    "saving": "Enregistrement",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "continue": "Continuer",
+    "back": "Retour",
+    "next": "Suivant",
+    "submit": "Envoyer",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "remove": "Retirer",
+    "done": "Terminé",
+    "optional": "facultatif",
+    "required": "obligatoire",
+    "readMore": "Lire la suite",
+    "viewAll": "Tout voir",
+    "learnMore": "En savoir plus",
+    "comingSoon": "Bientôt",
+    "demoBadge": "Contenu de démonstration",
+    "minutesRead": "{minutes} min de lecture",
+    "language": "Langue",
+    "english": "Anglais",
+    "french": "Français",
+    "errorTitle": "Quelque chose ne s'est pas passé comme prévu.",
+    "errorBody": "Réessayez dans un instant. Si cela persiste, écrivez-nous et nous réglerons cela.",
+    "retry": "Réessayer",
+    "notFoundTitle": "Cette page n'est pas dans la garde-robe.",
+    "notFoundBody": "Le lien a peut-être changé, ou il n'a jamais existé. Allons quelque part d'utile.",
+    "backHome": "Retour à l'accueil",
+    "whatsapp": "WhatsApp",
+    "signIn": "Se connecter",
+    "signOut": "Se déconnecter",
+    "createAccount": "Créer un compte",
+    "myPassport": "Ouvrir mon Style Passport"
+  },
+  "cta": {
+    "discover": "Découvrir votre style",
+    "book": "Réserver une consultation",
+    "enterStudio": "Entrer dans le Style Studio",
+    "tryRemix": "Essayer Closet Remix",
+    "remixMyCloset": "Remixer ma garde-robe",
+    "exploreColours": "Explorer mes couleurs",
+    "enterMagazine": "Entrer dans le Magazine",
+    "readMagazine": "Lire le Magazine",
+    "ask": "Demander à Virtuous Vogue",
+    "passport": "Ouvrir mon Style Passport",
+    "bookPrivate": "Réserver une consultation privée",
+    "refinePalette": "Affiner votre palette avec une styliste",
+    "subscribe": "S'abonner",
+    "explore": "Explorer"
+  },
+  "nav": {
+    "home": "Accueil",
+    "studio": "Style Studio",
+    "services": "Consultations",
+    "magazine": "Magazine",
+    "about": "À propos",
+    "contact": "Contact",
+    "edit": "The Edit",
+    "wardrobe": "Garde-robe",
+    "profile": "Profil",
+    "account": "Mon Passport",
+    "admin": "Cockpit",
+    "book": "Réserver",
+    "newsletter": "Newsletter",
+    "policies": "Politiques",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "compass": "Style Compass",
+    "colourLens": "Colour Lens",
+    "closetRemix": "Closet Remix",
+    "stylingDouala": "Styliste personnelle à Douala",
+    "styling": "Stylisme"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "studio": "Style Studio",
+    "connect": "Nous suivre",
+    "legal": "Politiques",
+    "newsletterTitle": "The Virtuous Edit",
+    "newsletterBody": "Une note réfléchie sur le style, la garde-robe et une vie intentionnelle. Sans bruit, sans pression.",
+    "emailLabel": "Adresse e-mail",
+    "emailPlaceholder": "vous@exemple.com",
+    "rights": "© {year} Virtuous Vogue. Douala, Cameroun.",
+    "madeFor": "Stylisme personnel à Douala et en ligne, partout dans le monde.",
+    "imageNote": "Les images de campagne sont dirigées artistiquement et générées pour Virtuous Vogue. Les femmes représentées ne sont pas des clientes."
+  },
+  "whatsapp": {
+    "generic": "J'ai une question sur Virtuous Vogue.",
+    "service": "J'ai une question sur {service}.",
+    "chooseConsultation": "J'ai besoin d'aide pour choisir une consultation.",
+    "outfit": "Virtuous Vogue peut-elle m'aider avec cette tenue ?",
+    "article": "J'ai lu « {title} » et j'aimerais parler de ma propre garde-robe.",
+    "notConfigured": "WhatsApp n'est pas encore connecté. Utilisez le formulaire de contact.",
+    "label": "Écrire sur WhatsApp"
+  },
+  "home": {
+    "hero": {
+      "line1": "Le style doit vous exprimer.",
+      "line2": "Il ne doit pas vous définir.",
+      "support": "Stylisme personnel, intelligence de garde-robe et mode sélectionnée pour les femmes qui veulent s'habiller avec intention.",
+      "scroll": "Défiler",
+      "videoAlt": "Une femme en haut crème et jupe mûre profonde tourne lentement dans un couloir de galerie baigné de lumière."
+    },
+    "philosophy": {
+      "eyebrow": "Philosophie",
+      "title1": "De l'intérieur,",
+      "title2": "pas de l'extérieur.",
+      "p1": "Virtuous Vogue commence par la femme, pas par la tendance. Avant de parler d'un seul vêtement, nous parlons de votre vie : les pièces où vous entrez, le travail que vous faites, la manière dont vous voulez être reçue.",
+      "p2": "C'est vous qui donnez de la pertinence à ce que vous portez. Ce que vous portez ne vous donne pas de pertinence. Notre rôle est de vous aider à voir clairement votre propre style, puis de rendre simple le fait de s'habiller pour lui.",
+      "quote": "La mode est le langage. L'identité est le message. Le style est la manière de le communiquer.",
+      "pillars": [
+        {
+          "title": "Découvrir",
+          "body": "Comprendre les directions qui vivent déjà dans vos choix."
+        },
+        {
+          "title": "Affiner",
+          "body": "Éditer ce que vous possédez jusqu'à ce que tout parle d'une seule voix."
+        },
+        {
+          "title": "Exprimer",
+          "body": "S'habiller pour la vie que vous vivez vraiment, avec aisance et confiance."
+        }
+      ],
+      "alt1": "Une femme touche pensivement la manche d'un manteau camel dans une garde-robe éditée.",
+      "alt2": "Une femme ajuste le col d'un manteau camel devant un miroir en arche.",
+      "alt3": "Des mains posées sur des mailles ivoire pliées et de la soie mûre.",
+      "alt4": "Une femme en tailleur-pantalon vert forêt entre dans un immeuble de bureaux moderne à Douala."
+    },
+    "studio": {
+      "eyebrow": "VV Style Studio",
+      "title": "Rencontrez votre style avec un regard neuf.",
+      "body": "Trois outils réfléchis pour comprendre ce à quoi vous répondez déjà, avant que quiconque vous suggère d'acheter quoi que ce soit.",
+      "compass": {
+        "title": "Style Compass",
+        "body": "Découvrez votre direction de style.",
+        "meta": "2 à 4 minutes"
+      },
+      "colour": {
+        "title": "Colour Lens",
+        "body": "Explorez les couleurs qui pourraient vous aller à merveille.",
+        "meta": "Aperçu photo facultatif"
+      },
+      "remix": {
+        "title": "Closet Remix",
+        "body": "Créez de nouvelles combinaisons avec les vêtements que vous possédez déjà.",
+        "meta": "Téléversez 3 à 10 pièces"
+      },
+      "passport": {
+        "title": "Style Passport",
+        "body": "Votre profil de style vivant, conservé en privé en un seul endroit."
+      }
+    },
+    "services": {
+      "eyebrow": "Consultations",
+      "title": "Le stylisme, avec considération.",
+      "body": "Chaque consultation est d'abord une conversation. Choisissez celle qui correspond à où vous en êtes, et nous vous dirons franchement si c'est le bon point de départ.",
+      "format": "En personne à Douala ou en ligne",
+      "from": "Tarifs communiqués sur demande",
+      "viewAll": "Toutes les consultations"
+    },
+    "closet": {
+      "eyebrow": "Shop your closet",
+      "title1": "Vous n'avez peut-être pas besoin de plus de vêtements.",
+      "title2": "Vous avez peut-être besoin de voir vos vêtements autrement.",
+      "body": "Closet Remix commence par ce qui est déjà sur votre portant. Échangez une pièce et regardez toute la silhouette changer.",
+      "swapHint": "Touchez une pièce pour l'échanger",
+      "look": "Silhouette",
+      "ofYours": "pièces que vous possédez",
+      "optional": "Ajout facultatif"
+    },
+    "magazine": {
+      "eyebrow": "Virtuous Vogue Magazine",
+      "title": "Des histoires pour les femmes qui s'habillent à dessein.",
+      "issue": "Numéro",
+      "featured": "À la une",
+      "latest": "Derniers articles"
+    },
+    "private": {
+      "eyebrow": "Consultation privée",
+      "line1": "Parfois, un algorithme peut suggérer.",
+      "line2": "Une styliste peut comprendre.",
+      "body": "Quand vous voulez quelqu'un qui s'assoie avec votre garde-robe, votre agenda et vos questions, réservez une consultation privée. En ligne, ou en personne à Douala.",
+      "alt": "Deux fauteuils ivoire tournés l'un vers l'autre près d'une grande fenêtre dans un atelier calme."
+    },
+    "stories": {
+      "eyebrow": "Histoires de clientes",
+      "title": "Avec leurs mots.",
+      "empty": "Nous publions les histoires de clientes uniquement avec leur permission, et uniquement lorsqu'elles sont réelles. Cet espace attend les premières.",
+      "emptyAction": "Faire partie des premières"
+    },
+    "newsletter": {
+      "eyebrow": "The Virtuous Edit",
+      "title": "Une note réfléchie sur le style, la garde-robe et une vie intentionnelle.",
+      "body": "Une courte lettre, quelques fois par mois. Réfléchie, jamais bruyante.",
+      "alt": "Une feuille de papier ivoire pliée, nouée d'un ruban mûre."
+    }
+  },
+  "newsletter": {
+    "emailLabel": "Adresse e-mail",
+    "placeholder": "vous@exemple.com",
+    "consent": "Je souhaite recevoir The Virtuous Edit. Je peux me désabonner à tout moment.",
+    "success": "Merci. La première note est en route.",
+    "already": "Vous êtes déjà sur la liste. Merci de nous lire.",
+    "error": "Impossible d'enregistrer pour le moment. Veuillez réessayer.",
+    "invalid": "Veuillez saisir une adresse e-mail valide."
+  },
+  "meta": {
+    "defaultTitle": "Virtuous Vogue — Stylisme personnel, intelligence de garde-robe et mode sélectionnée à Douala",
+    "defaultDescription": "Virtuous Vogue est une maison de stylisme numérique à Douala, Cameroun. Consultations de stylisme personnel, le VV Style Studio et un magazine éditorial pour les femmes qui s'habillent avec intention.",
+    "home": "Virtuous Vogue — Le style doit vous exprimer. Il ne doit pas vous définir.",
+    "studio": "VV Style Studio",
+    "studioDesc": "Style Compass, Colour Lens et Closet Remix : trois outils réfléchis pour rencontrer votre style avec un regard neuf.",
+    "services": "Consultations de stylisme",
+    "servicesDesc": "Clarté de Style, Couleur & Harmonie, Tri de Garde-robe, Stylisme d'Occasion, Personal Shopping et Stylisme Privé Signature. À Douala ou en ligne.",
+    "magazine": "Virtuous Vogue Magazine",
+    "magazineDesc": "Des histoires sur le style personnel, l'intelligence de garde-robe, la couleur, l'élégance modeste et la vie intentionnelle.",
+    "about": "À propos de Virtuous Vogue",
+    "aboutDesc": "La philosophie, la femme avant la garde-robe, et pourquoi Virtuous Vogue existe.",
+    "book": "Réserver une consultation",
+    "bookDesc": "Choisissez une consultation, un créneau, payez par Mobile Money ou carte, et recevez votre confirmation.",
+    "contact": "Contact",
+    "contactDesc": "Écrivez à Virtuous Vogue au sujet du stylisme, des consultations ou des collaborations.",
+    "newsletter": "The Virtuous Edit",
+    "newsletterDesc": "Une note réfléchie sur le style, la garde-robe et une vie intentionnelle.",
+    "login": "Se connecter",
+    "signup": "Créer votre Style Passport",
+    "account": "Mon Style Passport",
+    "admin": "Cockpit styliste",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "edit": "The Edit",
+    "editDesc": "Mode sélectionnée, après le stylisme.",
+    "styling": "Stylisme personnel au Cameroun"
+  }
+}

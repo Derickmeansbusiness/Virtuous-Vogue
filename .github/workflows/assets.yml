@@ -1,0 +1,45 @@
+name: Build visual assets
+
+# Fetches approved Higgsfield sources listed in assets-src/manifest.json,
+# optimises them (AVIF/WebP/JPEG, H.264/VP9), stamps the VV lockup and
+# commits the results back to the branch that triggered the run.
+on:
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Comma-separated asset ids to rebuild (empty = all approved)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: pnpm install --frozen-lockfile
+      - name: Build assets
+        env:
+          FETCH: "1"
+          ONLY: ${{ inputs.only }}
+        run: node scripts/assets/build.mjs
+      - name: Commit results
+        run: |
+          git config user.name "virtuous-vogue-assets[bot]"
+          git config user.email "assets@users.noreply.github.com"
+          git add public/assets src/lib/assets/manifest.generated.json assets-src/masters
+          git diff --cached --quiet && echo "No asset changes" && exit 0
+          git commit -m "chore(assets): build optimised visual assets"
+          git push origin HEAD:${{ github.ref_name }}
