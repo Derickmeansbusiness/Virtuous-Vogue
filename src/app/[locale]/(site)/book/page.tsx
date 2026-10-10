@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Container, Section } from "@/components/ui/section";
 import { Eyebrow } from "@/components/ui/typography";
 import { BookingFlow } from "@/components/booking/booking-flow";
+import { SITE } from "@/lib/site";
 import { listServices } from "@/lib/domain/services";
 import { paymentOptions } from "@/lib/actions/booking";
 import { getSessionUser } from "@/lib/auth/session";
@@ -25,7 +26,7 @@ export default async function BookPage({ params, searchParams }: { params: Promi
         <Eyebrow>{t("eyebrow")}</Eyebrow>
         <h1 className="display-lg mt-3 max-w-3xl">{t("title")}</h1>
         <div className="mt-10">
-          <BookingFlow services={services} initialService={services.some((s) => s.slug === sp.service) ? sp.service : undefined} methods={options.methods} user={user ? { name: user.name, email: user.email } : null} compassId={sp.compass} outfitId={sp.outfit} occasion={sp.occasion} />
+          <BookingFlow mode={SITE.bookingMode} services={services} initialService={services.some((s) => s.slug === sp.service) ? sp.service : undefined} methods={options.methods} user={user ? { name: user.name, email: user.email } : null} compassId={sp.compass} outfitId={sp.outfit} occasion={sp.occasion} />
         </div>
       </Container>
     </Section>

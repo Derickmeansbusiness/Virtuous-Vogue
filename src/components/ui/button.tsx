@@ -51,7 +51,7 @@ export function Button({
   if (href) {
     if (external) {
       return (
-        <a href={href} className={classes} target="_blank" rel="noopener noreferrer">
+        <a href={href} className={classes} target="_blank" rel="noopener noreferrer" onClick={props.onClick as unknown as React.MouseEventHandler<HTMLAnchorElement>}>
           {children}
         </a>
       );

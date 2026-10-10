@@ -5,21 +5,23 @@ import { useLocale, useTranslations } from "next-intl";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { addDays, addMonths, endOfMonth, format, startOfMonth, startOfDay, isSameMonth, eachDayOfInterval, getDay } from "date-fns";
 import { formatInTimeZone } from "date-fns-tz";
+import { fr as frLocale } from "date-fns/locale";
 import { Check, ChevronLeft, ChevronRight } from "lucide-react";
 import type { Service } from "@/content/types";
 import { pick } from "@/content/types";
 import { Button } from "@/components/ui/button";
 import { ChoiceChip, Checkbox, Field, Input, Notice, Textarea } from "@/components/ui/form";
 import { fetchSlots, createBooking, checkPayment, type CreateBookingResult } from "@/lib/actions/booking";
-import { WhatsAppLink } from "@/components/layout/whatsapp";
+import { WhatsAppLink, buildWhatsAppHref } from "@/components/layout/whatsapp";
 import { track } from "@/lib/analytics/client";
 import { cn } from "@/lib/utils/cn";
 import { EditorialImage } from "@/components/media/editorial-image";
 
-type Step = "service" | "learn" | "format" | "date" | "time" | "details" | "payment" | "confirm";
-const ORDER: Step[] = ["service", "learn", "format", "date", "time", "details", "payment", "confirm"];
+type Step = "service" | "learn" | "format" | "date" | "time" | "details" | "payment" | "whatsapp" | "confirm";
+const ONLINE_ORDER: Step[] = ["service", "learn", "format", "date", "time", "details", "payment", "confirm"];
+const WHATSAPP_ORDER: Step[] = ["service", "learn", "format", "date", "time", "details", "whatsapp"];
 
-export function BookingFlow({ services, initialService, methods, user, compassId, outfitId, occasion }: { services: Service[]; initialService?: string; methods: ("mtn_momo" | "orange_money" | "card")[]; user: { name?: string; email: string } | null; compassId?: string; outfitId?: string; occasion?: string }) {
+export function BookingFlow({ mode = "online", services, initialService, methods, user, compassId, outfitId, occasion }: { mode?: "whatsapp" | "online"; services: Service[]; initialService?: string; methods: ("mtn_momo" | "orange_money" | "card")[]; user: { name?: string; email: string } | null; compassId?: string; outfitId?: string; occasion?: string }) {
   const t = useTranslations("booking");
   const ts = useTranslations("services");
   const locale = useLocale();
@@ -40,6 +42,8 @@ export function BookingFlow({ services, initialService, methods, user, compassId
   const [error, setError] = React.useState<string | null>(null);
   const [result, setResult] = React.useState<CreateBookingResult | null>(null);
   const [payState, setPayState] = React.useState<"idle" | "waiting" | "succeeded" | "failed">("idle");
+  const [sentToWhatsApp, setSentToWhatsApp] = React.useState(false);
+  const ORDER = mode === "whatsapp" ? WHATSAPP_ORDER : ONLINE_ORDER;
   const service = services.find((s) => s.slug === serviceSlug);
   const idx = ORDER.indexOf(step);
 
@@ -108,6 +112,30 @@ export function BookingFlow({ services, initialService, methods, user, compassId
       return;
     }
     go("confirm");
+  };
+
+  const whatsappMessage = () => {
+    if (!service || !slot) return "";
+    const fmtLabel = fmt === "in_person" ? t("inPerson") : fmt === "group" ? t("group") : t("virtual");
+    const extras = `${compassId ? t("whatsappStep.extraCompass", { id: compassId }) : ""}${outfitId ? t("whatsappStep.extraOutfit", { id: outfitId }) : ""}`;
+    return t("whatsappStep.message", {
+      service: pick(service.name, locale),
+      format: fmtLabel,
+      date: formatInTimeZone(new Date(slot.startsAt), tz, "EEEE d MMMM yyyy, HH:mm", { locale: locale === "fr" ? frLocale : undefined }),
+      tz,
+      name: details.name.trim(),
+      email: details.email.trim(),
+      phone: details.phone.trim() || t("whatsappStep.notGiven"),
+      goals: details.goals.trim() || t("whatsappStep.none"),
+      extras,
+    });
+  };
+  const sendToWhatsApp = () => {
+    if (!service || !slot) return;
+    setSentToWhatsApp(true);
+    track("booking_whatsapp", { service: service.slug, format: fmt });
+    // Best effort: keep a record and notify the stylist when a store/email is configured. Never blocks the hand-off.
+    createBooking({ serviceSlug: service.slug, format: fmt, startsAt: slot.startsAt, timeZone: tz, name: details.name, email: details.email, phone: details.phone || undefined, goals: details.goals || undefined, attachPassport: details.attachPassport, compassId, outfitId, locale, method: "later" }).catch(() => {});
   };
 
   const days = eachDayOfInterval({ start: startOfMonth(month), end: endOfMonth(month) });
@@ -271,7 +299,7 @@ export function BookingFlow({ services, initialService, methods, user, compassId
                 ) : null}
                 <div className="mt-8 flex gap-3">
                   <Button variant="ghost" onClick={() => go("time")}><ChevronLeft className="size-4" aria-hidden /> {t("back")}</Button>
-                  <Button onClick={() => go("payment")} disabled={details.name.trim().length < 2 || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(details.email)}>{t("review")}</Button>
+                  <Button onClick={() => go(mode === "whatsapp" ? "whatsapp" : "payment")} disabled={details.name.trim().length < 2 || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(details.email)}>{t("review")}</Button>
                 </div>
               </section>
             ) : null}
@@ -309,6 +337,30 @@ export function BookingFlow({ services, initialService, methods, user, compassId
                     {busy ? t("processing") : price && method !== "later" ? t("pay") : t("confirmFree")}
                   </Button>
                 </div>
+              </section>
+            ) : null}
+
+            {step === "whatsapp" && service && slot ? (
+              <section>
+                <h2 className="display-md">{sentToWhatsApp ? t("whatsappStep.sentTitle") : t("whatsappStep.title")}</h2>
+                <p className="mt-4 font-serif text-lg text-ink-soft">{sentToWhatsApp ? t("whatsappStep.sentBody") : t("whatsappStep.body")}</p>
+                <dl className="mt-8 divide-y divide-line border-y border-line text-sm">
+                  <div className="flex justify-between gap-6 py-3"><dt className="text-ink-muted">{t("steps.service")}</dt><dd className="text-right">{pick(service.name, locale)}</dd></div>
+                  <div className="flex justify-between gap-6 py-3"><dt className="text-ink-muted">{t("steps.format")}</dt><dd className="text-right">{fmt === "in_person" ? t("inPerson") : fmt === "group" ? t("group") : t("virtual")}</dd></div>
+                  <div className="flex justify-between gap-6 py-3"><dt className="text-ink-muted">{t("steps.time")}</dt><dd className="text-right">{formatInTimeZone(new Date(slot.startsAt), tz, "EEEE d MMMM, HH:mm", { locale: locale === "fr" ? frLocale : undefined })} ({tz})</dd></div>
+                  <div className="flex justify-between gap-6 py-3"><dt className="text-ink-muted">{t("name")}</dt><dd className="text-right">{details.name}</dd></div>
+                  <div className="flex justify-between gap-6 py-3"><dt className="text-ink-muted">{t("email")}</dt><dd className="text-right">{details.email}</dd></div>
+                  {details.phone ? <div className="flex justify-between gap-6 py-3"><dt className="text-ink-muted">{t("phone")}</dt><dd className="text-right">{details.phone}</dd></div> : null}
+                  {details.goals ? <div className="flex justify-between gap-6 py-3"><dt className="text-ink-muted">{t("goals")}</dt><dd className="max-w-[60%] text-right whitespace-pre-line">{details.goals}</dd></div> : null}
+                </dl>
+                {!price ? <Notice className="mt-5">{t("priceOnRequest")}</Notice> : null}
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <Button variant="ghost" onClick={() => go("details")}><ChevronLeft className="size-4" aria-hidden /> {t("back")}</Button>
+                  <Button href={buildWhatsAppHref(whatsappMessage())} external size="lg" onClick={sendToWhatsApp}>
+                    {t("whatsappStep.send")}
+                  </Button>
+                </div>
+                <p className="mt-5 text-xs text-ink-muted">{t("policy")}</p>
               </section>
             ) : null}
 

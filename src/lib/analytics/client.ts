@@ -11,6 +11,7 @@ export type AnalyticsEvent =
   | "booking_start"
   | "booking_step"
   | "booking_complete"
+  | "booking_whatsapp"
   | "payment_start"
   | "payment_complete"
   | "compass_start"

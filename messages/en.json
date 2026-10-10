@@ -508,7 +508,8 @@
       "goals": "Style goals",
       "passport": "Style Passport",
       "payment": "Payment",
-      "confirm": "Confirmation"
+      "confirm": "Confirmation",
+      "whatsapp": "WhatsApp"
     },
     "chooseService": "Which consultation?",
     "includes": "What it includes",
@@ -567,7 +568,20 @@
     "unavailable": "Unavailable",
     "selectedService": "Selected",
     "change": "Change",
-    "reference": "Reference"
+    "reference": "Reference",
+    "whatsappStep": {
+      "stepLabel": "WhatsApp",
+      "title": "Send your request on WhatsApp",
+      "body": "Your request goes straight to Kimbi Rosa on WhatsApp with everything below. She confirms the time and the pricing there. Nothing is charged now.",
+      "send": "Send on WhatsApp",
+      "sentTitle": "Request sent to WhatsApp",
+      "sentBody": "If WhatsApp did not open, use the button again. Kimbi confirms your time there, usually within a working day. Keep this summary for your records.",
+      "message": "Hello Kimbi, I would like to book a consultation.\n\nService: {service}\nFormat: {format}\nDate: {date} ({tz})\n\nName: {name}\nEmail: {email}\nPhone: {phone}\n\nWhat I would like from it:\n{goals}{extras}\n\nSent from virtuousvogue.com",
+      "extraCompass": "\n\nStyle Compass result attached: {id}",
+      "extraOutfit": "\nCloset Remix look attached: {id}",
+      "notGiven": "not given",
+      "none": "(no notes)"
+    }
   },
   "magazine": {
     "eyebrow": "Virtuous Vogue Magazine",

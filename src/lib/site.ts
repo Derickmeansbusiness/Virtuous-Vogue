@@ -11,7 +11,9 @@ export const SITE = {
   city: "Douala",
   country: "Cameroon",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
-  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "",
+  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "237675741245",
+  /** "whatsapp": every booking request is handed to the stylist on WhatsApp (no payment step). "online": on-site confirmation and payments. */
+  bookingMode: (process.env.NEXT_PUBLIC_BOOKING_MODE === "online" ? "online" : "whatsapp") as "whatsapp" | "online",
   instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL ?? "",
   tiktok: process.env.NEXT_PUBLIC_TIKTOK_URL ?? "",
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "",
