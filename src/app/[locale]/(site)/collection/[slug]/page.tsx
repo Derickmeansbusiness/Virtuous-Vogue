@@ -11,6 +11,7 @@ import { LookCard, StatusBadge } from "@/components/collection/look-card";
 import { collectionChapters, getLook, looksInChapter, publishedLooks } from "@/content/collection";
 import { pick } from "@/content/types";
 import { JsonLd, breadcrumbSchema } from "@/lib/seo/json-ld";
+import { getImage } from "@/lib/assets";
 import { Link } from "@/i18n/navigation";
 
 export function generateStaticParams() {
@@ -21,10 +22,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale, slug } = await params;
   const look = getLook(slug);
   if (!look) return {};
+  const img = getImage(look.image);
+  const share = img?.base ? `${img.base}-${img.widths[0]}.jpg` : "/og/collection.jpg";
   return {
     title: `${look.code} ${pick(look.name, locale)}`,
-    description: pick(look.signature, locale),
+    description: pick(look.tagline, locale) + " " + pick(look.signature, locale),
     alternates: { canonical: `/collection/${slug}`, languages: { en: `/collection/${slug}`, fr: `/fr/collection/${slug}` } },
+    openGraph: { title: `${look.code} · ${pick(look.name, locale)}`, description: pick(look.signature, locale), images: [{ url: share, width: img?.width ? Math.min(img.width, img.widths[0]) : 900, height: img?.width ? Math.round(Math.min(img.width, img.widths[0]) / img.aspect) : 1200, alt: img?.alt }] },
+    twitter: { card: "summary_large_image", images: [share] },
   };
 }
 

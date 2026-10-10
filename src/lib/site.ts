@@ -10,7 +10,13 @@ export const SITE = {
   statement: "Style should express you. It should not define you.",
   city: "Douala",
   country: "Cameroon",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  // Absolute origin used for canonical links, sitemaps and Open Graph images. Prefer the configured
+  // domain, then Vercel's production URL, then the current deployment, then local dev.
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : undefined) ??
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined) ??
+    "http://localhost:3000",
   whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "237675741245",
   /** "whatsapp": every booking request is handed to the stylist on WhatsApp (no payment step). "online": on-site confirmation and payments. */
   bookingMode: (process.env.NEXT_PUBLIC_BOOKING_MODE === "online" ? "online" : "whatsapp") as "whatsapp" | "online",

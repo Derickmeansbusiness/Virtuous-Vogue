@@ -12,7 +12,13 @@ import { JsonLd, breadcrumbSchema } from "@/lib/seo/json-ld";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
-  return { title: t("collection"), description: t("collectionDesc"), alternates: { canonical: "/collection", languages: { en: "/collection", fr: "/fr/collection" } } };
+  return {
+    title: t("collection"),
+    description: t("collectionDesc"),
+    alternates: { canonical: "/collection", languages: { en: "/collection", fr: "/fr/collection" } },
+    openGraph: { title: `${t("collection")} · The Signature Edit`, description: t("collectionDesc"), images: [{ url: "/og/collection.jpg", width: 1200, height: 630 }] },
+    twitter: { card: "summary_large_image", images: ["/og/collection.jpg"] },
+  };
 }
 
 export default async function CollectionPage({ params }: { params: Promise<{ locale: string }> }) {

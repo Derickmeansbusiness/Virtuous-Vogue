@@ -10,7 +10,13 @@ import { EditorialImage } from "@/components/media/editorial-image";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
-  return { title: t("about"), description: t("aboutDesc"), alternates: { canonical: "/about", languages: { en: "/about", fr: "/fr/about" } } };
+  return {
+    title: t("about"),
+    description: t("aboutDesc"),
+    alternates: { canonical: "/about", languages: { en: "/about", fr: "/fr/about" } },
+    openGraph: { title: `${t("about")} · Kimbi Rosa`, description: t("aboutDesc"), images: [{ url: "/og/about.jpg", width: 1200, height: 630 }] },
+    twitter: { card: "summary_large_image", images: ["/og/about.jpg"] },
+  };
 }
 
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {

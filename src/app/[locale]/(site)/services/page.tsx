@@ -16,7 +16,13 @@ import { JsonLd, breadcrumbSchema, serviceSchema } from "@/lib/seo/json-ld";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
-  return { title: t("services"), description: t("servicesDesc"), alternates: { canonical: "/services", languages: { en: "/services", fr: "/fr/services" } } };
+  return {
+    title: t("services"),
+    description: t("servicesDesc"),
+    alternates: { canonical: "/services", languages: { en: "/services", fr: "/fr/services" } },
+    openGraph: { title: t("services"), description: t("servicesDesc"), images: [{ url: "/og/consultations.jpg", width: 1200, height: 630 }] },
+    twitter: { card: "summary_large_image", images: ["/og/consultations.jpg"] },
+  };
 }
 
 export default async function ServicesPage({ params }: { params: Promise<{ locale: string }> }) {

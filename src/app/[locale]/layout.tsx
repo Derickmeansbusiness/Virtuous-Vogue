@@ -33,10 +33,12 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       siteName: SITE.name,
+      title: t("shareTitle"),
+      description: t("shareDescription"),
       locale: locale === "fr" ? "fr_CM" : "en_GB",
-      images: [{ url: "/assets/virtuous-vogue/hero/hero-01-woman-before-wardrobe-1600.jpg", width: 1600, height: 900 }, { url: "/icons/og-fallback.jpg", width: 1200, height: 630 }],
+      images: [{ url: "/og/virtuous-vogue.jpg", width: 1200, height: 630, alt: t("shareTitle") }],
     },
-    twitter: { card: "summary_large_image" },
+    twitter: { card: "summary_large_image", title: t("shareTitle"), description: t("shareDescription"), images: ["/og/virtuous-vogue.jpg"] },
     alternates: {
       canonical: "/",
       languages: { en: "/", fr: "/fr" },
