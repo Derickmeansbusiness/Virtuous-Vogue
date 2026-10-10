@@ -56,7 +56,9 @@ async function stamp(image, meta, entry) {
   const tone = entry.logoTone ?? "ivory";
   const corner = entry.logoCorner ?? "bottom-right";
   const w = Math.max(96, Math.round(meta.width * (entry.logoScale ?? 0.14)));
+  // `logoInsetX` widens the horizontal margin for portrait assets that phones crop at the sides.
   const margin = Math.round(meta.width * 0.028);
+  const marginX = Math.round(meta.width * (entry.logoInsetX ?? 0.028));
   const logo = await lockupBuffer(tone, w);
   const lm = await sharp(logo).metadata();
   // Soft contrasting halo so the mark stays legible on any photograph.
@@ -67,10 +69,10 @@ async function stamp(image, meta, entry) {
     .png()
     .toBuffer();
   const pos = {
-    "bottom-right": { left: meta.width - lm.width - margin, top: meta.height - lm.height - margin },
-    "bottom-left": { left: margin, top: meta.height - lm.height - margin },
-    "top-right": { left: meta.width - lm.width - margin, top: margin },
-    "top-left": { left: margin, top: margin },
+    "bottom-right": { left: meta.width - lm.width - marginX, top: meta.height - lm.height - margin },
+    "bottom-left": { left: marginX, top: meta.height - lm.height - margin },
+    "top-right": { left: meta.width - lm.width - marginX, top: margin },
+    "top-left": { left: marginX, top: margin },
   }[corner];
   return image.composite([
     { input: shadow, left: pos.left, top: pos.top, blend: "over" },
@@ -154,7 +156,7 @@ async function buildVideo(entry) {
   for (const v of variants) {
     const mp4 = path.join(dir, `${entry.id}-${v.suffix}.mp4`);
     const webm = path.join(dir, `${entry.id}-${v.suffix}.webm`);
-    const overlay = entry.logo === false ? "" : `[0:v][1:v]overlay=W-w-(W*0.028):H-h-(W*0.028)[v];[v]`;
+    const overlay = entry.logo === false ? "" : `[0:v][1:v]overlay=W-w-(W*${entry.logoInsetX ?? 0.028}):H-h-(W*0.028)[v];[v]`;
     const filter = `${overlay}scale=${v.width}:-2:flags=lanczos,format=yuv420p`;
     const args = ["-y", "-i", input, ...(entry.logo === false ? [] : ["-i", logoPng]), "-filter_complex", filter.replace(/\[v\]$/, ""), "-an", "-movflags", "+faststart"];
     execFileSync("ffmpeg", [...args, "-c:v", "libx264", "-preset", "slow", "-crf", String(v.crf), "-pix_fmt", "yuv420p", mp4], { stdio: "inherit" });

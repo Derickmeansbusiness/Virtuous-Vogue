@@ -23,7 +23,7 @@ Source: Higgsfield Soul 2.0 (stills, 2k) and Seedance 2.5 (video), generated und
 ## To replace or add an asset
 
 1. Generate or photograph the new image (follow the standards above; no lettering, fully clothed).
-2. Add or edit its entry in `assets-src/manifest.json` (id, section, source URL or path, alt text, usage, `logoTone`, optional `logoCorner`/`logoScale`/`crop`).
+2. Add or edit its entry in `assets-src/manifest.json` (id, section, source URL or path, alt text, usage, `logoTone`, optional `logoCorner`/`logoScale`/`logoInsetX` (wider side margin for portrait assets that phones crop)/`crop`).
 3. Run `FETCH=1 ONLY=<id> pnpm assets:build` locally, or dispatch the workflow with the id in the `only` input.
 4. Reference it in code with `<EditorialImage id="<id>" />`.
 
