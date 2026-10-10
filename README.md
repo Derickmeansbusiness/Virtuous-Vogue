@@ -35,7 +35,7 @@ Without Supabase credentials the app runs in **local mode**: data is written to 
 2. **Auth**: enable Email (magic link) in Supabase Auth; set the site URL and add `https://yourdomain/auth/callback` to redirect URLs.
 3. **Email**: `RESEND_API_KEY`, `EMAIL_FROM`, `STYLIST_NOTIFICATION_EMAIL`.
 4. **Payments**: set `CAMPAY_PERMANENT_TOKEN` (+ `CAMPAY_WEBHOOK_KEY`) or `FLUTTERWAVE_SECRET_KEY` (+ `FLUTTERWAVE_WEBHOOK_HASH`). Point the gateway webhook at `/api/webhooks/payments/campay` or `/api/webhooks/payments/flutterwave`. Add Stripe for international cards if wanted. Without any gateway, bookings are confirmed by the stylist and marked paid manually in the cockpit.
-5. **Reminders**: set `CRON_SECRET`; `vercel.json` schedules `/api/cron/reminders` hourly.
+5. **Reminders**: set `CRON_SECRET`. `vercel.json` schedules `/api/cron/reminders` once a day at 06:00 UTC (the most a Vercel Hobby plan allows). For timely 2-hour reminders, add the repository secrets `SITE_URL` and `CRON_SECRET` so `.github/workflows/reminders.yml` pings the endpoint hourly for free, or move the Vercel cron to hourly on a Pro plan.
 6. **Services & prices**: set duration, price (XAF), deposit, capacity and formats in **Cockpit → Services**. Prices are never invented in code; until set, the site says "Pricing shared on request".
 7. **WhatsApp / socials / founder photo**: `NEXT_PUBLIC_WHATSAPP_NUMBER`, `NEXT_PUBLIC_INSTAGRAM_URL`, `NEXT_PUBLIC_TIKTOK_URL`, `NEXT_PUBLIC_FOUNDER_PHOTO`.
 8. **Analytics**: `NEXT_PUBLIC_PLAUSIBLE_DOMAIN`.
