@@ -58,15 +58,15 @@ export class LocalFileStore implements Store {
     return rows as (T & { id: string })[];
   }
 
-  async insert<T extends object>(table: string, row: Partial<T> & { id?: string }) {
+  async insert<T extends object>(table: string, row: Record<string, unknown>) {
     const rows = await this.read(table);
     const now = new Date().toISOString();
-    const full = { created_at: now, updated_at: now, ...row, id: row.id ?? randomUUID() } as Record<string, unknown>;
+    const full = { created_at: now, updated_at: now, ...row, id: (row.id as string | undefined) ?? randomUUID() } as Record<string, unknown>;
     await this.write(table, [...rows, full]);
-    return full as T & { id: string };
+    return full as unknown as T & { id: string };
   }
 
-  async update<T extends object>(table: string, id: string, patch: Partial<T>) {
+  async update<T extends object>(table: string, id: string, patch: Record<string, unknown>) {
     const rows = await this.read(table);
     const idx = rows.findIndex((r) => r.id === id);
     if (idx === -1) throw new Error(`[local-store] ${table}/${id} not found`);
@@ -74,10 +74,10 @@ export class LocalFileStore implements Store {
     const copy = [...rows];
     copy[idx] = next;
     await this.write(table, copy);
-    return next as T & { id: string };
+    return next as unknown as T & { id: string };
   }
 
-  async upsert<T extends object>(table: string, row: Partial<T> & { id: string }) {
+  async upsert<T extends object>(table: string, row: Record<string, unknown> & { id: string }) {
     const existing = await this.get(table, row.id);
     return existing ? this.update<T>(table, row.id, row) : this.insert<T>(table, row);
   }

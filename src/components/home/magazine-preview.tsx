@@ -36,7 +36,7 @@ export async function MagazinePreview() {
 
         <article className="mt-14 grid gap-8 lg:grid-cols-12 lg:gap-12">
           <MaskReveal className="lg:col-span-8">
-            <Link href={{ pathname: "/magazine/[slug]", params: { slug: featured.slug } }} className="fabric-hover block">
+            <Link href={`/magazine/${featured.slug}`} className="fabric-hover block">
               <div className="aspect-[3/2]">
                 <EditorialImage id={featured.hero} alt={pick(featured.heroAlt, locale)} className="h-full w-full" sizes="(min-width:1024px) 66vw, 100vw" />
               </div>
@@ -45,7 +45,7 @@ export async function MagazinePreview() {
           <Reveal delay={0.2} className="flex flex-col justify-end lg:col-span-4">
             <p className="eyebrow text-mulberry">{t("featured")} · {cat ? pick(cat.name, locale) : ""}</p>
             <h3 className="display-md mt-4">
-              <Link href={{ pathname: "/magazine/[slug]", params: { slug: featured.slug } }} className="hover:text-mulberry">
+              <Link href={`/magazine/${featured.slug}`} className="hover:text-mulberry">
                 {pick(featured.title, locale)}
               </Link>
             </h3>

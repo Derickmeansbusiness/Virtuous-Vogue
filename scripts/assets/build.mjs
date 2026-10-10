@@ -12,7 +12,7 @@
  *  4. stamp the Virtuous Vogue lockup on every published image/video
  *  5. write src/lib/assets/manifest.generated.json with dimensions + blur placeholders
  */
-import { createWriteStream, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { copyFileSync, createWriteStream, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { pipeline } from "node:stream/promises";
 import { Readable } from "node:stream";
 import { execFileSync } from "node:child_process";
@@ -82,7 +82,11 @@ async function buildImage(entry) {
   const ext = entry.source.split("?")[0].split(".").pop();
   const raw = path.join(MASTERS, `${entry.id}.source.${ext}`);
   const master = path.join(MASTERS, `${entry.id}.jpg`);
-  if (FETCH) await download(entry.source, raw);
+  if (/^https?:/.test(entry.source)) {
+    if (FETCH) await download(entry.source, raw);
+  } else if (!existsSync(raw) && existsSync(entry.source)) {
+    copyFileSync(entry.source, raw);
+  }
   if (!existsSync(master)) {
     if (!existsSync(raw)) throw new Error(`Missing source for ${entry.id}. Run with FETCH=1.`);
     let img = sharp(raw).rotate();
@@ -146,11 +150,8 @@ async function buildVideo(entry) {
   // Poster from the first frame, stamped like a still
   const posterRaw = path.join(MASTERS, `${entry.id}.poster.jpg`);
   execFileSync("ffmpeg", ["-y", "-i", raw, "-frames:v", "1", "-q:v", "2", posterRaw], { stdio: "inherit" });
-  const posterEntry = { ...entry, id: `${entry.id}-poster`, source: posterRaw, section: entry.section };
-  if (!existsSync(path.join(MASTERS, `${posterEntry.id}.jpg`))) {
-    await sharp(posterRaw).jpeg({ quality: 92 }).toFile(path.join(MASTERS, `${posterEntry.id}.jpg`));
-  }
-  const poster = await buildImage({ ...posterEntry, source: `${posterEntry.id}.jpg` });
+  const posterEntry = { ...entry, id: `${entry.id}-poster`, kind: "image", source: posterRaw, section: entry.section, variants: undefined };
+  const poster = await buildImage(posterEntry);
   return { id: entry.id, section: entry.section, kind: "video", width: targetW, height: entry.height ?? Math.round(targetW * 9 / 16), outputs, poster, alt: entry.alt, usage: entry.usage };
 }
 

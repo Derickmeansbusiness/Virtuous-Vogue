@@ -34,7 +34,7 @@ export async function ServicesPreview() {
               {services.map((s, i) => (
                 <li key={s.slug}>
                   <Reveal delay={i * 0.04}>
-                    <Link href={{ pathname: "/services/[slug]", params: { slug: s.slug } }} className="group grid grid-cols-[auto_1fr_auto] items-center gap-5 py-6 md:grid-cols-[auto_6rem_1fr_auto] md:gap-8">
+                    <Link href={`/services/${s.slug}`} className="group grid grid-cols-[auto_1fr_auto] items-center gap-5 py-6 md:grid-cols-[auto_6rem_1fr_auto] md:gap-8">
                       <span className="font-display text-sm tracking-[0.18em] text-ink-muted">{s.number}</span>
                       <span className="hidden aspect-[3/4] w-24 overflow-hidden md:block">
                         <EditorialImage id={s.image} className="h-full w-full" sizes="96px" />

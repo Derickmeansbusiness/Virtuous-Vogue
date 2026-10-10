@@ -21,9 +21,9 @@ export interface Store {
     filter?: Filter,
     opts?: { orderBy?: string; ascending?: boolean; limit?: number },
   ): Promise<(T & { id: string })[]>;
-  insert<T extends object>(table: string, row: Partial<T> & { id?: string }): Promise<T & { id: string }>;
-  update<T extends object>(table: string, id: string, patch: Partial<T>): Promise<T & { id: string }>;
-  upsert<T extends object>(table: string, row: Partial<T> & { id: string }): Promise<T & { id: string }>;
+  insert<T extends object = Record<string, unknown>>(table: string, row: Record<string, unknown>): Promise<T & { id: string }>;
+  update<T extends object = Record<string, unknown>>(table: string, id: string, patch: Record<string, unknown>): Promise<T & { id: string }>;
+  upsert<T extends object = Record<string, unknown>>(table: string, row: Record<string, unknown> & { id: string }): Promise<T & { id: string }>;
   delete(table: string, id: string): Promise<void>;
 }
 
@@ -55,21 +55,21 @@ class SupabaseStore implements Store {
     return (data ?? []) as (T & { id: string })[];
   }
 
-  async insert<T extends object>(table: string, row: Partial<T> & { id?: string }) {
+  async insert<T extends object>(table: string, row: Record<string, unknown>) {
     const sb = await this.client();
     const { data, error } = await sb.from(table).insert(row).select("*").single();
     if (error) throw new Error(`[store] ${table}.insert: ${error.message}`);
     return data as T & { id: string };
   }
 
-  async update<T extends object>(table: string, id: string, patch: Partial<T>) {
+  async update<T extends object>(table: string, id: string, patch: Record<string, unknown>) {
     const sb = await this.client();
     const { data, error } = await sb.from(table).update(patch).eq("id", id).select("*").single();
     if (error) throw new Error(`[store] ${table}.update: ${error.message}`);
     return data as T & { id: string };
   }
 
-  async upsert<T extends object>(table: string, row: Partial<T> & { id: string }) {
+  async upsert<T extends object>(table: string, row: Record<string, unknown> & { id: string }) {
     const sb = await this.client();
     const { data, error } = await sb.from(table).upsert(row).select("*").single();
     if (error) throw new Error(`[store] ${table}.upsert: ${error.message}`);
