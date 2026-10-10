@@ -6,7 +6,7 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import { Menu, X, User } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
-import { HeaderLockup, Monogram } from "@/components/ui/brand";
+import { HeaderLockup } from "@/components/ui/brand";
 import { Button } from "@/components/ui/button";
 import { LocaleSwitch } from "./locale-switch";
 
@@ -78,8 +78,9 @@ export function Header({
       >
         <div className="container-vv flex h-full items-center justify-between">
           <Link href="/" className="flex items-center" aria-label="Virtuous Vogue home">
+            {/* The full lockup (monogram + wordmark) on every screen: white over dark pages, ink over light ones. */}
             <HeaderLockup tone={overHero && !open ? "white" : "ink"} height={30} className="hidden sm:block" />
-            <Monogram tone={overHero && !open ? "white" : "twotone"} height={30} className="sm:hidden" />
+            <HeaderLockup tone={overHero && !open ? "white" : "ink"} height={24} className="sm:hidden" />
           </Link>
 
           <nav aria-label="Primary" className="hidden items-center gap-8 lg:flex">
