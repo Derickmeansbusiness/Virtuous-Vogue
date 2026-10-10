@@ -665,6 +665,118 @@
       "alt": "Kimbi Rosa, founder and Editor-in-Chief of Virtuous Vogue, seated in a black and white zebra-print shirt dress with gold earrings in a warm, softly lit lounge.",
       "usage": "About page: Meet the Founder; magazine author page; Editor-in-Chief masthead",
       "dominant": "#9c7f62"
+    },
+    "collection-vv01-ivory-testament": {
+      "id": "collection-vv01-ivory-testament",
+      "section": "collection",
+      "width": 1536,
+      "height": 2048,
+      "aspect": 0.75,
+      "widths": [
+        900,
+        1400
+      ],
+      "base": "/assets/virtuous-vogue/collection/collection-vv01-ivory-testament",
+      "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABwAwCdASoQABUAPu1kqk4ppaQiMAgBMB2JYwAAVNrxIe/3EAAA9wnd6GNxNjyNS/0NGn4fnjdCrfqAVuQ/2RZp/UEoAA==",
+      "alt": "VV01 The Ivory Testament: a woman in an ivory wrap-front blouse with a high folded neckline and fluid palazzo trousers, standing in a sunlit limestone gallery.",
+      "usage": "Our Collection: VV01 catalogue hero",
+      "dominant": "#ae9175"
+    },
+    "collection-vv03-soft-sovereign": {
+      "id": "collection-vv03-soft-sovereign",
+      "section": "collection",
+      "width": 1536,
+      "height": 2048,
+      "aspect": 0.75,
+      "widths": [
+        900,
+        1400
+      ],
+      "base": "/assets/virtuous-vogue/collection/collection-vv03-soft-sovereign",
+      "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAABQAwCdASoQABUAPu1iqU2ppaQiMAgBMB2JQBOmUAAaNbAMsAD+XpZkFnKeULGIuWEtthy/Nut8Tg45rjW9x4URnbaSpwAA",
+      "alt": "VV03 The Soft Sovereign: a woman in an oat-taupe three-piece suit with a rounded notch lapel and pleated wide-leg trousers, in a light oak business club interior.",
+      "usage": "Our Collection: VV03 catalogue hero",
+      "dominant": "#917b65"
+    },
+    "collection-vv04-champagne-reverie": {
+      "id": "collection-vv04-champagne-reverie",
+      "section": "collection",
+      "width": 1536,
+      "height": 2048,
+      "aspect": 0.75,
+      "widths": [
+        900,
+        1400
+      ],
+      "base": "/assets/virtuous-vogue/collection/collection-vv04-champagne-reverie",
+      "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQBACdASoQABUAPu1kqk4ppaQiMAgBMB2JYwCdMoR3ACWjwMyOO/gJjJgAAP7w369yWL5liA0My0A8KkAuM7Ei9zKoxQbCBsAAAA==",
+      "alt": "VV04 Champagne Reverie: a woman in a champagne ankle-length gown with a bateau neckline, long sleeves and a one-sided shoulder drape, in a warm hotel salon.",
+      "usage": "Our Collection: VV04 catalogue hero",
+      "dominant": "#443221"
+    },
+    "collection-vv05-sunday-heirloom": {
+      "id": "collection-vv05-sunday-heirloom",
+      "section": "collection",
+      "width": 1536,
+      "height": 2048,
+      "aspect": 0.75,
+      "widths": [
+        900,
+        1400
+      ],
+      "base": "/assets/virtuous-vogue/collection/collection-vv05-sunday-heirloom",
+      "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABwAwCdASoQABUAPu1kq04ppaQiMAgBMB2JQBYdgjvLznOMVOAA/YStnMPx5NY8eLYmmnhKt33rRZC7H5hubkC2y2iOjJCoGJMSomAA",
+      "alt": "VV05 The Sunday Heirloom: a silver-haired woman in a dusty-blush fit-and-flare dress with petal cuffs, in a sunlit stone courtyard.",
+      "usage": "Our Collection: VV05 catalogue hero",
+      "dominant": "#a1866c"
+    },
+    "collection-vv06-city-devotion": {
+      "id": "collection-vv06-city-devotion",
+      "section": "collection",
+      "width": 1536,
+      "height": 2048,
+      "aspect": 0.75,
+      "widths": [
+        900,
+        1400
+      ],
+      "base": "/assets/virtuous-vogue/collection/collection-vv06-city-devotion",
+      "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACQAwCdASoQABUAPu1kq04ppaQiMAgBMB2JZwDCgBxG/tprcgAAAP6zoH9+hbqfEA4pw8pnVnZF2Y5ufyPGBI/5aF/vkZnOC9djQAAA",
+      "alt": "VV06 The City Devotion: a woman in a deep-olive belted shirt dress with a diagonal chest pocket, carrying a structured tote on a quiet city street.",
+      "usage": "Our Collection: VV06 catalogue hero",
+      "dominant": "#796e68"
+    },
+    "collection-vv09-pearl-discipline": {
+      "id": "collection-vv09-pearl-discipline",
+      "section": "collection",
+      "width": 1536,
+      "height": 2048,
+      "aspect": 0.75,
+      "widths": [
+        900,
+        1400
+      ],
+      "base": "/assets/virtuous-vogue/collection/collection-vv09-pearl-discipline",
+      "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAABwAwCdASoQABUAPu1kqk4ppaQiMAgBMB2JZwCzgBh3frTrO0AAzUFz998CqekYoVn9uCL7xYYUDsMAAAA=",
+      "alt": "VV09 The Pearl Discipline: a woman in a porcelain peplum top with a squared neckline and a column midi skirt, in a minimal white-plaster gallery.",
+      "usage": "Our Collection: VV09 catalogue hero",
+      "dominant": "#9a9387"
+    },
+    "collection-vv10-evening-psalm": {
+      "id": "collection-vv10-evening-psalm",
+      "section": "collection",
+      "width": 1536,
+      "height": 2048,
+      "aspect": 0.75,
+      "widths": [
+        900,
+        1400
+      ],
+      "base": "/assets/virtuous-vogue/collection/collection-vv10-evening-psalm",
+      "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQBACdASoQABUAPu1kq04ppaQiMAgBMB2JQBOmUABfk7e2OhxUpEbBYAD+6/56fJPV/qJpKhgl12KdMdD+8dQr59uiVEwPJVX1Jc+QAAA=",
+      "alt": "VV10 The Evening Psalm: a woman in a midnight-indigo column dress with a scarf panel falling from the left shoulder, on a grand concert-hall staircase.",
+      "usage": "Our Collection: VV10 catalogue hero",
+      "dominant": "#66432f"
     }
   },
   "videos": {
@@ -823,5 +935,5 @@
       "usage": "Homepage hero (mobile, seamless loop, loaded only on fast connections)"
     }
   },
-  "builtAt": "2026-10-10T21:38:30.720Z"
+  "builtAt": "2026-10-10T22:11:41.564Z"
 }
