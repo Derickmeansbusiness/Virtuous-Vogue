@@ -20,10 +20,28 @@ function toArrayBuffer(buf) {
   return buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.byteLength);
 }
 
+// Serialise path commands ourselves: opentype's toPathData can emit tokens that
+// librsvg (used by sharp) stops parsing on, which truncates the wordmark.
+function serialise(path) {
+  const f = (n) => (Math.round(n * 100) / 100).toFixed(2);
+  return path.commands
+    .map((c) => {
+      switch (c.type) {
+        case "M": return `M ${f(c.x)} ${f(c.y)}`;
+        case "L": return `L ${f(c.x)} ${f(c.y)}`;
+        case "C": return `C ${f(c.x1)} ${f(c.y1)} ${f(c.x2)} ${f(c.y2)} ${f(c.x)} ${f(c.y)}`;
+        case "Q": return `Q ${f(c.x1)} ${f(c.y1)} ${f(c.x)} ${f(c.y)}`;
+        case "Z": return "Z";
+        default: return "";
+      }
+    })
+    .join(" ");
+}
+
 function textPath(font, text, x, y, size, letterSpacing = 0) {
   const path = font.getPath(text, x, y, size, { kerning: true, letterSpacing });
   const bb = path.getBoundingBox();
-  return { d: path.toPathData(3), width: bb.x2 - bb.x1, bb };
+  return { d: serialise(path), width: bb.x2 - bb.x1, bb };
 }
 
 // Monogram (two overlapping V forms), mulberry + satin
@@ -35,31 +53,32 @@ const monogram = (ids = "") => `
 writeFileSync(`${out}/vv-monogram.svg`, `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100">${monogram()}</svg>`);
 
 // Stacked wordmark: VIRTUOUS / VOGUE (right-aligned second line), descriptor below
-// Bodoni glyph outlines above ~80px trip librsvg, so everything is drawn at 72px and scaled.
+// librsvg rejects some Bodoni outlines at other sizes; 72px with 0.04em tracking renders reliably,
+// so every element is drawn at that size and positioned with transforms.
 function stackedWordmark(color, withDescriptor, withTagline) {
   const size = 72;
-  const k = 100 / 72;
-  const l1 = textPath(bodoni, "VIRTUOUS", 0, 92 / k, size, 0.02);
-  const l2 = textPath(bodoni, "VOGUE", 0, 176 / k, size, 0.02);
+  const ls = 0.04;
+  const l1 = textPath(bodoni, "VIRTUOUS", 0, 60, size, ls);
+  const l2 = textPath(bodoni, "VOGUE", 0, 60, size, ls);
   const offset2 = l1.width - l2.width;
-  const l2b = textPath(bodoni, "VOGUE", offset2, 176 / k, size, 0.02);
-  const parts = [`<path d="${l1.d}" fill="${color}"/>`, `<path d="${l2b.d}" fill="${color}"/>`];
-  let height = 196;
+  const parts = [
+    `<path d="${l1.d}" fill="${color}"/>`,
+    `<g transform="translate(${offset2.toFixed(2)} 62)"><path d="${l2.d}" fill="${color}"/></g>`,
+  ];
+  let height = 134;
   if (withDescriptor) {
-    const desc = textPath(manrope, "FASHION STYLING & LIFESTYLE CONSULTANCY", 0, 230 / k, 15.5 / k, 0.28);
+    const desc = textPath(manrope, "FASHION STYLING & LIFESTYLE CONSULTANCY", 0, 12, 11.2, 0.28);
     const dx = (l1.width - desc.width) / 2;
-    const d2 = textPath(manrope, "FASHION STYLING & LIFESTYLE CONSULTANCY", dx, 230 / k, 15.5 / k, 0.28);
-    parts.push(`<path d="${d2.d}" fill="${color}" opacity="0.85"/>`);
-    height = 242;
+    parts.push(`<g transform="translate(${dx.toFixed(2)} 156)"><path d="${desc.d}" fill="${color}" opacity="0.85"/></g>`);
+    height = 172;
   }
   if (withTagline) {
-    const tg = textPath(bodoniItalic, "Virtue Never Goes Out of Style.", 0, 290 / k, 30 / k, 0.01);
+    const tg = textPath(bodoniItalic, "Virtue Never Goes Out of Style.", 0, 22, 22, 0.01);
     const tx = (l1.width - tg.width) / 2;
-    const tg2 = textPath(bodoniItalic, "Virtue Never Goes Out of Style.", tx, 290 / k, 30 / k, 0.01);
-    parts.push(`<path d="${tg2.d}" fill="${color}"/>`);
-    height = 304;
+    parts.push(`<g transform="translate(${tx.toFixed(2)} 196)"><path d="${tg.d}" fill="${color}"/></g>`);
+    height = 226;
   }
-  return { svg: `<g transform="scale(${k.toFixed(5)})">${parts.join("\n")}</g>`, width: Math.ceil(l1.width * k), height };
+  return { svg: parts.join("\n"), width: Math.ceil(l1.width), height };
 }
 
 for (const [name, color] of [["ink", "#191816"], ["ivory", "#F4EFE7"], ["mulberry", "#672F40"]]) {
