@@ -1,6 +1,7 @@
 import { Header } from "./header";
 import { Footer } from "./footer";
 import { MobileNav } from "./mobile-nav";
+import { Concierge } from "./concierge";
 import { Cursor } from "./cursor";
 import { getSessionUser } from "@/lib/auth/session";
 import { FEATURE_FLAGS } from "@/lib/site";
@@ -30,6 +31,7 @@ export async function SiteFrame({
       </main>
       {withFooter ? <Footer /> : null}
       <MobileNav signedIn={Boolean(user)} />
+      <Concierge />
       {FEATURE_FLAGS.customCursor ? <Cursor /> : null}
     </>
   );

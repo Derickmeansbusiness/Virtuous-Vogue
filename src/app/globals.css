@@ -49,7 +49,7 @@
 :root {
   color-scheme: light;
   --vv-header-h: 4.25rem;
-  --vv-bottom-nav-h: 4.25rem;
+  --vv-bottom-nav-h: 5.25rem; /* floating dock (4rem) + its 0.75rem lift + breathing room */
 }
 
 html {
@@ -278,6 +278,62 @@ body {
     &::before {
       transform: translateX(0);
       opacity: 0.35;
+    }
+  }
+}
+/* Light frosted glass for the floating mobile dock: ivory tint, hairline, sheen sweep and satin sparkles. */
+@utility glass-dock {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(251, 249, 245, 0.78) 0%, rgba(244, 239, 231, 0.62) 100%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -1px 0 rgba(103, 47, 64, 0.06),
+    0 18px 40px -16px rgba(25, 24, 22, 0.45);
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -60% -40%;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(
+      115deg,
+      transparent 42%,
+      rgba(255, 255, 255, 0.1) 47%,
+      rgba(255, 255, 255, 0.75) 50%,
+      rgba(255, 255, 255, 0.1) 53%,
+      transparent 58%
+    );
+    transform: translateX(-70%);
+    animation: vv-sheen 6.5s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 8% 30%, rgba(197, 174, 150, 0.95) 0 1px, transparent 2.2px),
+      radial-gradient(circle at 23% 72%, rgba(103, 47, 64, 0.55) 0 0.8px, transparent 1.8px),
+      radial-gradient(circle at 41% 22%, rgba(255, 255, 255, 1) 0 1.1px, transparent 2.4px),
+      radial-gradient(circle at 58% 76%, rgba(197, 174, 150, 0.9) 0 0.9px, transparent 2px),
+      radial-gradient(circle at 74% 28%, rgba(103, 47, 64, 0.5) 0 0.8px, transparent 1.8px),
+      radial-gradient(circle at 91% 64%, rgba(255, 255, 255, 1) 0 1px, transparent 2.2px);
+    animation: vv-twinkle 3.1s ease-in-out infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    &::before,
+    &::after {
+      animation: none;
+    }
+    &::before {
+      transform: translateX(0);
+      opacity: 0.3;
     }
   }
 }

@@ -2,12 +2,13 @@
 
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
-import { Home, Compass, CalendarCheck, BookOpen, User, LogIn } from "lucide-react";
+import { Home, Compass, Shirt, BookOpen, User, LogIn } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 
 /**
- * Bottom-docked primary navigation on phones and tablets, for every visitor.
- * Signed-in clients get their Style Passport as the last stop; guests get Sign in.
+ * Floating glass dock on phones and tablets, for every visitor: Home, Studio,
+ * Collection, Magazine and either the Style Passport or Sign in. Booking lives
+ * in the Concierge button so the dock stays about moving around the house.
  */
 export function MobileNav({ signedIn = false }: { signedIn?: boolean }) {
   const t = useTranslations("nav");
@@ -15,7 +16,7 @@ export function MobileNav({ signedIn = false }: { signedIn?: boolean }) {
   const items = [
     { href: "/", label: t("home"), icon: Home, match: (p: string) => p === "/" },
     { href: "/studio", label: t("studioShort"), icon: Compass, match: (p: string) => p.startsWith("/studio") },
-    { href: "/book", label: t("book"), icon: CalendarCheck, match: (p: string) => p.startsWith("/book") || p.startsWith("/services"), primary: true },
+    { href: "/collection", label: t("collectionShort"), icon: Shirt, match: (p: string) => p.startsWith("/collection") },
     { href: "/magazine", label: t("magazine"), icon: BookOpen, match: (p: string) => p.startsWith("/magazine") },
     signedIn
       ? { href: "/account", label: t("account"), icon: User, match: (p: string) => p.startsWith("/account") }
@@ -24,31 +25,27 @@ export function MobileNav({ signedIn = false }: { signedIn?: boolean }) {
   return (
     <nav
       aria-label="Mobile primary"
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-line/80 bg-ivory/92 pb-[env(safe-area-inset-bottom)] shadow-[0_-12px_30px_-18px_rgba(25,24,22,0.35)] backdrop-blur-xl lg:hidden"
-      style={{ height: "calc(var(--vv-bottom-nav-h) + env(safe-area-inset-bottom))" }}
+      className="fixed inset-x-3 z-30 lg:hidden"
+      style={{ bottom: "calc(env(safe-area-inset-bottom) + 0.75rem)" }}
     >
-      <ul className="grid h-[var(--vv-bottom-nav-h)] grid-cols-5">
-        {items.map(({ href, label, icon: Icon, match, primary }) => {
+      <ul className="glass-dock grid h-16 grid-cols-5 rounded-full px-1">
+        {items.map(({ href, label, icon: Icon, match }) => {
           const active = match(pathname);
           return (
-            <li key={href}>
+            <li key={href} className="min-w-0">
               <Link
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 href={href as any}
                 aria-current={active ? "page" : undefined}
                 className={cn(
-                  "flex h-full flex-col items-center justify-center gap-1 text-[0.625rem] font-semibold uppercase tracking-[0.12em] transition-colors",
-                  active ? "text-mulberry" : "text-ink-muted hover:text-ink",
+                  "flex h-full flex-col items-center justify-center gap-1 rounded-full text-[0.5625rem] font-semibold uppercase tracking-[0.12em] transition-colors",
+                  active ? "text-mulberry" : "text-ink-soft hover:text-ink",
                 )}
               >
-                {primary ? (
-                  <span className={cn("flex size-9 -mt-1 items-center justify-center rounded-full border transition-colors", active ? "border-mulberry bg-mulberry text-porcelain" : "border-mulberry/40 bg-mulberry-tint text-mulberry")}>
-                    <Icon className="size-[1.125rem]" aria-hidden strokeWidth={1.6} />
-                  </span>
-                ) : (
-                  <Icon className="size-5" aria-hidden strokeWidth={1.5} />
-                )}
-                {label}
+                <span className={cn("flex size-7 items-center justify-center rounded-full transition-colors", active && "bg-mulberry/10")}>
+                  <Icon className="size-[1.125rem]" aria-hidden strokeWidth={1.6} />
+                </span>
+                <span className="truncate">{label}</span>
               </Link>
             </li>
           );

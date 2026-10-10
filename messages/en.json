@@ -40,7 +40,15 @@
     "signIn": "Sign in",
     "signOut": "Sign out",
     "createAccount": "Create an account",
-    "myPassport": "Open my Style Passport"
+    "myPassport": "Open my Style Passport",
+    "concierge": {
+      "title": "Need a hand?",
+      "body": "Book a consultation or send us a message. A stylist replies within a working day.",
+      "book": "Book a consultation",
+      "whatsapp": "Chat on WhatsApp",
+      "open": "Book or get help",
+      "close": "Close"
+    }
   },
   "cta": {
     "discover": "Discover Your Style",
@@ -82,7 +90,8 @@
     "styling": "Styling",
     "signIn": "Sign in",
     "studioShort": "Studio",
-    "collection": "Our Collection"
+    "collection": "Our Collection",
+    "collectionShort": "Collection"
   },
   "footer": {
     "navigation": "Navigation",
