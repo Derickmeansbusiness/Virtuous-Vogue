@@ -71,7 +71,7 @@ export const looks: Look[] = [
     occasions: L("Business lunch, daytime reception, civil occasion, stylish everyday wear.", "Déjeuner d'affaires, réception de jour, cérémonie civile, quotidien élégant."),
     status: "first-sample",
     image: "collection-vv01-ivory-testament",
-    published: false,
+    published: true,
   },
   {
     code: "VV02",

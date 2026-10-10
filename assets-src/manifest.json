@@ -634,11 +634,11 @@
       "kind": "image",
       "section": "collection",
       "status": "approved",
-      "job": "7fe9cbf0-126c-443c-b02b-14470dbe1ecb",
-      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_220250_7fe9cbf0-126c-443c-b02b-14470dbe1ecb.png",
+      "job": "dab8907c-55d8-4409-9df9-cc6d33693ca0",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_221618_dab8907c-55d8-4409-9df9-cc6d33693ca0.png",
       "aspect": "3:4",
       "usage": "Our Collection: VV01 catalogue hero",
-      "alt": "VV01 The Ivory Testament: a woman in an ivory wrap-front blouse with a high folded neckline and fluid palazzo trousers, standing in a sunlit limestone gallery.",
+      "alt": "VV01 The Ivory Testament: a woman in an ivory cowl-neck tunic with a diagonal seam over fluid palazzo trousers, standing in a sunlit limestone gallery.",
       "logoTone": "ink",
       "logoScale": 0.2
     },
@@ -928,6 +928,18 @@
     {
       "job": "6936e780-54fc-4f91-9c2f-13873b3a85c2",
       "reason": "VV08 third pass: V neckline with cleavage and slit"
+    },
+    {
+      "job": "7fe9cbf0-126c-443c-b02b-14470dbe1ecb",
+      "reason": "VV01 second pass: wrap opening showed skin at the waist"
+    },
+    {
+      "job": "e255ef17-313c-4897-b5b7-c0d1cfccc373",
+      "reason": "VV01 third pass: gap at the waist under the front fold"
+    },
+    {
+      "job": "83765acd-6ea8-4c58-a7d3-2a7a8899309b",
+      "reason": "VV01 fourth pass: rendered as a crop top with bare midriff"
     }
   ]
 }

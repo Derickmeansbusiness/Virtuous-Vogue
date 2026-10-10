@@ -73,7 +73,7 @@ Source: Higgsfield Soul 2.0 (stills, 2k) and Seedance 2.5 (video), generated und
 | `consultation-chairs` | image | campaigns | 16:9 | 2048×1152 | 1200w, 1920w | Homepage private consultation section, booking flow | `f10e5fc1` |
 | `empty-hanger` | image | campaigns | 16:9 | 2048×1152 | 1200w, 1920w | 404 page and empty states | `35eabd9e` |
 | `founder-kimbi-rosa` | image | about | 3:4 | 1086×1448 | 900w | About page: Meet the Founder; magazine author page (real photograph supplied by the founder, not generated) | supplied |
-| `collection-vv01-ivory-testament` | image | collection | 3:4 | 1536×2048 | 900w, 1400w | Our Collection: VV01 catalogue hero | `7fe9cbf0` |
+| `collection-vv01-ivory-testament` | image | collection | 3:4 | 1536×2048 | 900w, 1400w | Our Collection: VV01 catalogue hero | `dab8907c` |
 | `collection-vv03-soft-sovereign` | image | collection | 3:4 | 1536×2048 | 900w, 1400w | Our Collection: VV03 catalogue hero | `195420f5` |
 | `collection-vv04-champagne-reverie` | image | collection | 3:4 | 1536×2048 | 900w, 1400w | Our Collection: VV04 catalogue hero | `2d43ba55` |
 | `collection-vv05-sunday-heirloom` | image | collection | 3:4 | 1536×2048 | 900w, 1400w | Our Collection: VV05 catalogue hero | `df86edf8` |
@@ -140,3 +140,6 @@ Kept for transparency about the review standard.
 | `99a9ef68` | VV08 first pass: deep V neckline and thigh slit |
 | `5eb1aa9b` | VV08 second pass: deep V neckline and slit |
 | `6936e780` | VV08 third pass: V neckline with cleavage and slit |
+| `7fe9cbf0` | VV01 second pass: wrap opening showed skin at the waist |
+| `e255ef17` | VV01 third pass: gap at the waist under the front fold |
+| `83765acd` | VV01 fourth pass: rendered as a crop top with bare midriff |
