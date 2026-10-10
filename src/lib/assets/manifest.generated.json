@@ -1,1 +1,658 @@
-{ "images": {}, "videos": {}, "builtAt": "" }
+{
+  "images": {
+    "hero-01-woman-before-wardrobe": {
+      "id": "hero-01-woman-before-wardrobe",
+      "section": "hero",
+      "width": 2048,
+      "height": 1152,
+      "aspect": 1.7778,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/hero/hero-01-woman-before-wardrobe",
+      "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADQAQCdASoQAAkAA4BaJQBOgCFUBmS0AAD+Ui6qByLKy0CMNGdk7xAAAAA=",
+      "alt": "An elegant woman in an ivory blazer and wide oatmeal trousers stands at the right of a sunlit travertine atrium.",
+      "usage": "Homepage hero concept 1 (desktop), Open Graph image",
+      "dominant": "#9b8b75"
+    },
+    "hero-01-woman-before-wardrobe-mobile": {
+      "id": "hero-01-woman-before-wardrobe-mobile",
+      "section": "mobile",
+      "width": 1152,
+      "height": 2048,
+      "aspect": 0.5625,
+      "widths": [
+        900
+      ],
+      "base": "/assets/virtuous-vogue/mobile/hero-01-woman-before-wardrobe-mobile",
+      "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAwCdASoQABwAPu1mq04ppaQiMAgBMB2JZQCdACG7mDZiCW/uanwAAP4UKiXAQAaHyNwlpEFo2bIG7lEVYJmMAsU/vQwA",
+      "alt": "A woman in an ivory blazer and oatmeal trousers stands beside a tall window in a travertine room.",
+      "usage": "Homepage hero concept 1 (mobile)",
+      "dominant": "#7a6c56"
+    },
+    "hero-02-style-in-motion": {
+      "id": "hero-02-style-in-motion",
+      "section": "hero",
+      "width": 2048,
+      "height": 1152,
+      "aspect": 1.7778,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/hero/hero-02-style-in-motion",
+      "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADwAQCdASoQAAkAA4BaJZQC7AELS8tUDgAA/fAg09FpEk1Bf6AXCyhNpUAAAA==",
+      "alt": "A woman in a cream top and deep mulberry silk skirt turns through a sunlit gallery corridor.",
+      "usage": "Homepage hero concept 2 (desktop), video poster fallback",
+      "dominant": "#988d84"
+    },
+    "hero-02-style-in-motion-mobile": {
+      "id": "hero-02-style-in-motion-mobile",
+      "section": "mobile",
+      "width": 1152,
+      "height": 2048,
+      "aspect": 0.5625,
+      "widths": [
+        900
+      ],
+      "base": "/assets/virtuous-vogue/mobile/hero-02-style-in-motion-mobile",
+      "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAwCdASoQABwAPu1krU2ppaSiMAgBMB2JQBOmUABKMlWmxEp0AAD+nsXm5sk/4Jl5AfNciU0TRCsjvCwPTtH/TOpGthCL+QgQzDoGh5945rgA",
+      "alt": "A woman in a cream top and deep mulberry skirt walks toward the camera along a warm corridor.",
+      "usage": "Homepage hero concept 2 (mobile)",
+      "dominant": "#584c3b"
+    },
+    "hero-03-intentional-elegance": {
+      "id": "hero-03-intentional-elegance",
+      "section": "hero",
+      "width": 2048,
+      "height": 1152,
+      "aspect": 1.7778,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/hero/hero-03-intentional-elegance",
+      "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACQAQCdASoQAAkAA4BaJQBOgBLtm4AA4m5rZEkqIFcvRr60qcmhoCQ1VUAAAA==",
+      "alt": "A woman in a sand linen shirt dress with a silk scarf looks calmly into the lens beside a window.",
+      "usage": "Homepage hero concept 3, About page",
+      "dominant": "#706053"
+    },
+    "hero-03-intentional-elegance-portrait": {
+      "id": "hero-03-intentional-elegance-portrait",
+      "section": "hero",
+      "width": 1536,
+      "height": 2048,
+      "aspect": 0.75,
+      "widths": [
+        900,
+        1400
+      ],
+      "base": "/assets/virtuous-vogue/hero/hero-03-intentional-elegance-portrait",
+      "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAwCdASoQABUAPu1krU2ppaSiMAgBMB2JYwC06B4HhHqsNjq9iXgA2wq8rx85KfHYeOD6Vaar4x0lvm5+1Wf4WMCS6kvt3qAAAA==",
+      "alt": "Portrait of a woman in a sand linen shirt dress and silk scarf beside a window.",
+      "usage": "Hero concept 3 portrait crop, About page, social",
+      "dominant": "#7d7163"
+    },
+    "hero-04-column-dress": {
+      "id": "hero-04-column-dress",
+      "section": "hero",
+      "width": 2048,
+      "height": 1152,
+      "aspect": 1.7778,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/hero/hero-04-column-dress",
+      "blurDataURL": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACwAQCdASoQAAkAA4BaJaACdACB7toAAPtcq+YDQBAnh84bm68JlYAA",
+      "alt": "A woman in a floor-length ivory column dress stands in profile at the edge of a vast limewashed room.",
+      "usage": "Services index hero, SEO landing pages",
+      "dominant": "#918d58"
+    },
+    "hero-05-colonnade": {
+      "id": "hero-05-colonnade",
+      "section": "campaigns",
+      "width": 2048,
+      "height": 1152,
+      "aspect": 1.7778,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/campaigns/hero-05-colonnade",
+      "blurDataURL": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADQAQCdASoQAAkAA4BaJYgCdAEG4cGnsAD+wOHzibSNQPNY/mfqo7UxvBltp8AA",
+      "alt": "Two women walk together along a sunlit stone colonnade, laughing.",
+      "usage": "Magazine index hero, Culture category",
+      "dominant": "#6c5033"
+    },
+    "philosophy-wardrobe": {
+      "id": "philosophy-wardrobe",
+      "section": "philosophy",
+      "width": 1536,
+      "height": 2048,
+      "aspect": 0.75,
+      "widths": [
+        900,
+        1400
+      ],
+      "base": "/assets/virtuous-vogue/philosophy/philosophy-wardrobe",
+      "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQBACdASoQABUAPu1kqU2ppaQiMAgBMB2JYwCw7B4X2j+/kb8uPntGAAD7uqVC9HuYxqy/qCzPXJ+bVHYH87Hq8igDUsmzadsmqYAA",
+      "alt": "A woman thoughtfully touches the sleeve of a camel coat in an edited oak wardrobe.",
+      "usage": "Homepage philosophy series",
+      "dominant": "#604c3a"
+    },
+    "philosophy-mirror": {
+      "id": "philosophy-mirror",
+      "section": "philosophy",
+      "width": 2048,
+      "height": 1536,
+      "aspect": 1.3333,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/philosophy/philosophy-mirror",
+      "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACQAQCdASoQAAwAA4BaJYgCdABp8rAA/ezPrhSTnXbfwom5tu+S+/FIhmk5lFFcwAA=",
+      "alt": "A woman adjusts the collar of a camel coat in front of an arched mirror.",
+      "usage": "Homepage philosophy series, About page",
+      "dominant": "#87715a"
+    },
+    "philosophy-hands": {
+      "id": "philosophy-hands",
+      "section": "philosophy",
+      "width": 2048,
+      "height": 2048,
+      "aspect": 1,
+      "widths": [
+        800,
+        1200
+      ],
+      "base": "/assets/virtuous-vogue/philosophy/philosophy-hands",
+      "blurDataURL": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAAAQAgCdASoQABAAA4BaJYwCdAEJ9Cr49bIAAP7PSXZEm3A+zI6z9NheJDVtIhBCbpwAAA==",
+      "alt": "Hands rest on folded ivory knitwear and deep mulberry silk.",
+      "usage": "Homepage philosophy series, Wardrobe Edit",
+      "dominant": "#5e4d3f"
+    },
+    "philosophy-city-walk": {
+      "id": "philosophy-city-walk",
+      "section": "philosophy",
+      "width": 2016,
+      "height": 1344,
+      "aspect": 1.5,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/philosophy/philosophy-city-walk",
+      "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADwAQCdASoQAAsAA4BaJYwC7AEfUelTzAAA/rrCk+36IFXRc+lrzKSYAAA=",
+      "alt": "A woman in a forest-green trouser suit walks into a modern office building in Douala.",
+      "usage": "Homepage philosophy series, Executive styling landing",
+      "dominant": "#7b7867"
+    },
+    "service-style-clarity": {
+      "id": "service-style-clarity",
+      "section": "services",
+      "width": 1536,
+      "height": 2048,
+      "aspect": 0.75,
+      "widths": [
+        900,
+        1400
+      ],
+      "base": "/assets/virtuous-vogue/services/service-style-clarity",
+      "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAwCdASoQABUAPu1iqU2ppaQiMAgBMB2JYgCw7Bb2cKNDnt7YRrwAAP7goAF5lcN5I3KehVWsEyLR19pex8RizHebZSpBaRUBJe9HyYQO1ZsYAAA=",
+      "alt": "Two women talk across an oak table with a notebook and folded fabric swatches.",
+      "usage": "Style Clarity Consultation",
+      "dominant": "#ae9675"
+    },
+    "service-colour-harmony": {
+      "id": "service-colour-harmony",
+      "section": "services",
+      "width": 1536,
+      "height": 2048,
+      "aspect": 0.75,
+      "widths": [
+        900,
+        1400
+      ],
+      "base": "/assets/virtuous-vogue/services/service-colour-harmony",
+      "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAwCdASoQABUAPu1iqk2ppaQiMAgBMB2JZQCsABt+0GJ900scAAD5RJ3TM7HmtqTKZPCWUPdYO5efV6kkM4Pjvf9ULRepQAA=",
+      "alt": "A stylist drapes a terracotta silk swatch beneath the chin of a woman in an ivory top.",
+      "usage": "Colour & Harmony Consultation",
+      "dominant": "#ac9c8b"
+    },
+    "service-wardrobe-edit": {
+      "id": "service-wardrobe-edit",
+      "section": "services",
+      "width": 1536,
+      "height": 2048,
+      "aspect": 0.75,
+      "widths": [
+        900,
+        1400
+      ],
+      "base": "/assets/virtuous-vogue/services/service-wardrobe-edit",
+      "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACwAwCdASoQABUAPu1krU6ppaSiMAgBMB2JYwCdABoH8NXmOG2TWAD3CRO2qybaWYaVw9LOUo+ONEIkJO/35ujJEpDQAA==",
+      "alt": "A woman compares a navy blazer and a camel blazer on hangers in front of a brass rail.",
+      "usage": "Wardrobe Edit",
+      "dominant": "#77695e"
+    },
+    "service-occasion-styling": {
+      "id": "service-occasion-styling",
+      "section": "services",
+      "width": 1536,
+      "height": 2048,
+      "aspect": 0.75,
+      "widths": [
+        900,
+        1400
+      ],
+      "base": "/assets/virtuous-vogue/services/service-occasion-styling",
+      "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAACQAwCdASoQABUAPu1iqk2ppaQiMAgBMB2JYwCsACGa0lKT0m0YAP7pcH8x2U/u1vPtyKPZwBP/Cy2U3TC9IAAA",
+      "alt": "A woman in a long-sleeved deep mulberry satin gown walks along a warm hotel corridor at dusk.",
+      "usage": "Occasion Styling",
+      "dominant": "#49311f"
+    },
+    "service-personal-shopping": {
+      "id": "service-personal-shopping",
+      "section": "services",
+      "width": 1536,
+      "height": 2048,
+      "aspect": 0.75,
+      "widths": [
+        900,
+        1400
+      ],
+      "base": "/assets/virtuous-vogue/services/service-personal-shopping",
+      "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAACQAwCdASoQABUAPu1mq04ppaQiMAgBMB2JYwCo9Bg88KE8ja00APUEhxXOCPl/CHDIvZJoBccpjtUWz5q6AAAA",
+      "alt": "A woman in a cream trench coat considers a sage silk dress on a brass rail in a calm boutique.",
+      "usage": "Personal Shopping",
+      "dominant": "#80735c"
+    },
+    "service-signature-private": {
+      "id": "service-signature-private",
+      "section": "services",
+      "width": 1536,
+      "height": 2048,
+      "aspect": 0.75,
+      "widths": [
+        900,
+        1400
+      ],
+      "base": "/assets/virtuous-vogue/services/service-signature-private",
+      "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAwBACdASoQABUAPu1iqU2ppaOiMAgBMB2JYwCdMoADKT+PG81QXVhfYBAAxdZXYCuzniW5A8UEQwXbXsHbzRwDDEaAtlj3KTYAAA==",
+      "alt": "A stylist adjusts the shoulder of an ivory jacket on a woman in a black midi dress before a tall mirror.",
+      "usage": "Signature Private Styling",
+      "dominant": "#675849"
+    },
+    "studio-compass": {
+      "id": "studio-compass",
+      "section": "style-studio",
+      "width": 2048,
+      "height": 1536,
+      "aspect": 1.3333,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/style-studio/studio-compass",
+      "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADwAQCdASoQAAwAA4BaJYwCdADDa3FsYgAA+cn0Rx37ZWTxb+l9i1XwAAA=",
+      "alt": "Three outfits on brass hangers against an ivory wall: a soft knit set, an ivory silk dress with a mulberry belt, and a charcoal blazer with stone trousers.",
+      "usage": "Style Compass card and page",
+      "dominant": "#76695d"
+    },
+    "studio-colour-lens": {
+      "id": "studio-colour-lens",
+      "section": "style-studio",
+      "width": 2048,
+      "height": 1536,
+      "aspect": 1.3333,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/style-studio/studio-colour-lens",
+      "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoQAAwAA4BaJYwCdADBTG4AAP6oJJpGDUignZp5+yg+JlYCUAA=",
+      "alt": "A woman in an ivory knit holds a bundle of satin ribbons in terracotta, olive, mulberry, teal and camel near her collarbone.",
+      "usage": "Colour Lens card and page",
+      "dominant": "#7b6b5d"
+    },
+    "studio-closet-remix": {
+      "id": "studio-closet-remix",
+      "section": "style-studio",
+      "width": 2048,
+      "height": 1536,
+      "aspect": 1.3333,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/style-studio/studio-closet-remix",
+      "blurDataURL": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADQAQCdASoQAAwAA4BaJQBOgCG4bZ4AAAD8sbFaNsKos8kTvsUR6BEA2X+T9LrHlIAAAA==",
+      "alt": "A wardrobe laid flat on ivory linen: camel coat, white shirt, navy knit, black trousers, a wool skirt, loafers, flats and a tan bag.",
+      "usage": "Closet Remix card, Shop Your Closet section",
+      "dominant": "#8e7f6f"
+    },
+    "studio-passport": {
+      "id": "studio-passport",
+      "section": "style-studio",
+      "width": 2048,
+      "height": 1536,
+      "aspect": 1.3333,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/style-studio/studio-passport",
+      "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoQAAwAA4BaJQBOgCEF9mvAAM1ZJwMh2gI26UH9R52dc6xN2BgAAA==",
+      "alt": "Hands hold open a linen folio of fabric swatch cards and blank cream cards.",
+      "usage": "Style Passport promotion, account empty states",
+      "dominant": "#867565"
+    },
+    "mag-edited-rail": {
+      "id": "mag-edited-rail",
+      "section": "magazine",
+      "width": 2016,
+      "height": 1344,
+      "aspect": 1.5,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/magazine/mag-edited-rail",
+      "blurDataURL": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADwAQCdASoQAAsAA4BaJYwCdAEOls1AEYAA/uA7A67a+KtNMb/oViBn3qxvAAAA",
+      "alt": "A woman stands beside a small brass rail holding eight carefully chosen garments.",
+      "usage": "Article: Why More Clothes Don't Always Mean More Style",
+      "dominant": "#c3bbb6"
+    },
+    "mag-swatch-wall": {
+      "id": "mag-swatch-wall",
+      "section": "magazine",
+      "width": 2016,
+      "height": 1344,
+      "aspect": 1.5,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/magazine/mag-swatch-wall",
+      "blurDataURL": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAQCdASoQAAsAA4BaJQBOgBhd+7AwAP7gmzpBVlfLX5HKTi0VyVgN+X3XMgAA",
+      "alt": "A woman in a black turtleneck considers fabric swatches pinned to a sunlit studio wall.",
+      "usage": "Article: How to Discover Your Style Without Copying Someone Else",
+      "dominant": "#837665"
+    },
+    "mag-rework-shirt": {
+      "id": "mag-rework-shirt",
+      "section": "magazine",
+      "width": 2016,
+      "height": 1344,
+      "aspect": 1.5,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/magazine/mag-rework-shirt",
+      "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADQAQCdASoQAAsAA4BaJZQCw7CzbPgMkAD5vDG8jUPNRXYD5XHRXL5p9iAAAA==",
+      "alt": "A woman in a buttoned white shirt and mulberry skirt adjusts a silk scarf beside a window.",
+      "usage": "Article: 7 Ways to Rework Pieces You Already Own",
+      "dominant": "#9e9e95"
+    },
+    "mag-planned-wardrobe": {
+      "id": "mag-planned-wardrobe",
+      "section": "magazine",
+      "width": 2016,
+      "height": 1344,
+      "aspect": 1.5,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/magazine/mag-planned-wardrobe",
+      "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoQAAsAA4BaJQBOgBBeGgWAAP5xruFxPz+st7wTcxlMLi3Ng9u/WVygAAA=",
+      "alt": "An open oak wardrobe with garments arranged from ivory to black in morning light.",
+      "usage": "Article: The Quiet Power of a Well-Planned Wardrobe",
+      "dominant": "#61544b"
+    },
+    "mag-modest-elegance": {
+      "id": "mag-modest-elegance",
+      "section": "magazine",
+      "width": 2016,
+      "height": 1344,
+      "aspect": 1.5,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/magazine/mag-modest-elegance",
+      "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACQAQCdASoQAAsAA4BaJYgCdADA6AAA/rmItfbMfdIyOJkuP0OFC80AAAA=",
+      "alt": "A woman in a long-sleeved olive dress walks along a sunlit street lined with palms.",
+      "usage": "Article: What Does Modest Elegance Actually Mean?",
+      "dominant": "#85725a"
+    },
+    "mag-real-life": {
+      "id": "mag-real-life",
+      "section": "magazine",
+      "width": 2016,
+      "height": 1344,
+      "aspect": 1.5,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/magazine/mag-real-life",
+      "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADQAQCdASoQAAsAA4BaJQBOgCHRxqYgAAD+rSdTXjWuVR1llcTw1+MJAt4AAA==",
+      "alt": "A woman in relaxed linen laughs at a shaded café table in Douala.",
+      "usage": "Article: Dressing for the Life You Actually Live",
+      "dominant": "#514a2f"
+    },
+    "mag-colour-joy": {
+      "id": "mag-colour-joy",
+      "section": "magazine",
+      "width": 2016,
+      "height": 1344,
+      "aspect": 1.5,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/magazine/mag-colour-joy",
+      "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADwAQCdASoQAAsAA4BaJQBOgBmfhOr6uIAA+x2w2rVU/RNpgCtJ+vRm6dOW0gnyjuTnEXAAAAA=",
+      "alt": "A laughing woman in an ivory top with a cobalt and terracotta silk scarf.",
+      "usage": "Article: Colour Without Rules",
+      "dominant": "#8f7866"
+    },
+    "mag-inspiration-desk": {
+      "id": "mag-inspiration-desk",
+      "section": "magazine",
+      "width": 2016,
+      "height": 1344,
+      "aspect": 1.5,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/magazine/mag-inspiration-desk",
+      "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADwAQCdASoQAAsAA4BaJYgCdAC2dXT2goAA2cKaKZ/Qr3irjh16qO1MbwZbbBAAAAA=",
+      "alt": "Hands arrange a linen notebook and fabric swatches on an oak desk.",
+      "usage": "Article: From Inspiration to Identity",
+      "dominant": "#957961"
+    },
+    "mag-city-douala": {
+      "id": "mag-city-douala",
+      "section": "magazine",
+      "width": 2016,
+      "height": 1344,
+      "aspect": 1.5,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/magazine/mag-city-douala",
+      "blurDataURL": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADQAQCdASoQAAsAA4BaJQBOgB49VjW3oAD2OnrbbwhiOQJqmLhujFgU7sOez2uwK5PgAA==",
+      "alt": "A woman in an ivory coat and camel trousers stands on a balcony above Douala's rooftops.",
+      "usage": "Article: City Style Douala",
+      "dominant": "#99826a"
+    },
+    "brand-seal-card": {
+      "id": "brand-seal-card",
+      "section": "brand",
+      "width": 2016,
+      "height": 1344,
+      "aspect": 1.5,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/brand/brand-seal-card",
+      "blurDataURL": "data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAACwAQCdASoQAAsAA4BaJYwCdAED17AAAPtRGWQa0fer3cqu76AAAA==",
+      "alt": "A blank ivory card sealed with a drop of mulberry wax, tied with satin ribbon on marble.",
+      "usage": "About page, policies, brand moments",
+      "dominant": "#a49d90"
+    },
+    "brand-newsletter-letter": {
+      "id": "brand-newsletter-letter",
+      "section": "brand",
+      "width": 2016,
+      "height": 1344,
+      "aspect": 1.5,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/brand/brand-newsletter-letter",
+      "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADQAQCdASoQAAsAA4BaJYwCdADD2jmgAAD1PSdYoDfM8PedyfpdYUgAAAA=",
+      "alt": "A folded sheet of ivory paper tied with a mulberry ribbon on cream linen.",
+      "usage": "The Virtuous Edit newsletter section and page",
+      "dominant": "#9a8978"
+    },
+    "about-woman-before-wardrobe": {
+      "id": "about-woman-before-wardrobe",
+      "section": "campaigns",
+      "width": 1536,
+      "height": 2048,
+      "aspect": 0.75,
+      "widths": [
+        900,
+        1400
+      ],
+      "base": "/assets/virtuous-vogue/campaigns/about-woman-before-wardrobe",
+      "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAwCdASoQABUAPu1iqk2ppaQiMAgBMB2JYwCdACzxylo1gAD+28qTeOov5sp+noVpdM5GKJq1FT08c2/3wEOHw07mV5BICkAAAA==",
+      "alt": "A woman in a plain cream dress sits on a wooden chair in an empty ivory room beside a window.",
+      "usage": "About page: The Woman Before the Wardrobe",
+      "dominant": "#a99578"
+    },
+    "consultation-chairs": {
+      "id": "consultation-chairs",
+      "section": "campaigns",
+      "width": 2048,
+      "height": 1152,
+      "aspect": 1.7778,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/campaigns/consultation-chairs",
+      "blurDataURL": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAQCdASoQAAkAA4BaJQBOgBj1ereAAP7QKtGwqGSvqX+SWmtXYKUKyiifgAAA",
+      "alt": "Two ivory bouclé chairs angled toward each other beside a tall window in a calm atelier.",
+      "usage": "Homepage private consultation section, booking flow",
+      "dominant": "#73634d"
+    },
+    "empty-hanger": {
+      "id": "empty-hanger",
+      "section": "campaigns",
+      "width": 2048,
+      "height": 1152,
+      "aspect": 1.7778,
+      "widths": [
+        1200,
+        1920
+      ],
+      "base": "/assets/virtuous-vogue/campaigns/empty-hanger",
+      "blurDataURL": "data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAABwAQCdASoQAAkAA4BaJQBOgBwzgAD19P0vfOge429y0UhybsDAAA==",
+      "alt": "A single wooden hanger on a brass rail against a plain ivory wall.",
+      "usage": "404 page and empty states",
+      "dominant": "#99866d"
+    }
+  },
+  "videos": {
+    "hero-video-wide": {
+      "id": "hero-video-wide",
+      "section": "motion",
+      "kind": "video",
+      "width": 1920,
+      "height": 1080,
+      "outputs": [
+        {
+          "suffix": "1080",
+          "width": 1920,
+          "mp4": "/assets/virtuous-vogue/motion/hero-video-wide-1080.mp4",
+          "webm": "/assets/virtuous-vogue/motion/hero-video-wide-1080.webm"
+        },
+        {
+          "suffix": "720",
+          "width": 1280,
+          "mp4": "/assets/virtuous-vogue/motion/hero-video-wide-720.mp4",
+          "webm": "/assets/virtuous-vogue/motion/hero-video-wide-720.webm"
+        }
+      ],
+      "poster": {
+        "id": "hero-video-wide-poster",
+        "section": "motion",
+        "width": 1920,
+        "height": 1080,
+        "aspect": 1.7778,
+        "widths": [
+          1200,
+          1920
+        ],
+        "base": "/assets/virtuous-vogue/motion/hero-video-wide-poster",
+        "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADQAQCdASoQAAkAA4BaJZQC7ACydlANAAD8s+UQ8KGRsnUnYmbHnt+pJwAAAA==",
+        "alt": "A woman in a cream top and deep mulberry skirt turns slowly through a sunlit gallery corridor.",
+        "usage": "Homepage hero (desktop, loop)",
+        "dominant": "#968b82"
+      },
+      "alt": "A woman in a cream top and deep mulberry skirt turns slowly through a sunlit gallery corridor.",
+      "usage": "Homepage hero (desktop, loop)"
+    },
+    "hero-video-mobile": {
+      "id": "hero-video-mobile",
+      "section": "motion",
+      "kind": "video",
+      "width": 720,
+      "height": 1280,
+      "outputs": [
+        {
+          "suffix": "720",
+          "width": 720,
+          "mp4": "/assets/virtuous-vogue/motion/hero-video-mobile-720.mp4",
+          "webm": "/assets/virtuous-vogue/motion/hero-video-mobile-720.webm"
+        },
+        {
+          "suffix": "480",
+          "width": 480,
+          "mp4": "/assets/virtuous-vogue/motion/hero-video-mobile-480.mp4",
+          "webm": "/assets/virtuous-vogue/motion/hero-video-mobile-480.webm"
+        }
+      ],
+      "poster": {
+        "id": "hero-video-mobile-poster",
+        "section": "motion",
+        "width": 720,
+        "height": 1280,
+        "aspect": 0.5625,
+        "widths": [
+          720
+        ],
+        "base": "/assets/virtuous-vogue/motion/hero-video-mobile-poster",
+        "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAwCdASoQABwAPu1orU6ppiSiMAgBMB2JQBOgBDfcv/rALiYnkNQAAP7Lg/mzgiMjhpyfo5qtx8bD8zIqvU2rXULnLZ9nUSAAAA==",
+        "alt": "A woman in a cream top and deep mulberry skirt walks toward the camera along a warm corridor.",
+        "usage": "Homepage hero (mobile, loop, loaded only on request or fast connections)",
+        "dominant": "#544636"
+      },
+      "alt": "A woman in a cream top and deep mulberry skirt walks toward the camera along a warm corridor.",
+      "usage": "Homepage hero (mobile, loop, loaded only on request or fast connections)"
+    }
+  },
+  "builtAt": "2026-10-10T19:44:43.517Z"
+}
