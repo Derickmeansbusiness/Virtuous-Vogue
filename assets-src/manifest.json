@@ -628,6 +628,97 @@
       "logoCorner": "bottom-left",
       "logoScale": 0.2,
       "rights": "Supplied by the founder. Real photograph, not generated."
+    },
+    {
+      "id": "collection-vv01-ivory-testament",
+      "kind": "image",
+      "section": "collection",
+      "status": "approved",
+      "job": "7fe9cbf0-126c-443c-b02b-14470dbe1ecb",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_220250_7fe9cbf0-126c-443c-b02b-14470dbe1ecb.png",
+      "aspect": "3:4",
+      "usage": "Our Collection: VV01 catalogue hero",
+      "alt": "VV01 The Ivory Testament: a woman in an ivory wrap-front blouse with a high folded neckline and fluid palazzo trousers, standing in a sunlit limestone gallery.",
+      "logoTone": "ink",
+      "logoScale": 0.2
+    },
+    {
+      "id": "collection-vv03-soft-sovereign",
+      "kind": "image",
+      "section": "collection",
+      "status": "approved",
+      "job": "195420f5-52c9-4760-ad64-4762fa6c397c",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_215747_195420f5-52c9-4760-ad64-4762fa6c397c.png",
+      "aspect": "3:4",
+      "usage": "Our Collection: VV03 catalogue hero",
+      "alt": "VV03 The Soft Sovereign: a woman in an oat-taupe three-piece suit with a rounded notch lapel and pleated wide-leg trousers, in a light oak business club interior.",
+      "logoTone": "ink",
+      "logoScale": 0.2
+    },
+    {
+      "id": "collection-vv04-champagne-reverie",
+      "kind": "image",
+      "section": "collection",
+      "status": "approved",
+      "job": "2d43ba55-d935-46a9-a072-68ebb8e9e48a",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_215750_2d43ba55-d935-46a9-a072-68ebb8e9e48a.png",
+      "aspect": "3:4",
+      "usage": "Our Collection: VV04 catalogue hero",
+      "alt": "VV04 Champagne Reverie: a woman in a champagne ankle-length gown with a bateau neckline, long sleeves and a one-sided shoulder drape, in a warm hotel salon.",
+      "logoTone": "ivory",
+      "logoScale": 0.2
+    },
+    {
+      "id": "collection-vv05-sunday-heirloom",
+      "kind": "image",
+      "section": "collection",
+      "status": "approved",
+      "job": "df86edf8-abd4-459a-bda0-82b689dc7bfb",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_215748_df86edf8-abd4-459a-bda0-82b689dc7bfb.png",
+      "aspect": "3:4",
+      "usage": "Our Collection: VV05 catalogue hero",
+      "alt": "VV05 The Sunday Heirloom: a silver-haired woman in a dusty-blush fit-and-flare dress with petal cuffs, in a sunlit stone courtyard.",
+      "logoTone": "ink",
+      "logoScale": 0.2
+    },
+    {
+      "id": "collection-vv06-city-devotion",
+      "kind": "image",
+      "section": "collection",
+      "status": "approved",
+      "job": "6b0c28e2-4327-4b9b-a3f9-865cb0df46a0",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_220250_6b0c28e2-4327-4b9b-a3f9-865cb0df46a0.png",
+      "aspect": "3:4",
+      "usage": "Our Collection: VV06 catalogue hero",
+      "alt": "VV06 The City Devotion: a woman in a deep-olive belted shirt dress with a diagonal chest pocket, carrying a structured tote on a quiet city street.",
+      "logoTone": "ivory",
+      "logoScale": 0.2
+    },
+    {
+      "id": "collection-vv09-pearl-discipline",
+      "kind": "image",
+      "section": "collection",
+      "status": "approved",
+      "job": "b5209737-8b2d-45b0-b46c-a8a663cb3b4c",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_215748_b5209737-8b2d-45b0-b46c-a8a663cb3b4c.png",
+      "aspect": "3:4",
+      "usage": "Our Collection: VV09 catalogue hero",
+      "alt": "VV09 The Pearl Discipline: a woman in a porcelain peplum top with a squared neckline and a column midi skirt, in a minimal white-plaster gallery.",
+      "logoTone": "ink",
+      "logoScale": 0.2
+    },
+    {
+      "id": "collection-vv10-evening-psalm",
+      "kind": "image",
+      "section": "collection",
+      "status": "approved",
+      "job": "3a17e7c1-b698-44aa-bc1b-e8d0a3a73308",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_215748_3a17e7c1-b698-44aa-bc1b-e8d0a3a73308.png",
+      "aspect": "3:4",
+      "usage": "Our Collection: VV10 catalogue hero",
+      "alt": "VV10 The Evening Psalm: a woman in a midnight-indigo column dress with a scarf panel falling from the left shoulder, on a grand concert-hall staircase.",
+      "logoTone": "ivory",
+      "logoScale": 0.2
     }
   ],
   "rejected": [
@@ -754,6 +845,50 @@
     {
       "job": "41b40b47-8b16-45b1-b65b-0f9d8a28f3a9",
       "reason": "Staircase (desktop), second pass: faint lettering at the bottom edge and flatter light than the approved frame"
+    },
+    {
+      "job": "72561ef9-ea58-4471-a288-1b960970dace",
+      "reason": "VV01 first pass: head cropped, neckline too deep"
+    },
+    {
+      "job": "34c7dd9d-a21a-49b6-af4e-c4954ba999a3",
+      "reason": "VV02 first pass: square neckline too low"
+    },
+    {
+      "job": "2d70cee6-ffa9-4d87-a4d7-e8abe15c4dfd",
+      "reason": "VV02 second pass: neckline still low"
+    },
+    {
+      "job": "af6def8e-95bb-4670-b3f8-20f6501d84f9",
+      "reason": "VV02 third pass: cut-out decolletage"
+    },
+    {
+      "job": "0c136fc6-920f-4be4-bb09-0aeaff5904cb",
+      "reason": "VV06 first pass: thigh-high slit and shop lettering in the background"
+    },
+    {
+      "job": "3f3f5a7f-3f15-4f0e-a8fd-4c12b95bac52",
+      "reason": "VV07 first pass: head cropped, bare midriff"
+    },
+    {
+      "job": "61fceab9-8cb2-42fd-802a-76b3186e41f6",
+      "reason": "VV07 second pass: crop top, bare midriff"
+    },
+    {
+      "job": "f3e428f1-add7-46e7-954f-3e08263bfcec",
+      "reason": "VV07 third pass: knotted tee, bare midriff, head cropped"
+    },
+    {
+      "job": "99a9ef68-326b-4ce2-b95f-e8ff8fdc5142",
+      "reason": "VV08 first pass: deep V neckline and thigh slit"
+    },
+    {
+      "job": "5eb1aa9b-2416-444a-96da-542c58fe5129",
+      "reason": "VV08 second pass: deep V neckline and slit"
+    },
+    {
+      "job": "6936e780-54fc-4f91-9c2f-13873b3a85c2",
+      "reason": "VV08 third pass: V neckline with cleavage and slit"
     }
   ]
 }
