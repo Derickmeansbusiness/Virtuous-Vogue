@@ -81,7 +81,8 @@
     "stylingDouala": "Personal Stylist in Douala",
     "styling": "Styling",
     "signIn": "Sign in",
-    "studioShort": "Studio"
+    "studioShort": "Studio",
+    "collection": "Our Collection"
   },
   "footer": {
     "navigation": "Navigation",
@@ -103,7 +104,8 @@
     "outfit": "Can Virtuous Vogue help with this outfit?",
     "article": "I read \"{title}\" and I'd like to talk about my own wardrobe.",
     "notConfigured": "WhatsApp is not connected yet. Use the contact form instead.",
-    "label": "Message on WhatsApp"
+    "label": "Message on WhatsApp",
+    "look": "Hello Virtuous Vogue, I would like to enquire about {code} {name} from the Signature Edit."
   },
   "home": {
     "hero": {
@@ -243,7 +245,9 @@
     "terms": "Terms of Service",
     "edit": "The Edit",
     "editDesc": "Curated fashion, arriving after styling.",
-    "styling": "Personal Styling in Cameroon"
+    "styling": "Personal Styling in Cameroon",
+    "collection": "Our Collection",
+    "collectionDesc": "The Signature Edit, Volume 01: twenty original Virtuous Vogue designs for women who dress with intention. Design concepts, enquiries welcome."
   },
   "studio": {
     "index": {
@@ -888,5 +892,35 @@
       "deleteAccount": "Delete my account",
       "training": "Your images are never used to train models."
     }
+  },
+  "collection": {
+    "eyebrow": "The Signature Edit · Volume 01",
+    "title": "Our Collection",
+    "intro": "Twenty original Virtuous Vogue designs, drawn for women who dress with intention: structure and polish, practical distinction, expression for the evening, and a few pieces built to be unforgettable.",
+    "notice": "Every look is a design concept. Nothing here is manufactured, priced or for sale yet. If a design speaks to you, tell us: enquiries shape which pieces are sampled first.",
+    "chapter": "Chapter",
+    "designs": "{count} designs",
+    "status": {
+      "first-sample": "First sample",
+      "concept": "Concept preview"
+    },
+    "statusNote": {
+      "first-sample": "Selected for the first six physical samples.",
+      "concept": "Design concept. Enquiries welcome."
+    },
+    "silhouette": "Silhouette",
+    "palette": "Palette",
+    "signature": "Design signature",
+    "construction": "Construction & finishing",
+    "materials": "Recommended materials",
+    "fit": "Fit & wearability",
+    "occasions": "Occasions",
+    "enquireTitle": "Enquire about this design",
+    "enquireBody": "Tell us which look caught your eye. We will reply with where it sits in sampling and how a fitting or a styling conversation could begin.",
+    "enquireWhatsApp": "Enquire on WhatsApp",
+    "related": "More from this chapter",
+    "all": "All designs",
+    "moreComing": "More designs from the Signature Edit are being prepared and will appear here as they are approved.",
+    "moreComingTitle": "The edit continues."
   }
 }

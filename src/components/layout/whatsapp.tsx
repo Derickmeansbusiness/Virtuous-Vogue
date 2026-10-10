@@ -11,7 +11,8 @@ export type WhatsAppContext =
   | { kind: "service"; service: string }
   | { kind: "choose" }
   | { kind: "outfit"; outfitName?: string }
-  | { kind: "article"; title: string };
+  | { kind: "article"; title: string }
+  | { kind: "look"; code: string; name: string };
 
 export function buildWhatsAppHref(message: string, number = SITE.whatsappNumber) {
   const digits = number.replace(/[^\d]/g, "");
@@ -34,6 +35,7 @@ export function WhatsAppLink({
   let message = t("generic");
   if (context.kind === "service") message = t("service", { service: context.service });
   if (context.kind === "choose") message = t("chooseConsultation");
+  if (context.kind === "look") message = t("look", { code: context.code, name: context.name });
   if (context.kind === "outfit")
     message = `${t("outfit")}${context.outfitName ? ` (${context.outfitName})` : ""}`;
   if (context.kind === "article") message = t("article", { title: context.title });

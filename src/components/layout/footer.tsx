@@ -14,6 +14,7 @@ export async function Footer() {
     {
       title: t("navigation"),
       items: [
+        { href: "/collection", label: n("collection") },
         { href: "/magazine", label: n("magazine") },
         { href: "/services", label: n("services") },
         { href: "/about", label: n("about") },

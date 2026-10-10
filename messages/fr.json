@@ -81,7 +81,8 @@
     "stylingDouala": "Styliste personnelle à Douala",
     "styling": "Stylisme",
     "signIn": "Connexion",
-    "studioShort": "Studio"
+    "studioShort": "Studio",
+    "collection": "Notre Collection"
   },
   "footer": {
     "navigation": "Navigation",
@@ -103,7 +104,8 @@
     "outfit": "Virtuous Vogue peut-elle m'aider avec cette tenue ?",
     "article": "J'ai lu « {title} » et j'aimerais parler de ma propre garde-robe.",
     "notConfigured": "WhatsApp n'est pas encore connecté. Utilisez le formulaire de contact.",
-    "label": "Écrire sur WhatsApp"
+    "label": "Écrire sur WhatsApp",
+    "look": "Bonjour Virtuous Vogue, je souhaite me renseigner sur {code} {name} de The Signature Edit."
   },
   "home": {
     "hero": {
@@ -243,7 +245,9 @@
     "terms": "Conditions d'utilisation",
     "edit": "The Edit",
     "editDesc": "Mode sélectionnée, après le stylisme.",
-    "styling": "Stylisme personnel au Cameroun"
+    "styling": "Stylisme personnel au Cameroun",
+    "collection": "Notre Collection",
+    "collectionDesc": "The Signature Edit, Volume 01 : vingt créations originales Virtuous Vogue pour les femmes qui s'habillent avec intention. Concepts de création, demandes bienvenues."
   },
   "studio": {
     "index": {
@@ -889,5 +893,35 @@
       "deleteAccount": "Supprimer mon compte",
       "training": "Vos images ne sont jamais utilisées pour entraîner des modèles."
     }
+  },
+  "collection": {
+    "eyebrow": "The Signature Edit · Volume 01",
+    "title": "Notre Collection",
+    "intro": "Vingt créations originales Virtuous Vogue, dessinées pour les femmes qui s'habillent avec intention : structure et éclat, distinction pratique, expression pour le soir, et quelques pièces faites pour rester inoubliables.",
+    "notice": "Chaque tenue est un concept de création. Rien ici n'est encore fabriqué, tarifé ni en vente. Si une création vous parle, dites-le-nous : vos demandes orientent les pièces échantillonnées en premier.",
+    "chapter": "Chapitre",
+    "designs": "{count} créations",
+    "status": {
+      "first-sample": "Premier échantillon",
+      "concept": "Aperçu concept"
+    },
+    "statusNote": {
+      "first-sample": "Retenue parmi les six premiers échantillons physiques.",
+      "concept": "Concept de création. Demandes bienvenues."
+    },
+    "silhouette": "Silhouette",
+    "palette": "Palette",
+    "signature": "Signature de création",
+    "construction": "Construction & finitions",
+    "materials": "Matières recommandées",
+    "fit": "Coupe & portabilité",
+    "occasions": "Occasions",
+    "enquireTitle": "Se renseigner sur cette création",
+    "enquireBody": "Dites-nous quelle tenue a retenu votre attention. Nous vous répondrons sur son avancement en échantillonnage et sur la façon d'entamer un essayage ou une conversation de stylisme.",
+    "enquireWhatsApp": "Se renseigner sur WhatsApp",
+    "related": "Dans le même chapitre",
+    "all": "Toutes les créations",
+    "moreComing": "D'autres créations de The Signature Edit sont en préparation et apparaîtront ici au fur et à mesure de leur approbation.",
+    "moreComingTitle": "L'édit continue."
   }
 }

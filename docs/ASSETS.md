@@ -73,6 +73,16 @@ Source: Higgsfield Soul 2.0 (stills, 2k) and Seedance 2.5 (video), generated und
 | `consultation-chairs` | image | campaigns | 16:9 | 2048×1152 | 1200w, 1920w | Homepage private consultation section, booking flow | `f10e5fc1` |
 | `empty-hanger` | image | campaigns | 16:9 | 2048×1152 | 1200w, 1920w | 404 page and empty states | `35eabd9e` |
 | `founder-kimbi-rosa` | image | about | 3:4 | 1086×1448 | 900w | About page: Meet the Founder; magazine author page (real photograph supplied by the founder, not generated) | supplied |
+| `collection-vv01-ivory-testament` | image | collection | 3:4 | 1536×2048 | 900w, 1400w | Our Collection: VV01 catalogue hero | `7fe9cbf0` |
+| `collection-vv03-soft-sovereign` | image | collection | 3:4 | 1536×2048 | 900w, 1400w | Our Collection: VV03 catalogue hero | `195420f5` |
+| `collection-vv04-champagne-reverie` | image | collection | 3:4 | 1536×2048 | 900w, 1400w | Our Collection: VV04 catalogue hero | `2d43ba55` |
+| `collection-vv05-sunday-heirloom` | image | collection | 3:4 | 1536×2048 | 900w, 1400w | Our Collection: VV05 catalogue hero | `df86edf8` |
+| `collection-vv06-city-devotion` | image | collection | 3:4 | 1536×2048 | 900w, 1400w | Our Collection: VV06 catalogue hero | `6b0c28e2` |
+| `collection-vv09-pearl-discipline` | image | collection | 3:4 | 1536×2048 | 900w, 1400w | Our Collection: VV09 catalogue hero | `b5209737` |
+| `collection-vv10-evening-psalm` | image | collection | 3:4 | 1536×2048 | 900w, 1400w | Our Collection: VV10 catalogue hero | `3a17e7c1` |
+| `collection-vv02-mulberry-muse` | image | collection | 3:4 | 1536×2048 | 900w, 1400w | Our Collection: VV02 catalogue hero | `8f1c0825` |
+| `collection-vv07-linen-virtue` | image | collection | 3:4 | 1536×2048 | 900w, 1400w | Our Collection: VV07 catalogue hero | `04df1b59` |
+| `collection-vv08-rosewood-poise` | image | collection | 3:4 | 1536×2048 | 900w, 1400w | Our Collection: VV08 catalogue hero | `34daafae` |
 | `hero-video-staircase-wide` | video | motion |  | 1920×1080, 9 s after loop fade | 1080p mp4+webm, 720p mp4+webm | Homepage hero (desktop, seamless loop) | `f73dcd73` |
 | `hero-video-staircase-mobile` | video | motion |  | 1080×1920, 7 s after loop fade | 720p mp4+webm, 480p mp4+webm | Homepage hero (mobile, seamless loop, fast connections only) | `5170f0ba` |
 | `hero-video-wide` | video | motion |  | 1920×1080 | 1080p mp4+webm, 720p mp4+webm | Former homepage hero (retired, kept for reference) | `53c9ba2a` |
@@ -119,3 +129,14 @@ Kept for transparency about the review standard.
 | `b7c5fca8` | Headwrap portrait (mobile): sleeveless halter gown and invented lettering |
 | `23d3f7d1` | Staircase (mobile), first pass: invented lettering at the bottom edge |
 | `41b40b47` | Staircase (desktop), second pass: faint lettering at the bottom edge and flatter light than the approved frame |
+| `72561ef9` | VV01 first pass: head cropped, neckline too deep |
+| `34c7dd9d` | VV02 first pass: square neckline too low |
+| `2d70cee6` | VV02 second pass: neckline still low |
+| `af6def8e` | VV02 third pass: cut-out decolletage |
+| `0c136fc6` | VV06 first pass: thigh-high slit and shop lettering in the background |
+| `3f3f5a7f` | VV07 first pass: head cropped, bare midriff |
+| `61fceab9` | VV07 second pass: crop top, bare midriff |
+| `f3e428f1` | VV07 third pass: knotted tee, bare midriff, head cropped |
+| `99a9ef68` | VV08 first pass: deep V neckline and thigh slit |
+| `5eb1aa9b` | VV08 second pass: deep V neckline and slit |
+| `6936e780` | VV08 third pass: V neckline with cleavage and slit |

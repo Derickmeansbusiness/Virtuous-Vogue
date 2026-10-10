@@ -50,6 +50,7 @@ export function Header({
 
   const nav: NavItem[] = [
     { href: "/studio", label: t("studio") },
+    { href: "/collection", label: t("collection") },
     { href: "/services", label: t("services") },
     { href: "/magazine", label: t("magazine") },
     { href: "/about", label: t("about") },
