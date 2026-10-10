@@ -588,7 +588,8 @@
       "bookTitle": "En parler avec une styliste",
       "learn": "Ce qui est inclus",
       "editTitle": "Rejoindre The Virtuous Edit"
-    }
+    },
+    "editorInChief": "Rédactrice en chef"
   },
   "about": {
     "philosophy": {
@@ -619,13 +620,14 @@
     },
     "founder": {
       "eyebrow": "La fondatrice",
-      "title": "Une styliste qui préfère écouter d'abord.",
-      "p1": "Virtuous Vogue a été fondée à Douala par une styliste qui a passé des années à voir des femmes capables et accomplies s'excuser pour leur garde-robe. Le studio existe pour qu'elles puissent arrêter.",
-      "p2": "Son approche est calme, précise et pratique : comprendre la femme, lire honnêtement la garde-robe, et rendre le lendemain matin plus facile que le précédent.",
+      "title": "Kimbi Rosa. Une styliste qui préfère écouter d'abord.",
+      "p1": "Virtuous Vogue a été fondée à Douala par Kimbi Rosa, une styliste qui a passé des années à voir des femmes capables et accomplies s'excuser pour leur garde-robe. Le studio existe pour qu'elles puissent arrêter.",
+      "p2": "Son approche est calme, précise et pratique : comprendre la femme, lire honnêtement la garde-robe, et rendre le lendemain matin plus facile que le précédent. En tant que rédactrice en chef, elle écrit elle-même chaque article du magazine.",
       "quote1": "Je ne suis pas là pour vous dire de vous habiller comme moi.",
       "quote2": "Je suis là pour vous aider à découvrir comment vous habiller comme vous.",
-      "photoAlt": "La fondatrice de Virtuous Vogue",
-      "photoPending": "La photographie approuvée de la fondatrice apparaîtra ici. Aucun portrait généré n'est utilisé à sa place."
+      "photoAlt": "Kimbi Rosa, fondatrice et rédactrice en chef de Virtuous Vogue, assise dans une robe-chemise à imprimé zèbre.",
+      "name": "Kimbi Rosa",
+      "role": "Fondatrice & Rédactrice en chef"
     },
     "approach": {
       "eyebrow": "Notre approche",

@@ -97,6 +97,8 @@ export interface Author {
   name: string;
   role: Localized;
   bio: Localized;
+  /** Asset id of the author's portrait. */
+  image?: string;
   isDemo: boolean;
 }
 

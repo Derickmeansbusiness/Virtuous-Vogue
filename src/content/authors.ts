@@ -1,19 +1,17 @@
 import type { Author, Category, Faq } from "./types";
 
-/**
- * DEMO: the editorial voice is credited to "The Virtuous Vogue Editors"
- * until the founder's real byline and approved biography are supplied.
- */
+/** Kimbi Rosa founded Virtuous Vogue and edits the magazine; every story carries her byline. */
 export const authors: Author[] = [
   {
-    slug: "vv-editors",
-    name: "The Virtuous Vogue Editors",
-    role: { en: "Editorial", fr: "Rédaction" },
+    slug: "kimbi-rosa",
+    name: "Kimbi Rosa",
+    role: { en: "Founder & Editor-in-Chief", fr: "Fondatrice & Rédactrice en chef" },
     bio: {
-      en: "Notes on personal style, wardrobe intelligence and intentional living, written from the Virtuous Vogue studio in Douala.",
-      fr: "Notes sur le style personnel, l'intelligence de garde-robe et la vie intentionnelle, écrites depuis le studio Virtuous Vogue à Douala.",
+      en: "Kimbi Rosa is the founder of Virtuous Vogue and the Editor-in-Chief of its magazine. She writes from the studio in Douala on personal style, wardrobe intelligence and intentional living, with the same conviction that runs through every consultation: identity informs style, never the other way round.",
+      fr: "Kimbi Rosa est la fondatrice de Virtuous Vogue et la rédactrice en chef de son magazine. Elle écrit depuis le studio de Douala sur le style personnel, l'intelligence de garde-robe et la vie intentionnelle, avec la conviction qui traverse chaque consultation : l'identité informe le style, jamais l'inverse.",
     },
-    isDemo: true,
+    image: "founder-kimbi-rosa",
+    isDemo: false,
   },
 ];
 

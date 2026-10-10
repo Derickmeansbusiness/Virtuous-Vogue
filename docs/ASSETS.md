@@ -72,6 +72,7 @@ Source: Higgsfield Soul 2.0 (stills, 2k) and Seedance 2.5 (video), generated und
 | `about-woman-before-wardrobe` | image | campaigns | 3:4 | 1536×2048 | 900w, 1400w | About page: The Woman Before the Wardrobe | `185cb8ea` |
 | `consultation-chairs` | image | campaigns | 16:9 | 2048×1152 | 1200w, 1920w | Homepage private consultation section, booking flow | `f10e5fc1` |
 | `empty-hanger` | image | campaigns | 16:9 | 2048×1152 | 1200w, 1920w | 404 page and empty states | `35eabd9e` |
+| `founder-kimbi-rosa` | image | about | 3:4 | 1086×1448 | 900w | About page: Meet the Founder; magazine author page (real photograph supplied by the founder, not generated) | supplied |
 | `hero-video-staircase-wide` | video | motion |  | 1920×1080, 9 s after loop fade | 1080p mp4+webm, 720p mp4+webm | Homepage hero (desktop, seamless loop) | `f73dcd73` |
 | `hero-video-staircase-mobile` | video | motion |  | 1080×1920, 7 s after loop fade | 720p mp4+webm, 480p mp4+webm | Homepage hero (mobile, seamless loop, fast connections only) | `5170f0ba` |
 | `hero-video-wide` | video | motion |  | 1920×1080 | 1080p mp4+webm, 720p mp4+webm | Former homepage hero (retired, kept for reference) | `53c9ba2a` |

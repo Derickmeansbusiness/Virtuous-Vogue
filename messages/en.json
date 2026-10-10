@@ -587,7 +587,8 @@
       "bookTitle": "Talk it through with a stylist",
       "learn": "What it includes",
       "editTitle": "Join The Virtuous Edit"
-    }
+    },
+    "editorInChief": "Editor-in-Chief"
   },
   "about": {
     "philosophy": {
@@ -618,13 +619,14 @@
     },
     "founder": {
       "eyebrow": "Meet the Founder",
-      "title": "A stylist who would rather listen first.",
-      "p1": "Virtuous Vogue was founded in Douala by a stylist who spent years watching capable, accomplished women apologise for their wardrobes. The studio exists so they can stop.",
-      "p2": "Her approach is quiet, specific and practical: understand the woman, read the wardrobe honestly, and make the next morning easier than the last one.",
+      "title": "Kimbi Rosa. A stylist who would rather listen first.",
+      "p1": "Virtuous Vogue was founded in Douala by Kimbi Rosa, a stylist who spent years watching capable, accomplished women apologise for their wardrobes. The studio exists so they can stop.",
+      "p2": "Her approach is quiet, specific and practical: understand the woman, read the wardrobe honestly, and make the next morning easier than the last one. As Editor-in-Chief she writes every story in the magazine herself.",
       "quote1": "I'm not here to tell you to dress like me.",
       "quote2": "I'm here to help you discover how to dress like you.",
-      "photoAlt": "The founder of Virtuous Vogue",
-      "photoPending": "The founder's approved photograph will appear here. No generated portrait is used in its place."
+      "photoAlt": "Kimbi Rosa, founder and Editor-in-Chief of Virtuous Vogue, seated in a zebra-print shirt dress.",
+      "name": "Kimbi Rosa",
+      "role": "Founder & Editor-in-Chief"
     },
     "approach": {
       "eyebrow": "Our Approach",

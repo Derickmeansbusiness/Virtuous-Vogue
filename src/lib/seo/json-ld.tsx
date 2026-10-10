@@ -57,14 +57,14 @@ export function serviceSchema(s: { name: string; description: string; slug: stri
   };
 }
 
-export function articleSchema(a: { title: string; description: string; slug: string; publishedAt: string; author: string; image?: string }) {
+export function articleSchema(a: { title: string; description: string; slug: string; publishedAt: string; author: string; authorSlug?: string; image?: string }) {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: a.title,
     description: a.description,
     datePublished: a.publishedAt,
-    author: { "@type": "Organization", name: a.author },
+    author: a.authorSlug ? { "@type": "Person", name: a.author, url: `${SITE.url}/magazine/author/${a.authorSlug}` } : { "@type": "Organization", name: a.author },
     publisher: { "@id": `${SITE.url}#organization` },
     mainEntityOfPage: `${SITE.url}/magazine/${a.slug}`,
     ...(a.image ? { image: [`${SITE.url}${a.image}`] } : {}),

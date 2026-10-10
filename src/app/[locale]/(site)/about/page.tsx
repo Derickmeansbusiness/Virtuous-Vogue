@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { Reveal, MaskReveal, TextReveal } from "@/components/motion/reveal";
 import { Parallax } from "@/components/motion/parallax";
 import { EditorialImage } from "@/components/media/editorial-image";
-import { Wordmark } from "@/components/ui/brand";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -20,7 +19,6 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   const t = await getTranslations("about");
   const c = await getTranslations("cta");
   const approach = t.raw("approach.items") as { title: string; body: string }[];
-  const founderReady = Boolean(process.env.NEXT_PUBLIC_FOUNDER_PHOTO);
 
   return (
     <>
@@ -97,21 +95,15 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         <Container>
           <div className="grid items-center gap-12 lg:grid-cols-12">
             <div className="lg:col-span-5">
-              {founderReady ? (
-                <MaskReveal>
-                  <div className="aspect-[3/4] overflow-hidden">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={process.env.NEXT_PUBLIC_FOUNDER_PHOTO} alt={t("founder.photoAlt")} className="h-full w-full object-cover" />
-                  </div>
-                </MaskReveal>
-              ) : (
-                <Reveal>
-                  <div className="flex aspect-[3/4] flex-col items-center justify-center gap-5 border border-dashed border-line-strong bg-porcelain p-8 text-center">
-                    <Wordmark width={160} />
-                    <p className="max-w-xs text-sm text-ink-muted">{t("founder.photoPending")}</p>
-                  </div>
-                </Reveal>
-              )}
+              <MaskReveal>
+                <Parallax amount={20} className="aspect-[3/4]">
+                  <EditorialImage id="founder-kimbi-rosa" className="h-full w-full" sizes="(min-width:1024px) 40vw, 100vw" />
+                </Parallax>
+              </MaskReveal>
+              <p className="mt-4 font-display text-sm tracking-[0.12em] text-ink">
+                {t("founder.name")}
+                <span className="block font-sans text-xs tracking-[0.18em] text-ink-muted uppercase">{t("founder.role")}</span>
+              </p>
             </div>
             <Reveal className="lg:col-span-6 lg:col-start-7">
               <Eyebrow>05 · {t("founder.eyebrow")}</Eyebrow>

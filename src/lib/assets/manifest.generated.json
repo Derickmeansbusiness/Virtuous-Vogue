@@ -650,6 +650,21 @@
       "alt": "A woman in a sculptural ivory cape coat and column dress stands on a rooftop terrace at sunset, the cape lifted by the wind above a hazy coastal city.",
       "usage": "Alternate hero (mobile), social",
       "dominant": "#51392b"
+    },
+    "founder-kimbi-rosa": {
+      "id": "founder-kimbi-rosa",
+      "section": "about",
+      "width": 1086,
+      "height": 1448,
+      "aspect": 0.75,
+      "widths": [
+        900
+      ],
+      "base": "/assets/virtuous-vogue/about/founder-kimbi-rosa",
+      "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACwAwCdASoQABUAPu1iqU2ppaQiMAgBMB2JYgCdMoR4GB1SRsyvAADL3asTZfU6wKmS0ACOrmhxtKd5mzIVU2uAFDYAsT1cZXDwAA==",
+      "alt": "Kimbi Rosa, founder and Editor-in-Chief of Virtuous Vogue, seated in a black and white zebra-print shirt dress with gold earrings in a warm, softly lit lounge.",
+      "usage": "About page: Meet the Founder; magazine author page; Editor-in-Chief masthead",
+      "dominant": "#9c7f62"
     }
   },
   "videos": {
@@ -808,5 +823,5 @@
       "usage": "Homepage hero (mobile, seamless loop, loaded only on fast connections)"
     }
   },
-  "builtAt": "2026-10-10T21:31:17.166Z"
+  "builtAt": "2026-10-10T21:38:30.720Z"
 }

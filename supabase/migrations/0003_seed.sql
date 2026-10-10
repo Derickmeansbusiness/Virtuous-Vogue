@@ -17,9 +17,9 @@ insert into public.categories (slug, name_en, name_fr, sort_order) values
 on conflict (slug) do nothing;
 
 insert into public.authors (slug, name, role_en, role_fr, bio_en, bio_fr) values
-  ('vv-editors', 'The Virtuous Vogue Editors', 'Editorial', 'Rédaction',
-   'DEMO byline until the founder''s approved biography is supplied.',
-   'Signature DEMO en attendant la biographie approuvée de la fondatrice.')
+  ('kimbi-rosa', 'Kimbi Rosa', 'Founder & Editor-in-Chief', 'Fondatrice & Rédactrice en chef',
+   'Kimbi Rosa is the founder of Virtuous Vogue and the Editor-in-Chief of its magazine. She writes from the studio in Douala on personal style, wardrobe intelligence and intentional living.',
+   'Kimbi Rosa est la fondatrice de Virtuous Vogue et la rédactrice en chef de son magazine. Elle écrit depuis le studio de Douala sur le style personnel, l''intelligence de garde-robe et la vie intentionnelle.')
 on conflict (slug) do nothing;
 
 -- Default availability: Tue–Sat 09:00–17:00 Douala time, 15 min buffers.

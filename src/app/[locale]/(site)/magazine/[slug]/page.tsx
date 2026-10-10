@@ -59,7 +59,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
   return (
     <>
       <ReadingProgress />
-      <JsonLd data={[articleSchema({ title: a.title.en, description: a.dek.en, slug: a.slug, publishedAt: a.publishedAt, author: author?.name ?? SITE.name, image: img?.base ? `${img.base}-${img.widths[img.widths.length - 1]}.jpg` : undefined }), breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Magazine", path: "/magazine" }, { name: a.title.en, path: `/magazine/${a.slug}` }])]} />
+      <JsonLd data={[articleSchema({ title: a.title.en, description: a.dek.en, slug: a.slug, publishedAt: a.publishedAt, author: author?.name ?? SITE.name, authorSlug: author?.slug, image: img?.base ? `${img.base}-${img.widths[img.widths.length - 1]}.jpg` : undefined }), breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Magazine", path: "/magazine" }, { name: a.title.en, path: `/magazine/${a.slug}` }])]} />
       <article>
         <Section tone="porcelain" className="pt-[calc(var(--vv-header-h)+2.5rem)] pb-10">
           <Container narrow>

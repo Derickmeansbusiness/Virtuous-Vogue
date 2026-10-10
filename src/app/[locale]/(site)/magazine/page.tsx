@@ -45,6 +45,12 @@ export default async function MagazinePage({ params }: { params: Promise<{ local
               <p className="font-display text-sm tracking-[0.18em] text-ink-muted">
                 {t("issue")} {issue} · {new Date().getFullYear()}
               </p>
+              <p className="eyebrow text-ink-soft">
+                {t("editorInChief")} ·{" "}
+                <Link href="/magazine/author/kimbi-rosa" className="text-ink hover:text-mulberry">
+                  Kimbi Rosa
+                </Link>
+              </p>
               <MagazineSearch />
             </div>
           </div>

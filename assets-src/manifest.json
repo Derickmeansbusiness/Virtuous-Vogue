@@ -614,6 +614,20 @@
         }
       ],
       "logoInsetX": 0.12
+    },
+    {
+      "id": "founder-kimbi-rosa",
+      "kind": "image",
+      "section": "about",
+      "status": "approved",
+      "source": "assets-src/raw/founder-kimbi-rosa.jpg",
+      "aspect": "3:4",
+      "usage": "About page: Meet the Founder; magazine author page; Editor-in-Chief masthead",
+      "alt": "Kimbi Rosa, founder and Editor-in-Chief of Virtuous Vogue, seated in a black and white zebra-print shirt dress with gold earrings in a warm, softly lit lounge.",
+      "logoTone": "ivory",
+      "logoCorner": "bottom-left",
+      "logoScale": 0.2,
+      "rights": "Supplied by the founder. Real photograph, not generated."
     }
   ],
   "rejected": [

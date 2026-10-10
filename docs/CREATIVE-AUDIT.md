@@ -40,7 +40,7 @@ Dedicated 9:16 hero stills and a 9:16 hero video, a bottom navigation for signed
 
 ## Known gaps and next steps
 
-- **Founder photograph**: placeholder until the real, approved image is provided (`NEXT_PUBLIC_FOUNDER_PHOTO`). No generated stand-in is used, by design.
+- **Founder photograph**: the real portrait of Kimbi Rosa, supplied by the founder, runs on the About page and her author page. No generated stand-in was ever used.
 - **Testimonials**: honest empty state until the first consented client story is published from the cockpit.
 - **Vector logo**: the approved kit is raster; commission vector artwork before large-format print.
 - **Lookbook PDF export**: data model and builder are in place; rendering to PDF is a later step.
