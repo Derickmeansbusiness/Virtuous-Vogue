@@ -729,7 +729,84 @@
       },
       "alt": "A woman in a cream top and deep mulberry skirt walks toward the camera along a warm corridor.",
       "usage": "Homepage hero (mobile, loop, loaded only on request or fast connections)"
+    },
+    "hero-video-staircase-wide": {
+      "id": "hero-video-staircase-wide",
+      "section": "motion",
+      "kind": "video",
+      "width": 1920,
+      "height": 1080,
+      "outputs": [
+        {
+          "suffix": "1080",
+          "width": 1920,
+          "mp4": "/assets/virtuous-vogue/motion/hero-video-staircase-wide-1080.mp4",
+          "webm": "/assets/virtuous-vogue/motion/hero-video-staircase-wide-1080.webm"
+        },
+        {
+          "suffix": "720",
+          "width": 1280,
+          "mp4": "/assets/virtuous-vogue/motion/hero-video-staircase-wide-720.mp4",
+          "webm": "/assets/virtuous-vogue/motion/hero-video-staircase-wide-720.webm"
+        }
+      ],
+      "poster": {
+        "id": "hero-video-staircase-wide-poster",
+        "section": "motion",
+        "width": 1920,
+        "height": 1080,
+        "aspect": 1.7778,
+        "widths": [
+          1200,
+          1920
+        ],
+        "base": "/assets/virtuous-vogue/motion/hero-video-staircase-wide-poster",
+        "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADQAQCdASoQAAkAA4BaJYgCdAD0h/vOAAD+9pPWgxzaS2lLlikqqO4gjVMAAA==",
+        "alt": "A woman in a floor-length dark mulberry silk gown takes a slow step down a grand stone staircase, lit by a single shaft of golden light, as the camera drifts closer.",
+        "usage": "Homepage hero (desktop, seamless loop)",
+        "dominant": "#473824"
+      },
+      "alt": "A woman in a floor-length dark mulberry silk gown takes a slow step down a grand stone staircase, lit by a single shaft of golden light, as the camera drifts closer.",
+      "usage": "Homepage hero (desktop, seamless loop)"
+    },
+    "hero-video-staircase-mobile": {
+      "id": "hero-video-staircase-mobile",
+      "section": "motion",
+      "kind": "video",
+      "width": 1080,
+      "height": 1920,
+      "outputs": [
+        {
+          "suffix": "720",
+          "width": 720,
+          "mp4": "/assets/virtuous-vogue/motion/hero-video-staircase-mobile-720.mp4",
+          "webm": "/assets/virtuous-vogue/motion/hero-video-staircase-mobile-720.webm"
+        },
+        {
+          "suffix": "480",
+          "width": 480,
+          "mp4": "/assets/virtuous-vogue/motion/hero-video-staircase-mobile-480.mp4",
+          "webm": "/assets/virtuous-vogue/motion/hero-video-staircase-mobile-480.webm"
+        }
+      ],
+      "poster": {
+        "id": "hero-video-staircase-mobile-poster",
+        "section": "motion",
+        "width": 1080,
+        "height": 1920,
+        "aspect": 0.5625,
+        "widths": [
+          900
+        ],
+        "base": "/assets/virtuous-vogue/motion/hero-video-staircase-mobile-poster",
+        "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwBACdASoQABwAPu1oqk6ppiQiMAgBMB2JYwCsAGjr/PGvXd6os7Wu9IAA/v0DkirWIB/PazGqfskgDEPMdVpqhVvzUDPczQasxQ0gp+QAAA==",
+        "alt": "A woman in a floor-length deep mulberry silk gown walks down a pale stone staircase through a shaft of warm light.",
+        "usage": "Homepage hero (mobile, seamless loop, loaded only on fast connections)",
+        "dominant": "#775d45"
+      },
+      "alt": "A woman in a floor-length deep mulberry silk gown walks down a pale stone staircase through a shaft of warm light.",
+      "usage": "Homepage hero (mobile, seamless loop, loaded only on fast connections)"
     }
   },
-  "builtAt": "2026-10-10T21:20:34.934Z"
+  "builtAt": "2026-10-10T21:25:49.269Z"
 }
