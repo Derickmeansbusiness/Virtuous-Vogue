@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit -p tsconfig.json",
-    "assets:build": "node scripts/assets/build.mjs"
+    "assets:build": "node scripts/assets/build.mjs",
+    "qa:shots": "node scripts/qa/screenshots.mjs"
   },
   "dependencies": {
     "@react-email/components": "^1.0.12",

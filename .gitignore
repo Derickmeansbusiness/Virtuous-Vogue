@@ -45,3 +45,6 @@ next-env.d.ts
 
 # asset build cache (sources are re-fetchable via assets-src/manifest.json job ids)
 assets-src/masters/
+
+# visual QA output
+.qa/
