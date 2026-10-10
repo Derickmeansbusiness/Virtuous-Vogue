@@ -21,12 +21,11 @@ export function Reveal({
   once?: boolean;
   as?: "div" | "section" | "article" | "li" | "figure" | "header";
 }) {
-  const reduce = useReducedMotion();
   const Comp = motion[as];
   return (
     <Comp
       className={className}
-      initial={reduce ? false : { opacity: 0, y }}
+      initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once, margin: "-10% 0px -10% 0px" }}
       transition={{ duration: 0.9, ease, delay }}
@@ -90,14 +89,13 @@ export function TextReveal({
   delay?: number;
   as?: "h1" | "h2" | "h3" | "p";
 }) {
-  const reduce = useReducedMotion();
   return (
     <Tag className={cn(className)}>
       {lines.map((line, i) => (
         <span key={i} className="block overflow-hidden">
           <motion.span
             className={cn("block will-change-transform", lineClassName)}
-            initial={reduce ? false : { y: "110%" }}
+            initial={{ y: "110%" }}
             animate={{ y: 0 }}
             transition={{ duration: 1.1, ease, delay: delay + i * 0.12 }}
           >
@@ -121,7 +119,6 @@ export function MaskReveal({
   direction?: "up" | "left" | "right";
   delay?: number;
 }) {
-  const reduce = useReducedMotion();
   const clip = {
     up: { from: "inset(100% 0 0 0)", to: "inset(0 0 0 0)" },
     left: { from: "inset(0 100% 0 0)", to: "inset(0 0 0 0)" },
@@ -130,14 +127,14 @@ export function MaskReveal({
   return (
     <motion.div
       className={cn("relative overflow-hidden", className)}
-      initial={reduce ? false : { clipPath: clip.from }}
+      initial={{ clipPath: clip.from }}
       whileInView={{ clipPath: clip.to }}
       viewport={{ once: true, margin: "-8% 0px" }}
       transition={{ duration: 1.3, ease, delay }}
     >
       <motion.div
         className="h-full w-full"
-        initial={reduce ? false : { scale: 1.12 }}
+        initial={{ scale: 1.12 }}
         whileInView={{ scale: 1 }}
         viewport={{ once: true, margin: "-8% 0px" }}
         transition={{ duration: 1.6, ease, delay }}

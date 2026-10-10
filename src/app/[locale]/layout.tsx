@@ -7,6 +7,7 @@ import { fontVariables } from "@/lib/fonts";
 import { SITE } from "@/lib/site";
 import { Analytics } from "@/components/layout/analytics";
 import { ServiceWorker } from "@/components/layout/service-worker";
+import { MotionProvider } from "@/components/motion/motion-provider";
 import "../globals.css";
 
 export function generateStaticParams() {
@@ -66,7 +67,7 @@ export default async function LocaleLayout({
     <html lang={locale} className={`${fontVariables} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
         <NextIntlClientProvider>
-          {children}
+          <MotionProvider>{children}</MotionProvider>
           <ServiceWorker />
         </NextIntlClientProvider>
         <Analytics />

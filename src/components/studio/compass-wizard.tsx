@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { useRouter } from "@/i18n/navigation";
 import { questions, scoreAnswers, isComplete, type Answers, type Question } from "@/lib/studio/compass-model";
 import { ChoiceChip, Input, Textarea, Notice } from "@/components/ui/form";
@@ -18,7 +18,6 @@ export function CompassWizard() {
   const tc = useTranslations("common");
   const locale = useLocale();
   const router = useRouter();
-  const reduce = useReducedMotion();
   const [step, setStep] = React.useState(0);
   const [answers, setAnswers] = React.useState<Answers>({});
   const [dir, setDir] = React.useState<1 | -1>(1);
@@ -114,9 +113,9 @@ export function CompassWizard() {
           <motion.fieldset
             key={q.key}
             custom={dir}
-            initial={reduce ? false : { opacity: 0, x: dir * 24 }}
+            initial={{ opacity: 0, x: dir * 24 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={reduce ? undefined : { opacity: 0, x: dir * -24 }}
+            exit={{ opacity: 0, x: dir * -24 }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="border-0 p-0"
           >

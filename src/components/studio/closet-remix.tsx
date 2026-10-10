@@ -141,7 +141,7 @@ export function ClosetRemix({ signedIn }: { signedIn: boolean }) {
                 key={p.id}
                 type="button"
                 layout
-                initial={reduce ? false : { opacity: 0, scale: 0.96 }}
+                initial={{ opacity: 0, scale: 0.96 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.96 }}
                 onClick={() => setEditing(p.id)}
@@ -174,7 +174,7 @@ export function ClosetRemix({ signedIn }: { signedIn: boolean }) {
           {editing && pieceById(editing) ? (
             <motion.div
               key="editor"
-              initial={reduce ? false : { opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}
               className="mt-6 border border-line bg-porcelain p-5 md:p-7"

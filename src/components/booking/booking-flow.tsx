@@ -129,7 +129,7 @@ export function BookingFlow({ services, initialService, methods, user, compassId
 
       <div className="lg:col-span-7">
         <AnimatePresence mode="wait" initial={false}>
-          <motion.div key={step} initial={reduce ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.35 }}>
+          <motion.div key={step} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.35 }}>
             {step === "service" ? (
               <section>
                 <h2 className="display-md">{t("chooseService")}</h2>

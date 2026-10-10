@@ -3,7 +3,7 @@
 import * as React from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { Menu, X, User } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 import { HeaderLockup, Monogram } from "@/components/ui/brand";
@@ -28,7 +28,6 @@ export function Header({
   const locale = useLocale();
   const [open, setOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
-  const reduce = useReducedMotion();
 
   React.useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -133,7 +132,7 @@ export function Header({
           <motion.div
             id="mobile-menu"
             className="fixed inset-0 z-40 flex flex-col bg-ivory pt-[var(--vv-header-h)] text-ink lg:hidden"
-            initial={reduce ? false : { opacity: 0, y: -12 }}
+            initial={{ opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
@@ -142,7 +141,7 @@ export function Header({
               {[{ href: "/", label: t("home") }, ...nav, { href: "/contact", label: t("contact") }].map((item, i) => (
                 <motion.div
                   key={item.href}
-                  initial={reduce ? false : { opacity: 0, x: -10 }}
+                  initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.05 * i, duration: 0.4 }}
                 >

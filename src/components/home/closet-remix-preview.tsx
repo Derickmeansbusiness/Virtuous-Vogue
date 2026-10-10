@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { useTranslations } from "next-intl";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { Section, Container } from "@/components/ui/section";
 import { Eyebrow } from "@/components/ui/typography";
 import { Button } from "@/components/ui/button";
@@ -51,7 +51,6 @@ const textures: Record<NonNullable<Piece["texture"]>, string> = {
 export function ClosetRemixPreview({ locale }: { locale: string }) {
   const t = useTranslations("home.closet");
   const c = useTranslations("cta");
-  const reduce = useReducedMotion();
   const [idx, setIdx] = React.useState<Record<Slot, number>>({ top: 0, bottom: 0, layer: 0, shoe: 0 });
   const [lookNo, setLookNo] = React.useState(1);
 
@@ -91,7 +90,7 @@ export function ClosetRemixPreview({ locale }: { locale: string }) {
                     <li key={s} className="flex items-center gap-3">
                       <span aria-hidden className="size-3 border border-ink/10" style={{ background: p.colour === "transparent" ? "repeating-linear-gradient(45deg,#ddd 0 2px,#fff 2px 4px)" : p.colour }} />
                       <AnimatePresence mode="wait" initial={false}>
-                        <motion.span key={p.id} initial={reduce ? false : { opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -4 }} transition={{ duration: 0.25 }}>
+                        <motion.span key={p.id} initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -4 }} transition={{ duration: 0.25 }}>
                           {label(p)}
                         </motion.span>
                       </AnimatePresence>
@@ -125,7 +124,7 @@ export function ClosetRemixPreview({ locale }: { locale: string }) {
                         <AnimatePresence mode="popLayout" initial={false}>
                           <motion.span
                             key={p.id}
-                            initial={reduce ? false : { opacity: 0, scale: 0.96, y: 6 }}
+                            initial={{ opacity: 0, scale: 0.96, y: 6 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.98, y: -6 }}
                             transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}

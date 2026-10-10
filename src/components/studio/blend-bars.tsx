@@ -1,9 +1,8 @@
 "use client";
 
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 
 export function BlendBars({ items }: { items: { key: string; name: string; value: number }[] }) {
-  const reduce = useReducedMotion();
   return (
     <ul className="mt-4 space-y-3">
       {items.map((it, i) => (
@@ -15,7 +14,7 @@ export function BlendBars({ items }: { items: { key: string; name: string; value
             <div className="mt-1.5 h-1 w-full bg-line">
               <motion.div
                 className={i === 0 ? "h-1 bg-mulberry" : "h-1 bg-satin-deep"}
-                initial={reduce ? false : { width: 0 }}
+                initial={{ width: 0 }}
                 whileInView={{ width: `${Math.round(it.value * 100)}%` }}
                 viewport={{ once: true }}
                 transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: i * 0.05 }}
