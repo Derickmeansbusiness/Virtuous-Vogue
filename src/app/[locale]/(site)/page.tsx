@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { Hero } from "@/components/home/hero";
 import { Philosophy } from "@/components/home/philosophy";
+import { CollectionGallery } from "@/components/home/collection-gallery";
 import { StudioIntro } from "@/components/home/studio-intro";
 import { ServicesPreview } from "@/components/home/services-preview";
 import { ClosetRemixPreview } from "@/components/home/closet-remix-preview";
@@ -26,6 +27,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <JsonLd data={[organizationSchema(), websiteSchema()]} />
       <Hero />
       <Philosophy />
+      <CollectionGallery />
       <StudioIntro />
       <ServicesPreview />
       <ClosetRemixPreview locale={current} />
