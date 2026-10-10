@@ -677,10 +677,10 @@
         1400
       ],
       "base": "/assets/virtuous-vogue/collection/collection-vv01-ivory-testament",
-      "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABwAwCdASoQABUAPu1kqk4ppaQiMAgBMB2JYwAAVNrxIe/3EAAA9wnd6GNxNjyNS/0NGn4fnjdCrfqAVuQ/2RZp/UEoAA==",
-      "alt": "VV01 The Ivory Testament: a woman in an ivory wrap-front blouse with a high folded neckline and fluid palazzo trousers, standing in a sunlit limestone gallery.",
+      "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACQAwCdASoQABUAPu1iqk2ppaQiMAgBMB2JYwC7AA7zEJBdnSFAAPUJppMjzMadlXc5VRHi4TVITdS5kvpIDZtK+vrgYl/cvBvAAA==",
+      "alt": "VV01 The Ivory Testament: a woman in an ivory cowl-neck tunic with a diagonal seam over fluid palazzo trousers, standing in a sunlit limestone gallery.",
       "usage": "Our Collection: VV01 catalogue hero",
-      "dominant": "#ae9175"
+      "dominant": "#9c886d"
     },
     "collection-vv03-soft-sovereign": {
       "id": "collection-vv03-soft-sovereign",
@@ -983,5 +983,5 @@
       "usage": "Homepage hero (mobile, seamless loop, loaded only on fast connections)"
     }
   },
-  "builtAt": "2026-10-10T22:12:54.852Z"
+  "builtAt": "2026-10-10T22:18:02.734Z"
 }
