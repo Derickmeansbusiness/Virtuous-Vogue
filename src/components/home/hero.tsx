@@ -8,15 +8,15 @@ import { getImage, getVideo } from "@/lib/assets";
 export async function Hero() {
   const t = await getTranslations("home.hero");
   const c = await getTranslations("cta");
-  const desktop = getVideo("hero-video-wide");
-  const mobile = getVideo("hero-video-mobile");
-  const poster = desktop?.poster ?? getImage("hero-02-style-in-motion");
-  const mobilePoster = mobile?.poster ?? getImage("hero-02-style-in-motion-mobile");
+  const desktop = getVideo("hero-video-staircase-wide");
+  const mobile = getVideo("hero-video-staircase-mobile");
+  const poster = desktop?.poster ?? getImage("hero-06-staircase");
+  const mobilePoster = mobile?.poster ?? getImage("hero-06-staircase-mobile");
 
   return (
     <section className="relative isolate flex min-h-[100svh] items-end overflow-hidden bg-ink text-ivory" aria-label="Virtuous Vogue">
       <HeroVideo desktop={desktop} mobile={mobile} poster={poster} mobilePoster={mobilePoster} alt={t("videoAlt")} />
-      <div aria-hidden className="absolute inset-0 bg-[linear-gradient(to_top,rgba(25,24,22,0.78)_0%,rgba(25,24,22,0.35)_40%,rgba(25,24,22,0.12)_70%,rgba(25,24,22,0.35)_100%)]" />
+      <div aria-hidden className="absolute inset-0 bg-[linear-gradient(to_top,rgba(25,24,22,0.82)_0%,rgba(25,24,22,0.42)_38%,rgba(25,24,22,0.06)_68%,rgba(25,24,22,0.18)_100%)]" />
       <div aria-hidden className="grain absolute inset-0" />
       <div className="container-vv relative z-10 pb-16 pt-40 md:pb-24">
         <p className="eyebrow mb-6 text-ivory/80">VV / 01 — Douala · Virtual</p>

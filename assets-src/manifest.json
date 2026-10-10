@@ -533,7 +533,7 @@
       "width": 1920,
       "height": 1080,
       "duration": 10,
-      "usage": "Homepage hero (desktop, loop)",
+      "usage": "Former homepage hero (retired, kept for reference) (desktop, loop)",
       "alt": "A woman in a cream top and deep mulberry skirt turns slowly through a sunlit gallery corridor.",
       "logoTone": "ink",
       "logoScale": 0.12
@@ -548,8 +548,54 @@
       "width": 720,
       "height": 1280,
       "duration": 8,
-      "usage": "Homepage hero (mobile, loop, loaded only on request or fast connections)",
+      "usage": "Former homepage hero (retired, kept for reference) (mobile, loop, loaded only on request or fast connections)",
       "alt": "A woman in a cream top and deep mulberry skirt walks toward the camera along a warm corridor.",
+      "logoTone": "ink",
+      "logoScale": 0.3,
+      "variants": [
+        {
+          "suffix": "720",
+          "width": 720,
+          "crf": 26
+        },
+        {
+          "suffix": "480",
+          "width": 480,
+          "crf": 28
+        }
+      ]
+    },
+    {
+      "id": "hero-video-staircase-wide",
+      "kind": "video",
+      "section": "motion",
+      "status": "approved",
+      "job": "f73dcd73-eb99-4cfa-8ff7-a3f98bb97c3a",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_211707_f73dcd73-eb99-4cfa-8ff7-a3f98bb97c3a.mp4",
+      "width": 1920,
+      "height": 1080,
+      "duration": 10,
+      "loop": "crossfade",
+      "loopFade": 1,
+      "usage": "Homepage hero (desktop, seamless loop)",
+      "alt": "A woman in a floor-length dark mulberry silk gown takes a slow step down a grand stone staircase, lit by a single shaft of golden light, as the camera drifts closer.",
+      "logoTone": "ink",
+      "logoScale": 0.12
+    },
+    {
+      "id": "hero-video-staircase-mobile",
+      "kind": "video",
+      "section": "motion",
+      "status": "approved",
+      "job": "5170f0ba-a648-45f6-a890-1b48c4acf95b",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3ESHoubvKcTG5tMRKEJfkGOE2eo/hf_20261010_211707_5170f0ba-a648-45f6-a890-1b48c4acf95b.mp4",
+      "width": 1080,
+      "height": 1920,
+      "duration": 8,
+      "loop": "crossfade",
+      "loopFade": 1,
+      "usage": "Homepage hero (mobile, seamless loop, loaded only on fast connections)",
+      "alt": "A woman in a floor-length deep mulberry silk gown walks down a pale stone staircase through a shaft of warm light.",
       "logoTone": "ink",
       "logoScale": 0.3,
       "variants": [

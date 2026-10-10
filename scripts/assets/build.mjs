@@ -135,6 +135,20 @@ async function buildVideo(entry) {
   const targetW = entry.width ?? 1920;
   const lockFile = tone === "ivory" || tone === "white" ? "header-white-1600.png" : "header-ink-1600.png";
   await sharp(path.join(BRAND, lockFile)).resize({ width: Math.round(targetW * scale) }).png().toFile(logoPng);
+  // Optional seamless loop: drop the first `loopFade` seconds, then crossfade the
+  // tail into that dropped head so the last frame equals the first frame of the
+  // clip. Costs `loopFade` seconds of runtime, removes the hard jump on repeat.
+  let input = raw;
+  if (entry.loop === "crossfade") {
+    const fade = entry.loopFade ?? 1;
+    const probe = execFileSync("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", raw]).toString().trim();
+    const duration = Number(probe);
+    const looped = path.join(MASTERS, `${entry.id}.loop.mp4`);
+    const offset = (duration - fade * 2).toFixed(3);
+    const filter = `[0:v]split[a][b];[a]trim=start=${fade},setpts=PTS-STARTPTS[main];[b]trim=duration=${fade},setpts=PTS-STARTPTS[head];[main][head]xfade=transition=fade:duration=${fade}:offset=${offset},format=yuv420p[out]`;
+    execFileSync("ffmpeg", ["-y", "-i", raw, "-filter_complex", filter, "-map", "[out]", "-an", "-c:v", "libx264", "-preset", "fast", "-crf", "12", looped], { stdio: "inherit" });
+    input = looped;
+  }
   const outputs = [];
   const variants = (entry.variants ?? [{ suffix: "1080", width: targetW, crf: 24 }, { suffix: "720", width: targetW * 0.667, crf: 26 }]).map((v) => ({ ...v, width: even(v.width) }));
   for (const v of variants) {
@@ -142,7 +156,7 @@ async function buildVideo(entry) {
     const webm = path.join(dir, `${entry.id}-${v.suffix}.webm`);
     const overlay = entry.logo === false ? "" : `[0:v][1:v]overlay=W-w-(W*0.028):H-h-(W*0.028)[v];[v]`;
     const filter = `${overlay}scale=${v.width}:-2:flags=lanczos,format=yuv420p`;
-    const args = ["-y", "-i", raw, ...(entry.logo === false ? [] : ["-i", logoPng]), "-filter_complex", filter.replace(/\[v\]$/, ""), "-an", "-movflags", "+faststart"];
+    const args = ["-y", "-i", input, ...(entry.logo === false ? [] : ["-i", logoPng]), "-filter_complex", filter.replace(/\[v\]$/, ""), "-an", "-movflags", "+faststart"];
     execFileSync("ffmpeg", [...args, "-c:v", "libx264", "-preset", "slow", "-crf", String(v.crf), "-pix_fmt", "yuv420p", mp4], { stdio: "inherit" });
     execFileSync("ffmpeg", [...args, "-c:v", "libvpx-vp9", "-b:v", "0", "-crf", String(v.crf + 8), "-row-mt", "1", webm], { stdio: "inherit" });
     outputs.push({ suffix: v.suffix, width: v.width, mp4: `/assets/virtuous-vogue/${entry.section}/${path.basename(mp4)}`, webm: `/assets/virtuous-vogue/${entry.section}/${path.basename(webm)}` });
